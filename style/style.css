@@ -237,7 +237,7 @@ body #invitation-content #main-container .cover button:hover {
 }
 body #invitation-content #main-container .invitation-content {
   animation: animationFadeOut 0s ease 1 forwards;
-  background-image: url(layout/main.png);
+  background-image: url(../layout/main.png);
   background-size: contain;
   background-repeat: repeat-y;
 }
@@ -1025,7 +1025,7 @@ body #invitation-content #main-container .navbar.active {
   }
   body #invitation-content #main-container .invitation-content {
     animation: animationFadeOut 0s ease 1 forwards;
-    background-image: url(layout/main.png);
+    background-image: url(../layout/main.png);
     background-size: contain;
     background-repeat: repeat-y;
   }
