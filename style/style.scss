@@ -246,7 +246,7 @@ body{
             }
             .invitation-content{
                 animation: animationFadeOut .0s ease 1 forwards;
-                background-image: url('layout/main.png');
+                background-image: url('/layout/main.png');
                 background-size: contain;
                 background-repeat: repeat-y;
     
@@ -1101,7 +1101,7 @@ body{
                 }
                 .invitation-content{
                     animation: animationFadeOut .0s ease 1 forwards;
-                    background-image: url('layout/main.png');
+                    background-image: url('/layout/main.png');
                     background-size: contain;
                     background-repeat: repeat-y;
         
