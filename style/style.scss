@@ -39,21 +39,6 @@ body{
     
             nav.navbar{
                 position: fixed;
-                // left: 50%;
-                transform: translateX(-50%);
-                background-color: #d7d7c8;
-                padding: 10px 0;
-                border-radius: 50px;
-                justify-content: space-evenly;
-                height: 40px;
-                width: 90%;
-                line-height: 20px;
-                max-width: 400px;
-                bottom: 15px;
-                z-index: 10;
-                animation: animationFadeOut .0s ease 1 forwards;
-
-                position: fixed;
                 background-color: #d7d7c8;
                 padding: 10px 0;
                 border-radius: 50px;
@@ -77,14 +62,6 @@ body{
                             text-align: center;
                             color: #262b44;
                             width: fit-content;
-                            height: fit-content;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-
-                            text-align: center;
-                            color: #262b44;
-                            width: fit-content;
                             height: 1rem;
                             display: flex;
                             flex-direction: row;
@@ -97,14 +74,6 @@ body{
                                 z-index: 5;
                             }
                             .nav-text{
-                                position: absolute;
-                                margin-top: 15px;
-                                transform: translateY(-100%);
-                                opacity: 0;
-                                transition: all .3s;
-                                font-family: "Poppins", sans-serif;
-                                font-size: 11px;
-    
                                 position: absolute;
                                 margin-top: 10px;
                                 transform: translateX(-100%);
@@ -1028,7 +997,7 @@ body{
     
         #invitation-content{
             display: flex;
-            max-width: 100%;
+            width: fit-content;
             margin: auto;
             overflow: hidden;
             
@@ -1059,9 +1028,7 @@ body{
                 max-width: 450px;
                 width: 100%;
                 margin: auto;
-                position: absolute;
-                right: 50%;
-                transform: translateX(50%);
+                position: static;
                 z-index: 5;
         
                 nav.navbar{
