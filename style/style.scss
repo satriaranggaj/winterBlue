@@ -106,48 +106,55 @@ body{
                 }
             }
             .cover{
-                width: 450px;
-                max-height: 700px;
+                max-width: 450px;
+                width: 100%;
+                min-height: 700px;
+                overflow: hidden;
     
                 .cover-layout{
                     position: absolute;
-                    width: 450px;
-                    max-height: 700px;
+                    max-width: 450px;
+                    width: 100%;
                     z-index: 1;
                 }
                 .image{
-                    width: 300px;
-                    height: 300px;
-                    top: 140px;
-                    margin: 0 75px;
-                    position: absolute;
+                    max-width: 70%;
+                    margin: 0 15%;
+                    position: relative;
+                    margin-top: calc(6rem + 3vw);
                     animation: animationFadeIn 2s ease 1 forwards;
                 }
                 .text{
-                    width: 450px;
-                    height: 100%;    
+                    max-width: 450px;
+                    width: 100%;   
                     position: absolute;
                     top: 0;
                     z-index: 2;
                     color: #262b44;
                     font-family: "Playfair Display", serif;
                     font-weight: bold;
+                    text-align: center;
+                    overflow: hidden;
                     .title{
+                        margin-top: 8.5%;
                         .title-one{
-                            margin: 35px 0 0 75px;
                             animation: animationFadeRight 4s ease 1 forwards;
+                            margin: 0;
+                            margin-right: 24%;
+                            font-size: calc(1.5rem + .5vw);
                         }
                         .title-two{
-                            margin: 0 0 0 160px;
                             animation: animationFadeLeft 4s ease 1 forwards;
+                            margin: 0;
+                            margin-left: 17%;
+                            font-size: calc(1.5rem + .5vw);
                         }
                     }
                     .name{
                         position: relative;
                         width: fit-content;
                         margin: auto;
-                        top: 265px;
-                        text-align: center;
+                        margin-top: 62.5%;
                         .groom{
                             margin: 0 0 -30px 0;
                             animation: animationFadeDown 4s ease 1 forwards;
@@ -165,10 +172,10 @@ body{
                     .date{
                         display: flex;
                         justify-content: space-evenly;
-                        width: 450px;
+                        max-width: 450px;
+                        width: 100%;
                         position: relative;
-                        top: 300px;
-                        text-align: center;
+                        margin-top: 10%;
                         
                         .day{
                             border-top: #262b44 1px solid;
@@ -194,8 +201,7 @@ body{
                     }
                     .visitor{
                         position: relative;
-                        top: 325px;
-                        text-align: center;
+                        margin-top: 5%;
                         z-index: 2;
                         animation: animationFadeIn 4s ease 1 forwards;
     
@@ -219,15 +225,16 @@ body{
                 }
                 button{
                     cursor: pointer;
-                    position: absolute;
-                    top: 650px;
-                    margin-left: 150px;
+                    position: relative;
+                    width: 50%;
+                    margin: 0 25%;
+                    margin-top: calc(13.5rem + .5vw);
                     background: transparent;
                     border-radius: 50px;
                     border: 1px #262b44 solid;
                     color: #262b44;
                     padding: 10px 15px;
-                    z-index: 2;
+                    z-index: 1000;
                     transition: all .3s;
                     animation: animationFadeIn 4s ease 1 forwards;
                 }
@@ -239,7 +246,7 @@ body{
             }
             .invitation-content{
                 animation: animationFadeOut .0s ease 1 forwards;
-                background-image: url(/layout/main.png);
+                background-image: url(layout/main.png);
                 background-size: contain;
                 background-repeat: repeat-y;
     
@@ -1092,141 +1099,147 @@ body{
                         }
                     }
                 }
-                .cover{
-                    width: 450px;
-                    max-height: 700px;
+                // .cover{
+                //     max-width: 450px;
+                //     width: 100%;
+                //     min-height: 700px;
+                //     overflow: hidden;
         
-                    .cover-layout{
-                        position: absolute;
-                        width: 450px;
-                        max-height: 700px;
-                        z-index: 1;
-                    }
-                    .image{
-                        width: 300px;
-                        height: 300px;
-                        top: 140px;
-                        margin: 0 75px;
-                        position: absolute;
-                        animation: animationFadeIn 2s ease 1 forwards;
-                    }
-                    .text{
-                        width: 450px;
-                        height: 100%;    
-                        position: absolute;
-                        top: 0;
-                        z-index: 2;
-                        color: #262b44;
-                        font-family: "Playfair Display", serif;
-                        font-weight: bold;
-                        .title{
-                            .title-one{
-                                margin: 35px 0 0 75px;
-                                animation: animationFadeRight 4s ease 1 forwards;
-                            }
-                            .title-two{
-                                margin: 0 0 0 160px;
-                                animation: animationFadeLeft 4s ease 1 forwards;
-                            }
-                        }
-                        .name{
-                            position: relative;
-                            width: fit-content;
-                            margin: auto;
-                            top: 265px;
-                            text-align: center;
-                            .groom{
-                                margin: 0 0 -30px 0;
-                                animation: animationFadeDown 4s ease 1 forwards;
-                            }
-                            .and{
-                                text-align: end;
-                                margin: 0 -25px 0 0;
-                                animation: animationFadeLeft 4s ease 1 forwards;
-                            }
-                            .bride{
-                                margin: -30px 0 0 0;
-                                animation: animationFadeUp 4s ease 1 forwards;
-                            } 
-                        }
-                        .date{
-                            display: flex;
-                            justify-content: space-evenly;
-                            width: 450px;
-                            position: relative;
-                            top: 300px;
-                            text-align: center;
+                //     .cover-layout{
+                //         position: absolute;
+                //         max-width: 450px;
+                //         width: 100%;
+                //         z-index: 1;
+                //     }
+                //     .image{
+                //         max-width: 300px;
+                //         max-height: 300px;
+                //         margin: 37.5px;
+                //         position: relative;
+                //         margin-top: calc(7rem + 3.5vw);
+                //         animation: animationFadeIn 2s ease 1 forwards;
+                //     }
+                //     .text{
+                //         max-width: 450px;
+                //         width: 100%;   
+                //         position: absolute;
+                //         top: 0;
+                //         z-index: 2;
+                //         color: #262b44;
+                //         font-family: "Playfair Display", serif;
+                //         font-weight: bold;
+                //         text-align: center;
+                //         overflow: hidden;
+                //         .title{
+                //             margin-top: 25px;
+                //             .title-one{
+                //                 animation: animationFadeRight 4s ease 1 forwards;
+                //                 margin: 0;
+                //                 margin-right: 125px;
+                //             }
+                //             .title-two{
+                //                 animation: animationFadeLeft 4s ease 1 forwards;
+                //                 margin: 0;
+                //                 margin-left: 100px;
+                //             }
+                //         }
+                //         .name{
+                //             position: relative;
+                //             width: fit-content;
+                //             margin: auto;
+                //             margin-top: 220px;
+                //             .groom{
+                //                 margin: 0 0 -30px 0;
+                //                 animation: animationFadeDown 4s ease 1 forwards;
+                //             }
+                //             .and{
+                //                 text-align: end;
+                //                 margin: 0 -25px 0 0;
+                //                 animation: animationFadeLeft 4s ease 1 forwards;
+                //             }
+                //             .bride{
+                //                 margin: -30px 0 0 0;
+                //                 animation: animationFadeUp 4s ease 1 forwards;
+                //             } 
+                //         }
+                //         .date{
+                //             display: flex;
+                //             justify-content: space-evenly;
+                //             max-width: 450px;
+                //             width: 100%;
+                //             position: relative;
+                //             margin-top: 25px;
                             
-                            .day{
-                                border-top: #262b44 1px solid;
-                                border-bottom: #262b44 1px solid;
-                                padding: 5px 20px;
-                                font-weight: normal;
-                                z-index: 2;
-                                animation: animationFadeRight 4s ease 1 forwards;
-                            }
-                            .month{
-                                border-top: #262b44 1px solid;
-                                border-bottom: #262b44 1px solid;
-                                padding: 5px 20px;
-                                font-weight: normal;
-                                z-index: 2;
-                                animation: animationFadeLeft 4s ease 1 forwards;
-                            }
-                            .year{
-                                font-size: 25px;
-                                z-index: 2;
-                                animation: animationFadeIn 4s ease 1 forwards;
-                            }
-                        }
-                        .visitor{
-                            position: relative;
-                            top: 325px;
-                            text-align: center;
-                            z-index: 2;
-                            animation: animationFadeIn 4s ease 1 forwards;
+                //             .day{
+                //                 border-top: #262b44 1px solid;
+                //                 border-bottom: #262b44 1px solid;
+                //                 padding: 5px 20px;
+                //                 font-weight: normal;
+                //                 z-index: 2;
+                //                 animation: animationFadeRight 4s ease 1 forwards;
+                //             }
+                //             .month{
+                //                 border-top: #262b44 1px solid;
+                //                 border-bottom: #262b44 1px solid;
+                //                 padding: 5px 20px;
+                //                 font-weight: normal;
+                //                 z-index: 2;
+                //                 animation: animationFadeLeft 4s ease 1 forwards;
+                //             }
+                //             .year{
+                //                 font-size: 25px;
+                //                 z-index: 2;
+                //                 animation: animationFadeIn 4s ease 1 forwards;
+                //             }
+                //         }
+                //         .visitor{
+                //             position: relative;
+                //             margin-top: 25px;
+                //             z-index: 2;
+                //             animation: animationFadeIn 4s ease 1 forwards;
         
-                            .respect{
-                                font-weight: normal;
-                                font-size: 11px;
-                                margin-bottom: 5px;
-                            }
-                            .visitor-name{
-                                font-weight: 900;
-                            }
-                            .visitor-address{
-                                font-weight: normal;
-                            }
-                            .apologize{
-                                font-weight: normal;
-                                font-size: 10px;
-                                margin-top: 5px;
-                            }
-                        }
-                    }
-                    button{
-                        cursor: pointer;
-                        position: absolute;
-                        top: 650px;
-                        margin-left: 150px;
-                        background: transparent;
-                        border-radius: 50px;
-                        border: 1px #262b44 solid;
-                        color: #262b44;
-                        padding: 10px 15px;
-                        z-index: 2;
-                        transition: all .3s;
-                        animation: animationFadeIn 4s ease 1 forwards;
-                    }
-                    button:hover{
-                        background: #d7d7c8;
-                        border: 1px #d7d7c8 solid;
-                        color: white;
-                    }
-                }
+                //             .respect{
+                //                 font-weight: normal;
+                //                 font-size: 11px;
+                //                 margin-bottom: 5px;
+                //             }
+                //             .visitor-name{
+                //                 font-weight: 900;
+                //             }
+                //             .visitor-address{
+                //                 font-weight: normal;
+                //             }
+                //             .apologize{
+                //                 font-weight: normal;
+                //                 font-size: 10px;
+                //                 margin-top: 5px;
+                //             }
+                //         }
+                //     }
+                //     button{
+                //         cursor: pointer;
+                //         position: relative;
+                //         width: 50%;
+                //         margin: 0 25%;
+                //         margin-top: 150px;
+                //         background: transparent;
+                //         border-radius: 50px;
+                //         border: 1px #262b44 solid;
+                //         color: #262b44;
+                //         padding: 10px 15px;
+                //         z-index: 1000;
+                //         transition: all .3s;
+                //         animation: animationFadeIn 4s ease 1 forwards;
+                //     }
+                //     button:hover{
+                //         background: #d7d7c8;
+                //         border: 1px #d7d7c8 solid;
+                //         color: white;
+                //     }
+                // }
                 .invitation-content{
                     animation: animationFadeOut .0s ease 1 forwards;
-                    background-image: url(/layout/main.png);
+                    background-image: url(layout/main.png);
                     background-size: contain;
                     background-repeat: repeat-y;
         

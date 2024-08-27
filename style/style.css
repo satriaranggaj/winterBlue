@@ -99,48 +99,57 @@ body #invitation-content #main-container nav.navbar .navbar-item:hover a .nav-li
   opacity: 1;
 }
 body #invitation-content #main-container .cover {
-  width: 450px;
-  max-height: 700px;
+  max-width: 450px;
+  width: 100%;
+  min-height: 700px;
+  overflow: hidden;
 }
 body #invitation-content #main-container .cover .cover-layout {
   position: absolute;
-  width: 450px;
-  max-height: 700px;
+  max-width: 450px;
+  width: 100%;
   z-index: 1;
 }
 body #invitation-content #main-container .cover .image {
-  width: 300px;
-  height: 300px;
-  top: 140px;
-  margin: 0 75px;
-  position: absolute;
+  max-width: 70%;
+  margin: 0 15%;
+  position: relative;
+  margin-top: calc(6rem + 3vw);
   animation: animationFadeIn 2s ease 1 forwards;
 }
 body #invitation-content #main-container .cover .text {
-  width: 450px;
-  height: 100%;
+  max-width: 450px;
+  width: 100%;
   position: absolute;
   top: 0;
   z-index: 2;
   color: #262b44;
   font-family: "Playfair Display", serif;
   font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+}
+body #invitation-content #main-container .cover .text .title {
+  margin-top: 8.5%;
 }
 body #invitation-content #main-container .cover .text .title .title-one {
-  margin: 35px 0 0 75px;
   animation: animationFadeRight 4s ease 1 forwards;
+  margin: 0;
+  margin-right: 24%;
+  font-size: calc(1.5rem + 0.5vw);
 }
 body #invitation-content #main-container .cover .text .title .title-two {
-  margin: 0 0 0 160px;
   animation: animationFadeLeft 4s ease 1 forwards;
+  margin: 0;
+  margin-left: 17%;
+  font-size: calc(1.5rem + 0.5vw);
 }
 body #invitation-content #main-container .cover .text .name {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  top: 265px;
-  text-align: center;
+  margin-top: 62.5%;
 }
 body #invitation-content #main-container .cover .text .name .groom {
   margin: 0 0 -30px 0;
@@ -158,10 +167,10 @@ body #invitation-content #main-container .cover .text .name .bride {
 body #invitation-content #main-container .cover .text .date {
   display: flex;
   justify-content: space-evenly;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   position: relative;
-  top: 300px;
-  text-align: center;
+  margin-top: 10%;
 }
 body #invitation-content #main-container .cover .text .date .day {
   border-top: #262b44 1px solid;
@@ -186,8 +195,7 @@ body #invitation-content #main-container .cover .text .date .year {
 }
 body #invitation-content #main-container .cover .text .visitor {
   position: relative;
-  top: 325px;
-  text-align: center;
+  margin-top: 5%;
   z-index: 2;
   animation: animationFadeIn 4s ease 1 forwards;
 }
@@ -209,15 +217,16 @@ body #invitation-content #main-container .cover .text .visitor .apologize {
 }
 body #invitation-content #main-container .cover button {
   cursor: pointer;
-  position: absolute;
-  top: 650px;
-  margin-left: 150px;
+  position: relative;
+  width: 50%;
+  margin: 0 25%;
+  margin-top: calc(13.5rem + 0.5vw);
   background: transparent;
   border-radius: 50px;
   border: 1px #262b44 solid;
   color: #262b44;
   padding: 10px 15px;
-  z-index: 2;
+  z-index: 1000;
   transition: all 0.3s;
   animation: animationFadeIn 4s ease 1 forwards;
 }
@@ -228,7 +237,7 @@ body #invitation-content #main-container .cover button:hover {
 }
 body #invitation-content #main-container .invitation-content {
   animation: animationFadeOut 0s ease 1 forwards;
-  background-image: url(/layout/main.png);
+  background-image: url(layout/main.png);
   background-size: contain;
   background-repeat: repeat-y;
 }
@@ -1014,137 +1023,9 @@ body #invitation-content #main-container .navbar.active {
     transform: translateY(0);
     opacity: 1;
   }
-  body #invitation-content #main-container .cover {
-    width: 450px;
-    max-height: 700px;
-  }
-  body #invitation-content #main-container .cover .cover-layout {
-    position: absolute;
-    width: 450px;
-    max-height: 700px;
-    z-index: 1;
-  }
-  body #invitation-content #main-container .cover .image {
-    width: 300px;
-    height: 300px;
-    top: 140px;
-    margin: 0 75px;
-    position: absolute;
-    animation: animationFadeIn 2s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text {
-    width: 450px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    color: #262b44;
-    font-family: "Playfair Display", serif;
-    font-weight: bold;
-  }
-  body #invitation-content #main-container .cover .text .title .title-one {
-    margin: 35px 0 0 75px;
-    animation: animationFadeRight 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text .title .title-two {
-    margin: 0 0 0 160px;
-    animation: animationFadeLeft 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text .name {
-    position: relative;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: auto;
-    top: 265px;
-    text-align: center;
-  }
-  body #invitation-content #main-container .cover .text .name .groom {
-    margin: 0 0 -30px 0;
-    animation: animationFadeDown 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text .name .and {
-    text-align: end;
-    margin: 0 -25px 0 0;
-    animation: animationFadeLeft 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text .name .bride {
-    margin: -30px 0 0 0;
-    animation: animationFadeUp 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text .date {
-    display: flex;
-    justify-content: space-evenly;
-    width: 450px;
-    position: relative;
-    top: 300px;
-    text-align: center;
-  }
-  body #invitation-content #main-container .cover .text .date .day {
-    border-top: #262b44 1px solid;
-    border-bottom: #262b44 1px solid;
-    padding: 5px 20px;
-    font-weight: normal;
-    z-index: 2;
-    animation: animationFadeRight 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text .date .month {
-    border-top: #262b44 1px solid;
-    border-bottom: #262b44 1px solid;
-    padding: 5px 20px;
-    font-weight: normal;
-    z-index: 2;
-    animation: animationFadeLeft 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text .date .year {
-    font-size: 25px;
-    z-index: 2;
-    animation: animationFadeIn 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text .visitor {
-    position: relative;
-    top: 325px;
-    text-align: center;
-    z-index: 2;
-    animation: animationFadeIn 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover .text .visitor .respect {
-    font-weight: normal;
-    font-size: 11px;
-    margin-bottom: 5px;
-  }
-  body #invitation-content #main-container .cover .text .visitor .visitor-name {
-    font-weight: 900;
-  }
-  body #invitation-content #main-container .cover .text .visitor .visitor-address {
-    font-weight: normal;
-  }
-  body #invitation-content #main-container .cover .text .visitor .apologize {
-    font-weight: normal;
-    font-size: 10px;
-    margin-top: 5px;
-  }
-  body #invitation-content #main-container .cover button {
-    cursor: pointer;
-    position: absolute;
-    top: 650px;
-    margin-left: 150px;
-    background: transparent;
-    border-radius: 50px;
-    border: 1px #262b44 solid;
-    color: #262b44;
-    padding: 10px 15px;
-    z-index: 2;
-    transition: all 0.3s;
-    animation: animationFadeIn 4s ease 1 forwards;
-  }
-  body #invitation-content #main-container .cover button:hover {
-    background: #d7d7c8;
-    border: 1px #d7d7c8 solid;
-    color: white;
-  }
   body #invitation-content #main-container .invitation-content {
     animation: animationFadeOut 0s ease 1 forwards;
-    background-image: url(/layout/main.png);
+    background-image: url(layout/main.png);
     background-size: contain;
     background-repeat: repeat-y;
   }
