@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Green</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/libraries/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <div id="invitation-content">
+        <div id="main-image">
+            <canvas id="myCanvas">
+            </canvas>
+            <img src="img/gallery/beautiful-couple-having-their-wedding-beach (1).jpg" alt="main-image">
+        </div>
+        <div id="main-container">
+        <nav id="navbar" class="navbar">
+            <div class="navbar-item">
+                <a href="#" class="nav-link">
+                    <div class="nav-link-content">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <p class="nav-text home-text">Home</p>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a href="#" class="nav-link">
+                    <div class="nav-link-content">
+                        <i class="fa-solid fa-heart"></i>
+                        <p class="nav-text couple-text">Couple</p>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a href="#" class="nav-link">
+                    <div class="nav-link-content">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p class="nav-text date-text">Date</p>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a href="#" class="nav-link">
+                    <div class="nav-link-content">
+                        <i class="fa-solid fa-list-check"></i>
+                        <p class="nav-text rundown-text">Rundown</p>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a href="#" class="nav-link">
+                    <div class="nav-link-content">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p class="nav-text location-text">Location</p>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <div id="cover" class="cover active">
+            <img class="cover-layout" src="/layout/cover.png" alt="cover-layout">
+            <img class="image" src="/img/beautiful-couple-having-their-wedding-beach (2).jpg" alt="image">
+            <div class="text">
+                <div class="title">
+                    <h1 class="title-one">UNDANGAN</h1>
+                    <h1 class="title-two">PERNIKAHAN</h1>
+                </div>
+                <div class="name">
+                    <h1 class="groom">John</h1>
+                    <h1 class="and">&</h1>
+                    <h1 class="bride">Jane</h1>
+                </div>
+                <div class="date">
+                    <div class="day">
+                        11
+                    </div>
+                    <div class="year">
+                        2024
+                    </div>
+                    <div class="month">
+                        08
+                    </div>
+                </div>
+                <div class="visitor">
+                    <div class="respect">
+                        Bapak/i Yang Terhormat
+                    </div>
+                    <div class="visitor-name">
+                        John
+                    </div>
+                    <div class="visitor-address">
+                        Jakarta
+                    </div>
+                    <div class="apologize">
+                        *mohon maaf apabila ada kesalahan penulisan nama dan gelar
+                    </div>
+                </div>
+            </div>
+            <button onclick="buka()">
+                BUKA UNDANGAN
+            </button>
+        </div>
+        <div class="invitation-content">
+            <div id="quotes">
+                <img src="/layout/quotes.png" alt="quotes-layout" class="quotes-layout">
+                <img src="/img/beautiful-couple-having-their-wedding-beach (1).jpg" alt="quotes-image" class="quotes-image">
+                <div class="text">
+                    <div class="arab">
+                        <b>
+                            وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+                        </b>
+                    </div>
+                    <div class="terjemah">
+                        Artinya: “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir.” 
+                        <br><br>
+                        (QS. Ar-Rum: 21)
+                    </div>
+                </div>
+            </div>
+            <div id="couple">
+                <div class="title">
+                    <h1>Pernikahan</h1>
+                </div>
+                <div class="brides">
+                    <div class="groom">
+                        <div class="image">
+                            <div class="photo">
+                                <img src="/img/groom.jpg" alt="groom">
+                            </div>
+                            <div class="frame">
+                                <img src="/layout/frame.png" alt="frame">
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="name">
+                                <h1>John Doe</h1>
+                            </div>
+                            <div class="child-of">
+                                <b>
+                                    <p>Putra Dari</p>
+                                </b>
+                                <p>Bapak Samuel dan</p>
+                                <p>Ibu Dzubaedah</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="and">
+                        <img src="/layout/leaf-left.png" alt="shape">
+                        <p>&</p>
+                        <img src="/layout/leaf-right.png" alt="shape">
+                    </h1>
+                    <div class="bride">
+                        <div class="image">
+                            <div class="photo">
+                                <img src="/img/bride.jpg" alt="groom">
+                            </div>
+                            <div class="frame">
+                                <img src="/layout/frame2.png" alt="frame">
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="name">
+                                <h1>Jane Doe</h1>
+                            </div>
+                            <div class="child-of">
+                                <b>
+                                    <p>Putri Dari</p>
+                                </b>
+                                <p>Bapak Ucluk dan</p>
+                                <p>Ibu Jamilah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gallery">
+                <div class="text">
+                    <div class="title">
+                        <h1>Momen Berharga</h1>
+                    </div>
+                    <div class="fill">
+                        <p>
+                            “Menciptakan kenangan adalah anugerah yang tak ternilai harganya. Kenangan bertahan seumur hidup; benda hanya bertahan dalam waktu singkat.”
+                        </p>
+                    </div>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/CGoxTMkNbmQ?si=g3eX-QMCidYnN4Xh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="photo">
+                    <img src="/img/gallery/beautiful-couple-having-their-wedding-beach (1).jpg" alt="gallery">
+                    <img src="/img/gallery/beautiful-couple-having-their-wedding-beach (2).jpg" alt="gallery">
+                    <img src="/img/gallery/beautiful-couple-having-their-wedding-beach.jpg" alt="gallery">
+                    <img src="/img/gallery/beautiful-couple-having-their-wedding-beach (3).jpg" alt="gallery">
+                    <img src="/img/gallery/beautiful-couple-having-their-wedding-beach (8).jpg" alt="gallery">
+                    <img src="/img/gallery/beautiful-couple-having-their-wedding-beach (5).jpg" alt="gallery">
+                    <img src="/img/gallery/beautiful-couple-having-their-wedding-beach (6).jpg" alt="gallery">
+                    <img src="/img/gallery/beautiful-couple-having-their-wedding-beach (7).jpg" alt="gallery">
+                    <img src="/img/gallery/beautiful-couple-having-their-wedding-beach (4).jpg" alt="gallery">
+                </div>
+            </div>
+            <div id="countdown">
+                <div class="play">
+                    <div class="title">
+                        <h4>Acara Akan DiSelenggarakan :</h4>
+                    </div>
+                    <div class="time">
+                        <span>
+                            <div id="days" class="times">00</div>
+                            <div class="text">Hari</div>
+                        </span>
+                        <span>
+                            <div id="hours" class="times">00</div>
+                            <div class="text">Jam</div>
+                        </span>
+                        <span>
+                            <div id="minutes" class="times">00</div>
+                            <div class="text">Menit</div>
+                        </span>
+                        <span>
+                            <div id="seconds" class="times">00</div>
+                            <div class="text">Detik</div>
+                        </span>
+                    </div>
+                    <div class="tanggal">
+                        <p>Sabtu, 31 Agustus 2024</p>
+                    </div>
+                    <div class="buttons">
+                        <button id="addToCalendar"><i class="fa-regular fa-calendar-xmark"></i> Simpan Acara ke Kalender</button>
+                        <button id="activateNotification"><i class="fa-regular fa-bell"></i> Aktifkan Notifikasi Acara</button>
+                    </div>
+                </div>
+                <div class="done" style="display: none;">
+                    <h2>Acara Telah Selesai</h2>
+                </div>
+            </div>
+            <div id="rundown">
+                <div class="title">
+                    <h1>Rundown</h1>
+                </div>
+                <div class="first">
+                    <div class="title">
+                        <h2>Akad Nikah</h2>
+                    </div>
+                    <div class="date">
+                        <i class="fa-regular fa-calendar-xmark"></i>
+                        <p>Sabtu, 31 Agustus 2024</p>
+                    </div>
+                    <div class="time">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>09.00 - Selesai</p>
+                    </div>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Kranggan Lembur, RT 001/005 Jatirangga, Jatisampurna, Kota Bekasi, Jawa Barat, Indonesia - 17434.</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/yiNJFumKkof45Rs88" target="_blank">
+                        <button>Lihat Lokasi</button>
+                    </a>
+                </div>
+                <div class="second">
+                    <div class="title">
+                        <h2>Resepsi</h2>
+                    </div>
+                    <div class="date">
+                        <i class="fa-regular fa-calendar-xmark"></i>
+                        <p>Sabtu, 31 Agustus 2024</p>
+                    </div>
+                    <div class="time">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>10.00 - Selesai</p>
+                    </div>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Kranggan Lembur, RT 001/005 Jatirangga, Jatisampurna, Kota Bekasi, Jawa Barat, Indonesia - 17434.</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/yiNJFumKkof45Rs88" target="_blank">
+                        <button>Lihat Lokasi</button>
+                    </a>
+                </div>
+                <div class="third">
+                    <div class="title">
+                        <h2>Ngunduh Mantu</h2>
+                    </div>
+                    <div class="date">
+                        <i class="fa-regular fa-calendar-xmark"></i>
+                        <p>Minggu, 1 September 2024</p>
+                    </div>
+                    <div class="time">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>10.00 - Selesai</p>
+                    </div>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Jl. Manggis - Kranggan Permai, RT 002/016 Jatisampurna, Jatisampurna, Kota Bekasi, Jawa Barat, Indonesia.</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/yiNJFumKkof45Rs88" target="_blank">
+                        <button>Lihat Lokasi</button>
+                    </a>                    
+                </div>
+            </div>
+            <div id="location">
+                <div class="container">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2143963492836!2d106.9342617!3d-6.366294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993428d3c5d9f%3A0x2f14cdfae737d0c2!2sJl.%20Lembur%202%2C%20Jatirangga%2C%20Kec.%20Jatisampurna%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017434!5e0!3m2!1sid!2sid!4v1724615533331!5m2!1sid!2sid" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Kranggan Lembur, RT 001/005 Jatirangga, Jatisampurna, Kota Bekasi, Jawa Barat, Indonesia - 17434.</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/yiNJFumKkof45Rs88" target="_blank">
+                        <button>Lihat Lokasi</button>
+                    </a>
+                </div>
+            </div>
+            <div id="invited">
+                <div class="title">
+                    <h4>Turut Mengundang :</h4>
+                </div>
+                <div class="content">
+                    <p>Keluarga Besar Bapak Ucluk</p>
+                    <p>Keluarga Besar Bapak Samuel</p>
+                    <p>Alumni TK Belajar Mandiri Ang 2010</p>
+                    <p>Alumni SDN Jatirangga 4 Ang 2015</p>
+                    <p>Alumni MTs N 30 Jakarta Ang 2018</p>
+                    <p>Alumni SMK N 4 Kota Bekasi Ang 2021</p>
+                </div>
+            </div>
+            <div id="live-streaming">
+                <div class="container">
+                    <div class="title">
+                        <h1>Live Streaming</h1>
+                    </div>
+                    <div class="content">
+                        <p>Silahkan untuk join live streaming. *kata-kata/catatan live streaming bisa di edit di menu live streaming</p>
+                    </div>
+                    <a href="https://youtu.be/dQw4w9WgXcQ?si=aMWahklhWoMgSrcR" target="_blank">
+                        <button><i class="fa-solid fa-display"></i> Tonton Live Streaming</button>
+                    </a>
+                </div>
+            </div>
+            <div id="wish">
+                <div class="title">
+                    <h1>Ucapan & Doa</h1>
+                </div>
+                <div class="content">
+                    <div class="wish-card">
+                        <div class="name">
+                            <p>Satria</p>
+                        </div>
+                        <div class="information">
+                            <div class="origin">
+                                <p>Kranggan Lembur</p>
+                            </div>
+                            <div class="dash">
+                                <p>-</p>
+                            </div>
+                            <div class="confirmation">
+                                <p>Hadir</p>
+                            </div>
+                        </div>
+                        <div class="wish">
+                            <p>"Selamat menempuh hidup baru, semoga samawa."</p>
+                        </div>
+                    </div>
+                    <div class="wish-card">
+                        <div class="name">
+                            <p>Satria</p>
+                        </div>
+                        <div class="information">
+                            <div class="origin">
+                                <p>Kranggan Lembur</p>
+                            </div>
+                            <div class="dash">
+                                <p>-</p>
+                            </div>
+                            <div class="confirmation">
+                                <p>Hadir</p>
+                            </div>
+                        </div>
+                        <div class="wish">
+                            <p>"Selamat menempuh hidup baru, semoga samawa."</p>
+                        </div>
+                    </div>
+                    <div class="wish-card">
+                        <div class="name">
+                            <p>Satria</p>
+                        </div>
+                        <div class="information">
+                            <div class="origin">
+                                <p>Kranggan Lembur</p>
+                            </div>
+                            <div class="dash">
+                                <p>-</p>
+                            </div>
+                            <div class="confirmation">
+                                <p>Hadir</p>
+                            </div>
+                        </div>
+                        <div class="wish">
+                            <p>"Selamat menempuh hidup baru, semoga samawa."</p>
+                        </div>
+                    </div>
+                    <div class="wish-card">
+                        <div class="name">
+                            <p>Satria</p>
+                        </div>
+                        <div class="information">
+                            <div class="origin">
+                                <p>Kranggan Lembur</p>
+                            </div>
+                            <div class="dash">
+                                <p>-</p>
+                            </div>
+                            <div class="confirmation">
+                                <p>Hadir</p>
+                            </div>
+                        </div>
+                        <div class="wish">
+                            <p>"Selamat menempuh hidup baru, semoga samawa."</p>
+                        </div>
+                    </div>
+                    <div class="wish-card">
+                        <div class="name">
+                            <p>Satria</p>
+                        </div>
+                        <div class="information">
+                            <div class="origin">
+                                <p>Kranggan Lembur</p>
+                            </div>
+                            <div class="dash">
+                                <p>-</p>
+                            </div>
+                            <div class="confirmation">
+                                <p>Hadir</p>
+                            </div>
+                        </div>
+                        <div class="wish">
+                            <p>"Selamat menempuh hidup baru, semoga samawa."</p>
+                        </div>
+                    </div>
+                    <div class="wish-card">
+                        <div class="name">
+                            <p>Satria</p>
+                        </div>
+                        <div class="information">
+                            <div class="origin">
+                                <p>Kranggan Lembur</p>
+                            </div>
+                            <div class="dash">
+                                <p>-</p>
+                            </div>
+                            <div class="confirmation">
+                                <p>Hadir</p>
+                            </div>
+                        </div>
+                        <div class="wish">
+                            <p>"Selamat menempuh hidup baru, semoga samawa."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wish-form">
+                    <div class="title-form">
+                        <h4>Kirim Ucapan : </h4>
+                    </div>
+                    <form action="" method="post">
+                        <input class="name form-item" type="text" id="name" name="name" placeholder="Nama Lengkap" required>
+                        <input class="addres form-item" type="text" id="addres" name="addres" placeholder="Alamat" required>
+                        <select class="presensi form-item" name="presensi">
+                            <option selected disabled>Konfirmasi Kehadiran</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="TidakBisaHadir">Tidak Bisa Hadir</option>
+                        </select>
+                        <textarea class="message form-item" name="message" placeholder="Tuliskan Ucapan Anda"></textarea>
+                        <button class="submit-btn" type="submit">KIRIM SEKARANG</button>
+                    </form>
+                </div>
+            </div>
+            <div id="footer">
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="/script/script.js"></script>
+</body>
+</html>
