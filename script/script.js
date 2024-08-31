@@ -75,6 +75,26 @@ function scheduleNotification() {
     }
 }
 
+function copyAccount(accountId, accountName) {
+  var accountNumberElement = document.getElementById(accountId);
+  var accountNumber = accountNumberElement.textContent;
+
+  // Membuat elemen input sementara untuk menyalin teks
+  var tempInput = document.createElement("input");
+  tempInput.value = accountNumber;
+  document.body.appendChild(tempInput);
+
+  // Memilih teks dan menyalinnya
+  tempInput.select();
+  document.execCommand("copy");
+
+  // Menghapus elemen input sementara
+  document.body.removeChild(tempInput);
+
+  // Menampilkan pesan konfirmasi dengan nama pengguna
+  alert("Nomor rekening " + accountName + " berhasil disalin: " + accountNumber);
+}
+
 var mainCanvas = document.getElementById("myCanvas");
 var mainContext = mainCanvas.getContext('2d');
  

@@ -9,10 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css">
-
+    <!-- Fontawesome -->
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS -->
+    <!-- My Style -->
     <link rel="stylesheet" href="style/style.css">
+    <!-- My Style -->
 </head>
 <body>
     <div id="invitation-content">
@@ -24,7 +29,7 @@
         <div id="main-container">
         <nav id="navbar" class="navbar">
             <div class="navbar-item">
-                <a href="#" class="nav-link">
+                <a href="#quotes" class="nav-link">
                     <div class="nav-link-content">
                         <i class="fa-solid fa-house-chimney"></i>
                         <p class="nav-text home-text">Home</p>
@@ -32,7 +37,7 @@
                 </a>
             </div>
             <div class="navbar-item">
-                <a href="#" class="nav-link">
+                <a href="#couple" class="nav-link">
                     <div class="nav-link-content">
                         <i class="fa-solid fa-heart"></i>
                         <p class="nav-text couple-text">Couple</p>
@@ -40,7 +45,7 @@
                 </a>
             </div>
             <div class="navbar-item">
-                <a href="#" class="nav-link">
+                <a href="#countdown" class="nav-link">
                     <div class="nav-link-content">
                         <i class="fa-solid fa-calendar-days"></i>
                         <p class="nav-text date-text">Date</p>
@@ -48,7 +53,7 @@
                 </a>
             </div>
             <div class="navbar-item">
-                <a href="#" class="nav-link">
+                <a href="#rundown" class="nav-link">
                     <div class="nav-link-content">
                         <i class="fa-solid fa-list-check"></i>
                         <p class="nav-text rundown-text">Rundown</p>
@@ -56,7 +61,7 @@
                 </a>
             </div>
             <div class="navbar-item">
-                <a href="#" class="nav-link">
+                <a href="#location" class="nav-link">
                     <div class="nav-link-content">
                         <i class="fa-solid fa-location-dot"></i>
                         <p class="nav-text location-text">Location</p>
@@ -103,9 +108,13 @@
                     </div>
                 </div>
             </div>
-            <button onclick="buka()">
+
+            <a href="https://youtu.be/xvFZjo5PgG0?si=Kyfj1ijmdKhAHipr" target="_blank">
+                <button>BUKA UNDANGAN</button>
+            </a>
+            <!-- <button onclick="buka()">
                 BUKA UNDANGAN
-            </button>
+            </button> -->
         </div>
         <div class="invitation-content">
             <div id="quotes">
@@ -125,12 +134,12 @@
                 </div>
             </div>
             <div id="couple">
-                <div class="title">
+                <div class="title" data-aos="fade-down" data-aos-offset="1200">
                     <h1>Pernikahan</h1>
                 </div>
                 <div class="brides">
                     <div class="groom">
-                        <div class="image">
+                        <div class="image" data-aos="fade-left" data-aos-offset="1300" data-aos-delay="500">
                             <div class="photo">
                                 <img src="img/groom.jpg" alt="groom">
                             </div>
@@ -138,7 +147,7 @@
                                 <img src="layout/frame.png" alt="frame">
                             </div>
                         </div>
-                        <div class="text">
+                        <div class="text" data-aos="fade-in" data-aos-offset="1300" data-aos-delay="1000">
                             <div class="name">
                                 <h1>John Doe</h1>
                             </div>
@@ -157,7 +166,7 @@
                         <img src="layout/leaf-right.png" alt="shape">
                     </h1>
                     <div class="bride">
-                        <div class="image">
+                        <div class="image" data-aos="fade-right" data-aos-offset="1800" data-aos-delay="500">
                             <div class="photo">
                                 <img src="img/bride.jpg" alt="groom">
                             </div>
@@ -165,7 +174,7 @@
                                 <img src="layout/frame2.png" alt="frame">
                             </div>
                         </div>
-                        <div class="text">
+                        <div class="text" data-aos="fade-in" data-aos-offset="1800">
                             <div class="name">
                                 <h1>Jane Doe</h1>
                             </div>
@@ -182,70 +191,88 @@
             </div>
             <div id="gallery">
                 <div class="text">
-                    <div class="title">
+                    <div class="title" data-aos="fade-down" data-aos-offset="2500">
                         <h1>Momen Berharga</h1>
                     </div>
-                    <div class="fill">
+                    <div class="fill" data-aos="fade-in" data-aos-offset="2500" data-aos-delay="100">
                         <p>
                             “Menciptakan kenangan adalah anugerah yang tak ternilai harganya. Kenangan bertahan seumur hidup; benda hanya bertahan dalam waktu singkat.”
                         </p>
                     </div>
                 </div>
-                <div class="video">
+                <div class="video" data-aos="fade-in" data-aos-offset="2500" data-aos-delay="200">
                     <iframe src="https://www.youtube.com/embed/CGoxTMkNbmQ?si=g3eX-QMCidYnN4Xh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div class="photo">
-                    <img src="img/gallery/beautiful-couple-having-their-wedding-beach (1).jpg" alt="gallery">
-                    <img src="img/gallery/beautiful-couple-having-their-wedding-beach (2).jpg" alt="gallery">
-                    <img src="img/gallery/beautiful-couple-having-their-wedding-beach.jpg" alt="gallery">
-                    <img src="img/gallery/beautiful-couple-having-their-wedding-beach (3).jpg" alt="gallery">
-                    <img src="img/gallery/beautiful-couple-having-their-wedding-beach (8).jpg" alt="gallery">
-                    <img src="img/gallery/beautiful-couple-having-their-wedding-beach (5).jpg" alt="gallery">
-                    <img src="img/gallery/beautiful-couple-having-their-wedding-beach (6).jpg" alt="gallery">
-                    <img src="img/gallery/beautiful-couple-having-their-wedding-beach (7).jpg" alt="gallery">
-                    <img src="img/gallery/beautiful-couple-having-their-wedding-beach (4).jpg" alt="gallery">
+                <div class="photos">
+                    <div class="gallery-photo">
+                        <img src="img/gallery/beautiful-couple-having-their-wedding-beach (1).jpg" alt="gallery">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="img/gallery/beautiful-couple-having-their-wedding-beach (2).jpg" alt="gallery">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="img/gallery/beautiful-couple-having-their-wedding-beach.jpg" alt="gallery">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="img/gallery/beautiful-couple-having-their-wedding-beach (3).jpg" alt="gallery">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="img/gallery/beautiful-couple-having-their-wedding-beach (8).jpg" alt="gallery">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="img/gallery/beautiful-couple-having-their-wedding-beach (5).jpg" alt="gallery">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="img/gallery/beautiful-couple-having-their-wedding-beach (6).jpg" alt="gallery">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="img/gallery/beautiful-couple-having-their-wedding-beach (7).jpg" alt="gallery">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="img/gallery/beautiful-couple-having-their-wedding-beach (4).jpg" alt="gallery">
+                    </div>
                 </div>
             </div>
             <div id="countdown">
                 <div class="play">
-                    <div class="title">
+                    <div class="title" data-aos="fade-down" data-aos-offset="3500">
                         <h4>Acara Akan DiSelenggarakan :</h4>
                     </div>
                     <div class="time">
-                        <span>
+                        <span data-aos="zoom-in" data-aos-offset="3500" data-aos-duration="1000" data-aos-delay="100">
                             <div id="days" class="times">00</div>
                             <div class="text">Hari</div>
                         </span>
-                        <span>
+                        <span data-aos="zoom-in" data-aos-offset="3500" data-aos-duration="1000" data-aos-delay="200">
                             <div id="hours" class="times">00</div>
                             <div class="text">Jam</div>
                         </span>
-                        <span>
+                        <span data-aos="zoom-in" data-aos-offset="3500" data-aos-duration="1000" data-aos-delay="300">
                             <div id="minutes" class="times">00</div>
                             <div class="text">Menit</div>
                         </span>
-                        <span>
+                        <span data-aos="zoom-in" data-aos-offset="3500" data-aos-duration="1000" data-aos-delay="400">
                             <div id="seconds" class="times">00</div>
                             <div class="text">Detik</div>
                         </span>
                     </div>
-                    <div class="tanggal">
+                    <div class="tanggal" data-aos="fade-in" data-aos-offset="3500" data-aos-duration="1000" data-aos-delay="500">
                         <p>Sabtu, 31 Agustus 2024</p>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-down" data-aos-offset="3600" data-aos-duration="1000">
                         <button id="addToCalendar"><i class="fa-regular fa-calendar-xmark"></i> Simpan Acara ke Kalender</button>
                         <button id="activateNotification"><i class="fa-regular fa-bell"></i> Aktifkan Notifikasi Acara</button>
                     </div>
                 </div>
-                <div class="done" style="display: none;">
+                <div class="done" style="display: none;" data-aos="fade-down" data-aos-offset="3500">
                     <h2>Acara Telah Selesai</h2>
                 </div>
             </div>
             <div id="rundown">
-                <div class="title">
+                <div class="title" data-aos="fade-down" data-aos-offset="3800">
                     <h1>Rundown</h1>
                 </div>
-                <div class="first">
+                <div class="first" data-aos="fade-right" data-aos-offset="3900" data-aos-delay="500">
                     <div class="title">
                         <h2>Akad Nikah</h2>
                     </div>
@@ -265,7 +292,7 @@
                         <button>Lihat Lokasi</button>
                     </a>
                 </div>
-                <div class="second">
+                <div class="second" data-aos="fade-left" data-aos-offset="4100" data-aos-delay="500">
                     <div class="title">
                         <h2>Resepsi</h2>
                     </div>
@@ -285,7 +312,7 @@
                         <button>Lihat Lokasi</button>
                     </a>
                 </div>
-                <div class="third">
+                <div class="third" data-aos="fade-right" data-aos-offset="4300" data-aos-delay="500">
                     <div class="title">
                         <h2>Ngunduh Mantu</h2>
                     </div>
@@ -308,20 +335,20 @@
             </div>
             <div id="location">
                 <div class="container">
-                    <div class="map">
+                    <div class="map" data-aos="fade-in" data-aos-offset="5200">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2143963492836!2d106.9342617!3d-6.366294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993428d3c5d9f%3A0x2f14cdfae737d0c2!2sJl.%20Lembur%202%2C%20Jatirangga%2C%20Kec.%20Jatisampurna%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017434!5e0!3m2!1sid!2sid!4v1724615533331!5m2!1sid!2sid" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="address">
+                    <div class="address" data-aos="fade-up" data-aos-offset="5200" data-aos-delay="1000">
                         <i class="fa-solid fa-location-dot"></i>
                         <p>Kranggan Lembur, RT 001/005 Jatirangga, Jatisampurna, Kota Bekasi, Jawa Barat, Indonesia - 17434.</p>
                     </div>
-                    <a href="https://maps.app.goo.gl/yiNJFumKkof45Rs88" target="_blank">
+                    <a data-aos="fade-down" data-aos-offset="5200" data-aos-delay="2000" href="https://maps.app.goo.gl/yiNJFumKkof45Rs88" target="_blank">
                         <button>Lihat Lokasi</button>
                     </a>
                 </div>
             </div>
             <div id="invited">
-                <div class="title">
+                <div class="title" data-aos="fade-down" data-aos-offset="5500">
                     <h4>Turut Mengundang :</h4>
                 </div>
                 <div class="content">
@@ -334,7 +361,7 @@
                 </div>
             </div>
             <div id="live-streaming">
-                <div class="container">
+                <div class="container" data-aos="zoom-in" data-aos-offset="6200">
                     <div class="title">
                         <h1>Live Streaming</h1>
                     </div>
@@ -346,8 +373,44 @@
                     </a>
                 </div>
             </div>
+            <div id="envelope">
+                <div class="title" data-aos="fade-down" data-aos-offset="6700">
+                    <h1>Kirim Hadiah</h1>
+                </div>
+                <div class="text" data-aos="fade-in" data-aos-offset="6700" data-aos-delay="500">
+                    <p>
+                      Doa Restu Anda merupakan
+                      karunia yang sangat berarti bagi kami.
+                    </p>
+                    <p>
+                      Dan jika memberi adalah ungkapan tanda kasih
+                      Anda, Anda dapat memberi kado secara cashless.
+                    </p>
+                </div>
+                <div class="accounts">
+                    <div class="account" data-aos="fade-right" data-aos-offset="6800">
+                        <p>BANK BCA <br> A/N John Doe</p>
+                        <div class="number">
+                            <a href="#envelope" class="copy-account" onclick="copyAccount('account-number-1', 'John Doe')">
+                                <i class="fa-regular fa-copy"></i>
+                            </a>
+                            <p id="account-number-1">123456789</p>
+                        </div>
+                    </div>
+                    <div class="account" data-aos="fade-left" data-aos-offset="6800">
+                        <p>BANK BCA <br> A/N Jane Doe</p>
+                        <div class="number">
+                            <a href="#envelope" class="copy-account" onclick="copyAccount('account-number-2', 'Jane Doe')">
+                                <i class="fa-regular fa-copy"></i>
+                            </a>
+                            <p id="account-number-2">987654321</p>
+                        </div>
+                    </div>
+                </div>
+                                
+            </div>
             <div id="wish">
-                <div class="title">
+                <div class="title" data-aos="fade-down" data-aos-offset="7000">
                     <h1>Ucapan & Doa</h1>
                 </div>
                 <div class="content">
@@ -466,7 +529,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="wish-form">
+                <div class="wish-form" data-aos="zoom-in" data-aos-offset="7500">
                     <div class="title-form">
                         <h4>Kirim Ucapan : </h4>
                     </div>
@@ -489,6 +552,41 @@
         </div>
     </div>
     </div>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        const galleryPhotos = document.querySelectorAll('.gallery-photo img');
+        const invitedVisitor = document.querySelectorAll('#invited .content p');
+        const wishCard = document.querySelectorAll('#wish .content .wish-card');
+
+        galleryPhotos.forEach((img, i) => {
+            img.dataset.aos = 'flip-left';
+            img.dataset.aosOffset = 3000;
+            img.dataset.aosDelay = i * 100;
+            img.dataset.aosDuration = 1000;
+        }); 
+
+        invitedVisitor.forEach((inv, i) => {
+            inv.dataset.aos = 'zoom-in-up';
+            inv.dataset.aosOffset = 5800;
+            inv.dataset.aosDelay = i * 100;
+            inv.dataset.aosDuration = 1000;
+        });
+
+        wishCard.forEach((wish, i) => {
+            wish.dataset.aos = 'fade-left';
+            wish.dataset.aosOffset = 7200;
+            wish.dataset.aosDelay = i * 500;
+            wish.dataset.aosDuration = 500;
+        });
+
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+    <!-- AOS -->
+    <!-- My Script -->
     <script src="script/script.js"></script>
+    <!-- My Script -->
 </body>
 </html>

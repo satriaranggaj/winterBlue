@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     background-color: #fcfaf5;
@@ -245,7 +248,7 @@ body{
                 }
             }
             .invitation-content{
-                animation: animationFadeOut .0s ease 1 forwards;
+                animation: animationFadeOut 0s ease 1 forwards;
                 background-image: url(../layout/main.png);
                 background-size: contain;
                 background-repeat: repeat-y;
@@ -440,15 +443,19 @@ body{
                             height: 225px;
                         }
                     }
-                    .photo{
+                    .photos{
                         column-count: 3;
                         column-gap: 5px;
     
-                        img{
+                        .gallery-photo{
                             width: 100%;
                             height: auto;
                             break-inside: avoid;
                             transition: transform 0.3s ease-in-out;
+
+                            img{
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -870,6 +877,62 @@ body{
                         }
                     }
                 }
+                #envelope{
+                    margin-top: 50px;
+                    padding: 0 2rem;
+                    .title{
+                        h1{
+                            text-align: center;
+                            font-family: "Playfair Display", serif;
+                            font-weight: bold;
+                            margin-bottom: 2rem;
+                            margin: 0;
+                            color: #262b44;
+                        }
+                    }
+                    .text{
+                        margin-bottom: 50px;
+                        p{
+                            color: #262b44;
+                            font-family: "Poppins", sans-serif;
+                            font-size: calc(.7rem + .2vw);
+
+                        }
+                    }
+                    .accounts{
+                        .account{
+                            background-color: #6C6C4C;
+                            color: #fcfaf5;
+                            padding: 1rem 2rem;
+                            margin: 1rem auto;
+                            border-radius: 10px;
+
+                            p{
+                                font-family: "Playfair Display", serif;
+                                margin-bottom: 2rem;
+                                margin: 0;
+                            }
+                            .number{
+                                display: flex;
+                                align-items: center;
+                                margin-top: .5rem;
+                                
+                                a{
+                                    margin: 0;
+                                    margin-right: .5rem;
+                                    font-family: "Poppins", sans-serif;
+                                    font-size: 1rem;
+                                    color: #fcfaf5;
+                                }
+                                p{
+                                    margin: 0;
+                                    font-family: "Poppins", sans-serif;
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
                 #wish{
                     width: 100%;
                     margin-top: 100px;
@@ -978,7 +1041,7 @@ body{
                     }
                 }
                 #footer{
-                    height: 500px;
+                    height: 250px;
                 }
             }
             .cover.active{
@@ -986,12 +1049,136 @@ body{
             }
             .cover.remove-active{
                 animation: animationFadeOut 1s ease 1 forwards;
+                animation-delay: 1s;
+
+                .image{
+                    max-width: 70%;
+                    margin: 0 15%;
+                    position: relative;
+                    margin-top: calc(6rem + 3vw);
+                    animation: animationFadeOut 1s ease 1 forwards;
+                }
+                .text{
+                    max-width: 450px;
+                    width: 100%;   
+                    position: absolute;
+                    top: 0;
+                    z-index: 2;
+                    color: #262b44;
+                    font-family: "Playfair Display", serif;
+                    font-weight: bold;
+                    text-align: center;
+                    overflow: hidden;
+                    .title{
+                        margin-top: 8.5%;
+                        .title-one{
+                            animation: animationFadeRightOut 1s ease 1 forwards;
+                            margin: 0;
+                            margin-right: 24%;
+                            font-size: calc(1.5rem + .5vw);
+                        }
+                        .title-two{
+                            animation: animationFadeLeftOut 1s ease 1 forwards;
+                            margin: 0;
+                            margin-left: 17%;
+                            font-size: calc(1.5rem + .5vw);
+                        }
+                    }
+                    .name{
+                        position: relative;
+                        width: fit-content;
+                        margin: auto;
+                        margin-top: 61.5%;
+                        .groom{
+                            margin: 0 0 -30px 0;
+                            animation: animationFadeDownOut 1s ease 1 forwards;
+                        }
+                        .and{
+                            text-align: end;
+                            margin: 0 -25px 0 0;
+                            animation: animationFadeLeftOut 1s ease 1 forwards;
+                        }
+                        .bride{
+                            margin: -30px 0 0 0;
+                            animation: animationFadeUpOut 1s ease 1 forwards;
+                        } 
+                    }
+                    .date{
+                        display: flex;
+                        justify-content: space-evenly;
+                        max-width: 450px;
+                        width: 100%;
+                        position: relative;
+                        margin-top: 10%;
+                        
+                        .day{
+                            border-top: #262b44 1px solid;
+                            border-bottom: #262b44 1px solid;
+                            padding: 5px 20px;
+                            font-weight: normal;
+                            z-index: 2;
+                            animation: animationFadeRightOut 1s ease 1 forwards;
+                        }
+                        .month{
+                            border-top: #262b44 1px solid;
+                            border-bottom: #262b44 1px solid;
+                            padding: 5px 20px;
+                            font-weight: normal;
+                            z-index: 2;
+                            animation: animationFadeLeftOut 1s ease 1 forwards;
+                        }
+                        .year{
+                            font-size: 25px;
+                            z-index: 2;
+                            animation: animationFadeOut 1s ease 1 forwards;
+                        }
+                    }
+                    .visitor{
+                        position: relative;
+                        margin-top: 5%;
+                        z-index: 2;
+                        animation: animationFadeOut 1s ease 1 forwards;
+    
+                        .respect{
+                            font-weight: normal;
+                            font-size: 11px;
+                            margin-bottom: 5px;
+                        }
+                        .visitor-name{
+                            font-weight: 900;
+                        }
+                        .visitor-address{
+                            font-weight: normal;
+                        }
+                        .apologize{
+                            font-weight: normal;
+                            font-size: 10px;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+                button{
+                    cursor: pointer;
+                    position: relative;
+                    width: 50%;
+                    margin: 0 25%;
+                    margin-top: calc(13.5rem + .5vw);
+                    background: transparent;
+                    border-radius: 50px;
+                    border: 1px #262b44 solid;
+                    color: #262b44;
+                    padding: 10px 15px;
+                    z-index: 1000;
+                    transition: all .3s;
+                    animation: animationFadeOut 1s ease 1 forwards;
+                }
             }
             .invitation-content.active{
-                animation: animationFadeIn 2s ease 1 forwards;
+                animation: animationFadeIn 1s ease 1 forwards;
+                animation-delay: 1s;
             }
             .navbar.active{
-                animation: animationFadeInNavbar 3s ease 1 forwards;
+                animation: animationFadeInNavbar 6s ease 1 forwards;
             }
         }
     }
@@ -1099,755 +1286,6 @@ body{
                         }
                     }
                 }
-                .invitation-content{
-                    animation: animationFadeOut .0s ease 1 forwards;
-                    background-image: url(../layout/main.png);
-                    background-size: contain;
-                    background-repeat: repeat-y;
-        
-                    #quotes{
-                        width: 100%;
-                        height: fit-content;
-                        overflow: hidden;
-                        .quotes-layout{
-                            width: 100%;
-                            max-width: 450px;
-                            position: absolute;
-                            z-index: 1;
-                        }
-                        .quotes-image{
-                            width: 100%;
-                            max-width: 450px;
-                            animation: animationFadeIn 4s ease 1 forwards;
-                        }
-                        .text{
-                            padding: 0 25px;
-                            .arab{
-                                width: 100%;
-                                color: #262b44;
-                                position: relative;
-                                z-index: 2;
-                                margin: 150px 0 25px 0;
-                                text-align: center;
-                                animation: animationFadeDown 4s ease 1 forwards;
-                            }
-                            .terjemah{
-                                font-family: "Poppins", sans-serif;
-                                font-size: calc(.7rem + .2vw);
-                                font-style: italic;
-                                width: 100%;
-                                margin: auto;
-                                color: #262b44;
-                                position: relative;
-                                z-index: 2;
-                                text-align: center;
-                                animation: animationFadeDown 4s ease 1 forwards;
-                            }
-                        }
-                    }
-                    #couple{
-                        position: relative;
-                        z-index: 5;
-                        height: fit-content;
-                        background-color: #6C6C4C;
-                        padding: 25px;
-                        margin-top: 75px;
-                        border-radius: 500px;
-            
-                        .title{
-                            margin-top: 200px;
-                            color: white;
-                            text-align: center;
-                    
-                            h1{
-                                font-weight: bold;
-                                font-family: "Playfair Display", serif;
-                            }
-                        }
-                        .brides{
-                            width: 100%;
-                            margin-top: 100px;
-                            .groom{
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                .image{
-                                    width: 150px;
-                                    .photo{
-                                        position: relative;
-                                        img{
-                                            width: 100%;
-                                            border-radius: 100%;
-                                        }
-                                    }
-                                    .frame{
-                                        position: relative;
-                                        top: -170px;
-                                        left: -15px;
-                                        img{
-                                            width: 130%;
-                                        }
-                                    }
-                                }
-                                .text{
-                                    margin-top: -175px;
-                                    text-align: center;
-                                    .name{
-                                        h1{
-                                            margin-bottom: 5px;
-                                            color: #ECECE4;
-                                            font-family: "Playfair Display", serif;
-                                            font-weight: bold;
-                                        }
-                                    }
-                                    .child-of{
-                                        p{
-                                            margin: 0;
-                                            font-size: calc(.7rem + .2vw);
-                                            font-family: "Poppins", sans-serif;
-                                            color: #ECECE4;
-                                        }
-                                    }
-                                }
-                            }
-                            .and{
-                                width: 100%;
-                                color: white;
-                                font-family: "Playfair Display", serif;
-                                margin: 50px 0;
-                                display: flex;
-                                justify-content: center;
-        
-                                p{
-                                    margin: auto 25px;
-                                }
-                                img{
-                                    width: 200px;
-                                }
-                            }
-                            .bride{
-                                display: flex;
-                                flex-direction: column-reverse;
-                                align-items: center;
-                                margin-top: -25px;
-                                .image{
-                                    width: 150px;
-                                    .photo{
-                                        position: relative;
-                                        img{
-                                            width: 100%;
-                                            border-radius: 100%;
-                                        }
-                                    }
-                                    .frame{
-                                        position: relative;
-                                        top: -170px;
-                                        left: -30px;
-                                        img{
-                                            width: 130%;
-                                        }
-                                    }
-                                }
-                                .text{
-                                    text-align: center;
-                                    margin-bottom: 50px;
-                                    .name{
-                                        h1{
-                                            margin-bottom: 5px;
-                                            color: #ECECE4;
-                                            font-family: "Playfair Display", serif;
-                                            font-weight: bold;
-                                        }
-                                    }
-                                    .child-of{
-                                        p{
-                                            margin: 0;
-                                            font-size: calc(.7rem + .2vw);
-                                            font-family: "Poppins", sans-serif;
-                                            color: #ECECE4;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    #gallery{
-                        width: 100%;
-                        margin-top: 25px;
-        
-                        .text{
-                            text-align: center;
-                            color: #262b44;
-                            padding: 25px;
-            
-                            .title{
-                                font-family: "Playfair Display", serif;
-                                font-weight: bold;
-                            }
-                            .fill{
-                                font-family: "Poppins", sans-serif;
-                                font-size: calc(.7rem + .2vw);
-                            }
-                        }
-                        .video{
-                            iframe{
-                                width: 100%;
-                                height: 225px;
-                            }
-                        }
-                        .photo{
-                            column-count: 3;
-                            column-gap: 5px;
-        
-                            img{
-                                width: 100%;
-                                height: auto;
-                                break-inside: avoid;
-                                transition: transform 0.3s ease-in-out;
-                            }
-                        }
-                    }
-                    #countdown {
-                        margin-top: 50px;
-                        padding: 50px 10px;
-                        text-align: center;
-                        font-family: "Playfair Display", serif;
-                        
-                        .play {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-        
-                            .title h4 {
-                                margin-bottom: 20px;
-                                font-size: 20px;
-                                color: #262b44;
-                            }
-        
-                            .time {
-                                justify-content: center;
-                                align-items: center;
-                                display: flex;
-                                flex-wrap: wrap;
-                                gap: 10px;
-                                font-weight: bold;
-        
-                                span {
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    justify-content: center;
-                                    background: #6C6C4C;
-                                    color: #fcfaf5;
-                                    width: 5rem;
-                                    height: 5rem;
-                                    border-radius: 8px;
-        
-                                    .times{
-                                        font-size: 2rem;
-                                    }
-                                    .text{
-                                        font-size: 1rem;
-                                    }
-                                }
-                            }
-                            .tanggal p {
-                                margin-top: 20px;
-                                font-size: 1rem;
-                                color: #262b44;
-                            }
-                        }
-                        .done {
-                            color: #262b44;
-                        }
-                        .buttons {
-                            margin-top: 20px;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            gap: 10px;
-                            justify-content: center;
-        
-                            button {
-                                padding: 10px 20px;
-                                font-size: 1rem;
-                                background-color: #6C6C4C;
-                                color: white;
-                                border: none;
-                                border-radius: 5px;
-                                cursor: pointer;
-                                transition: background-color 0.3s ease;
-        
-                                i{
-                                    margin-right: 10px;
-                                }
-                            }
-                            button:hover {
-                                background-color: #6c6c4ca2;
-                            }
-                        }
-                    }
-                    #rundown{
-                        .title{
-                            font-family: "Playfair Display", serif;
-                            font-weight: bold;
-                            text-align: center;
-                            color: #262b44;
-                        }
-        
-                        .first{
-                            width: 75%;
-                            margin-top: 75px;
-                            background-color: #6C6C4C;
-                            color: white;
-                            padding: 2rem;
-                            margin-right: auto;
-        
-                            .title h2 {
-                                margin: 0;
-                                margin-bottom: 1rem;
-                                font-size: 20px;
-                                text-align: start;
-                                color: white;
-                                font-weight: bold;
-                            }
-                            .date{
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: .5rem;
-                                
-                                p{
-                                    margin: 0;
-                                    margin-left: .5rem;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            .time{
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: .5rem;
-        
-                                p{
-                                    margin: 0;
-                                    margin-left: .5rem;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            .location{
-                                display: flex;
-                                margin-bottom: .5rem;
-                                
-                                i{
-                                    margin-top: .2rem;
-                                }
-                                p{
-                                    margin: 0;
-                                    margin-left: .5rem;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            button{
-                                cursor: pointer;
-                                margin-top: 1rem;
-                                padding: .5rem 1rem;
-                                font-size: 1rem;
-                                color: #6C6C4C;
-                                background-color: #fcfaf5;
-                                border-radius: 10px;
-                                border: solid 1px #fcfaf5;
-                                transition: .3s all;
-                            }
-                            button:hover{
-                                color: #fcfaf5;
-                                background-color: #6C6C4C;
-                            }
-                        }
-                        .second{
-                            width: 75%;
-                            margin-top: 75px;
-                            background-color: #6C6C4C;
-                            color: white;
-                            padding: 2rem;
-                            text-align: end;
-                            margin-left: auto;
-        
-                            .title h2 {
-                                margin: 0;
-                                margin-bottom: 1rem;
-                                font-size: 20px;
-                                text-align: end;
-                                color: white;
-                                font-weight: bold;
-                            }
-                            .date{
-                                display: flex;
-                                flex-direction: row-reverse;
-                                align-items: center;
-                                margin-bottom: .5rem;
-                                
-                                p{
-                                    margin: 0;
-                                    margin-right: .5rem;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            .time{
-                                display: flex;
-                                flex-direction: row-reverse;
-                                align-items: center;
-                                margin-bottom: .5rem;
-        
-                                p{
-                                    margin: 0;
-                                    margin-right: .5rem;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            .location{
-                                display: flex;
-                                flex-direction: row-reverse;
-                                margin-bottom: .5rem;
-                                
-                                i{
-                                    margin-top: .2rem;
-                                }
-                                p{
-                                    margin: 0;
-                                    margin-right: .5rem;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            button{
-                                cursor: pointer;
-                                margin-top: 1rem;
-                                padding: .5rem 1rem;
-                                font-size: 1rem;
-                                color: #6C6C4C;
-                                background-color: #fcfaf5;
-                                border-radius: 10px;
-                                border: solid 1px #fcfaf5;
-                                transition: .3s all;
-                            }
-                            button:hover{
-                                color: #fcfaf5;
-                                background-color: #6C6C4C;
-                            }
-                        }
-                        .third{
-                            width: 75%;
-                            margin-top: 75px;
-                            background-color: #6C6C4C;
-                            color: white;
-                            padding: 2rem;
-                            margin-right: auto;
-        
-                            .title h2 {
-                                margin: 0;
-                                margin-bottom: 1rem;
-                                font-size: 20px;
-                                text-align: start;
-                                color: white;
-                                font-weight: bold;
-                            }
-                            .date{
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: .5rem;
-                                
-                                p{
-                                    margin: 0;
-                                    margin-left: .5rem;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            .time{
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: .5rem;
-        
-                                p{
-                                    margin: 0;
-                                    margin-left: .5rem;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            .location{
-                                display: flex;
-                                margin-bottom: .5rem;
-                                
-                                i{
-                                    margin-top: .2rem;
-                                }
-                                p{
-                                    margin: 0;
-                                    margin-left: .5rem;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            button{
-                                cursor: pointer;
-                                margin-top: 1rem;
-                                padding: .5rem 1rem;
-                                font-size: 1rem;
-                                color: #6C6C4C;
-                                background-color: #fcfaf5;
-                                border-radius: 10px;
-                                border: solid 1px #fcfaf5;
-                                transition: .3s all;
-                            }
-                            button:hover{
-                                color: #fcfaf5;
-                                background-color: #6C6C4C;
-                            }
-                        }
-                    }
-                    #location{
-                        margin-top: 100px;
-                        padding-bottom: 75px;
-        
-                        .container{
-                            width: 80%;
-                            margin: auto;
-                            padding-bottom: 2rem;
-                            text-align: center;
-                            border: solid 3px #6C6C4C;
-                            overflow: hidden;
-                            .map{
-                                width: 100%;
-                                height: 25rem;
-                                
-        
-                                iframe{
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                            .address{
-                                margin-top: 2rem;
-                                padding: 0 1rem;
-                                font-family: "Poppins", sans-serif;
-                                color: #6C6C4C;
-        
-                                i{
-                                    font-size: calc(1rem + .2vw);  
-                                }
-                                p{
-                                    margin: 0;
-                                    font-size: calc(.7rem + .2vw);
-                                }
-                            }
-                            a{
-                                button{
-                                    cursor: pointer;
-                                    margin: auto;
-                                    margin-top: 1rem;
-                                    padding: .5rem 1rem;
-                                    font-size: 1rem;
-                                    color: #fcfaf5;
-                                    background-color: #6C6C4C;
-                                    border-radius: 10px;
-                                    border: solid 1px #6C6C4C;
-                                    transition: .3s all;
-                                }
-                                button:hover{
-                                    color: #6C6C4C;
-                                    background-color: transparent;
-                                }
-                            }
-                        }
-                    }
-                    #invited{
-                        text-align: center;
-                        color: #262b44;
-        
-                        .title h4 {
-                            font-family: "Playfair Display", serif;
-                            margin-bottom: 2rem;
-                            font-size: 20px;
-                        }
-                        .content{
-                            p{
-                                font-family: "Poppins", sans-serif;
-                                font-size: calc(.7rem + .2vw);
-                                margin: .5rem 0;
-                            }
-                        }
-                    }
-                    #live-streaming{
-                        margin-top: 100px;
-                        text-align: center;
-                        
-                        .container{
-                            width: 75%;
-                            padding: 2rem;
-                            margin: auto;
-                            background-color: #6C6C4C;
-        
-                            .title{
-                                h1{
-                                    font-family: "Playfair Display", serif;
-                                    margin-bottom: 2rem;
-                                    margin: 0;
-                                    color: white;
-                                }
-                            }
-                            .content{
-                                p{
-                                    color: #fcfaf5;
-                                    font-family: "Poppins", sans-serif;
-                                    font-size: calc(.7rem + .2vw);
-        
-                                }
-                            }
-                            button{
-                                cursor: pointer;
-                                margin-top: 1rem;
-                                padding: .5rem 1rem;
-                                font-size: 1rem;
-                                color: #6C6C4C;
-                                background-color: #fcfaf5;
-                                border-radius: 10px;
-                                border: solid 1px #fcfaf5;
-                                transition: .3s all;
-                            }
-                            button:hover{
-                                color: #fcfaf5;
-                                background-color: #6C6C4C;
-                            }
-                        }
-                    }
-                    #wish{
-                        width: 100%;
-                        margin-top: 100px;
-                        .title{
-                            font-family: "Playfair Display", serif;
-                            font-weight: bold;
-                            text-align: center;
-                            color: #262b44;
-                            margin-bottom: 50px;
-                        }
-                        .content{
-                            max-height: 500px;
-                            overflow-y: scroll;
-                            .wish-card{
-                                width: 70%;
-                                margin: 1rem auto;
-                                background-color: #6C6C4C;
-                                color: #fcfaf5;
-                                font-family: "Poppins", sans-serif;
-                                padding: 1.5rem 2rem;
-                                border-radius: 10px;
-                                box-shadow: 5px 5px 5px -5px rgb(0, 0, 0);
-        
-                                .name{
-                                    p{
-                                        font-size: calc(.8rem + .2vw);
-                                        margin: 0;
-        
-                                        font-weight: bold;
-                                    }
-                                }
-                                .information{
-                                    display: flex;
-                                    margin-bottom: .5rem;
-        
-                                    .dash{
-                                        margin: 0 5px;
-                                    }
-                                    p{
-                                        margin: 0;
-                                        font-size: calc(.7rem + .2vw);
-                                    }
-                                }
-                                .wish{
-                                    p{
-                                        margin: 0;
-                                        font-size: calc(.7rem + .2vw);
-                                    }
-                                }
-                            }
-                        }
-                        .content::-webkit-scrollbar {
-                            width: 8px; /* Lebar scrollbar */
-                        }
-                        
-                        .content::-webkit-scrollbar-thumb {
-                            background-color: #6C6C4C; /* Warna scrollbar */
-                            border-radius: 10px; /* Membuat ujung scrollbar melengkung */
-                        }
-                        
-                        .content::-webkit-scrollbar-track {
-                            background-color: #fcfaf5; /* Warna track (latar belakang scrollbar) */
-                            border-radius: 10px;
-                        }
-                        .wish-form{
-                            width: 70%;
-                            padding: 1rem 2rem 2rem 2rem;
-                            margin: auto;
-                            margin-top: 50px;
-                            background-color: rgba(214, 214, 199, 0.5);
-                            
-                            .title h4 {
-                                margin: 0;
-                                font-size: 2.5rem;
-                                color: #262b44;
-                            }
-                            .form-item{
-                                margin: .5rem 0;
-                                padding: .5rem;
-                                font-size: .9rem;
-                                border-radius: 5px;
-                                border: 1px solid #6C6C4C;
-                                font-family: "Poppins", sans-serif;
-                                opacity: .5;
-                                background-color: rgba(214, 214, 199, 0.5);
-                            }
-                            button{
-                                cursor: pointer;
-                                margin-top: 1rem;
-                                padding: .5rem 1rem;
-                                font-size: 1rem;
-                                color: #fcfaf5;
-                                background-color: #6C6C4C;
-                                border-radius: 50px;
-                                border: solid 1px #6C6C4C;
-                                transition: .3s all;
-                            }
-                            button:hover{
-                                color: #6C6C4C;
-                                background-color: #fcfaf5;
-                            }
-                            form{
-                                display: flex;
-                                flex-direction: column;
-                            }
-                        }
-                    }
-                    #footer{
-                        height: 500px;
-                    }
-                }
-                .cover.active{
-                    animation: animationFadeIn 1s ease 1 forwards;
-                }
-                .cover.remove-active{
-                    animation: animationFadeOut 1s ease 1 forwards;
-                }
-                .invitation-content.active{
-                    animation: animationFadeIn 2s ease 1 forwards;
-                }
-                .navbar.active{
-                    animation: animationFadeInNavbar 3s ease 1 forwards;
-                }
             }
         }
     }
@@ -1871,6 +1309,25 @@ body{
         transform: translateY(0);
     }
 }
+@keyframes animationFadeUpOut {
+    0%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50%{
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
 @keyframes animationFadeDown {
     0%{
         display: none;
@@ -1888,6 +1345,25 @@ body{
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@keyframes animationFadeDownOut {
+    0%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50%{
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100%);
     }
 }
 @keyframes animationFadeRight {
@@ -1909,6 +1385,25 @@ body{
         transform: translateX(0);
     }
 }
+@keyframes animationFadeRightOut {
+    0%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50%{
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
 @keyframes animationFadeLeft {
     0%{
         display: none;
@@ -1926,6 +1421,25 @@ body{
         visibility: visible;
         opacity: 1;
         transform: translateX(0);
+    }
+}
+@keyframes animationFadeLeftOut {
+    0%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50%{
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(100%);
     }
 }
 @keyframes animationFadeIn {
