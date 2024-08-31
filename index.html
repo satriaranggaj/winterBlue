@@ -557,21 +557,18 @@
 
         galleryPhotos.forEach((img, i) => {
             img.dataset.aos = 'flip-left';
-            img.dataset.aosOffset = 2700;
             img.dataset.aosDelay = i * 100;
             img.dataset.aosDuration = 1000;
         }); 
 
         invitedVisitor.forEach((inv, i) => {
             inv.dataset.aos = 'zoom-in-up';
-            inv.dataset.aosOffset = 5500;
             inv.dataset.aosDelay = i * 100;
             inv.dataset.aosDuration = 1000;
         });
 
         wishCard.forEach((wish, i) => {
             wish.dataset.aos = 'fade-left';
-            wish.dataset.aosOffset = 6900;
             wish.dataset.aosDelay = i * 500;
             wish.dataset.aosDuration = 500;
         });
