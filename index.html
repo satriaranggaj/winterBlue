@@ -406,7 +406,7 @@
                                 
             </div>
             <div id="wish">
-                <div class="title" data-aos="fade-down" data-aos-offset="7000">
+                <div class="title" data-aos="fade-down" data-aos-offset="6800">
                     <h1>Ucapan & Doa</h1>
                 </div>
                 <div class="content">
@@ -571,13 +571,12 @@
 
         wishCard.forEach((wish, i) => {
             wish.dataset.aos = 'fade-left';
-            wish.dataset.aosOffset = 7000;
+            wish.dataset.aosOffset = 6900;
             wish.dataset.aosDelay = i * 500;
             wish.dataset.aosDuration = 500;
         });
 
       AOS.init({
-        once: true,
         duration: 2000,
       });
     </script>
