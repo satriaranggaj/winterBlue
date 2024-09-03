@@ -571,7 +571,8 @@
 
         wishCard.forEach((wish, i) => {
             wish.dataset.aos = 'fade-left';
-            wish.dataset.aosDelay = i * 500;
+            wish.dataset.aosOffset = -300;
+            wish.dataset.aosDelay = i * 100;
             wish.dataset.aosDuration = 500;
         });
 
