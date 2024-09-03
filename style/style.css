@@ -518,7 +518,13 @@ body #invitation-content #main-container .invitation-content #countdown .play .t
   color: #262b44;
 }
 body #invitation-content #main-container .invitation-content #countdown .done {
-  color: #262b44;
+  height: 200px;
+  width: 80%;
+  margin: auto;
+  line-height: 200px;
+  border-radius: 15px;
+  color: #fcfaf5;
+  background-color: #6C6C4C;
 }
 body #invitation-content #main-container .invitation-content #countdown .buttons {
   margin-top: 20px;
