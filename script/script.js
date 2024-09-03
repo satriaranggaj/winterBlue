@@ -2,6 +2,8 @@ const navbar = document.getElementById('navbar');
 const cover = document.querySelector('.cover');
 const content = document.querySelector('.invitation-content');
 const container = document.getElementById('main-container');
+const audio = document.getElementById('myAudio');
+const musicController = document.querySelector('.musicTriger');
 
 function buka() {
     cover.classList.remove('active');
@@ -9,7 +11,44 @@ function buka() {
     navbar.classList.add('active');
     cover.classList.add('remove-active');
     container.style.overflow = 'hidden';
+
+    musicController.classList.add('active');
+    audio.play()
 }
+
+function musicTriger() {
+  if (audio.paused) {
+      audio.play();
+      musicController.classList.remove('paused');
+  } else {
+      audio.pause();
+      musicController.classList.add('paused');
+  }
+}
+
+window.addEventListener('scroll', function() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  let currentSection = '';
+
+  sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+          currentSection = section.getAttribute('id');
+      }
+  });
+
+  navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+      }
+  });
+});
+
 
 // Set target date for the countdown
 // Set target date for the countdown

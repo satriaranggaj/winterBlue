@@ -12,6 +12,27 @@ body #invitation-content {
   margin: auto;
   overflow: hidden;
 }
+body #invitation-content .musicTriger {
+  cursor: pointer;
+  background-color: #d7d7c8;
+  color: #6C6C4C;
+  position: fixed;
+  top: 15px;
+  right: 380px;
+  z-index: 100;
+  border: none;
+  border-radius: 100%;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  animation: animationFadeOut 0s ease 1 forwards;
+}
+body #invitation-content .musicTriger i {
+  animation: animationScale 2s ease infinite;
+}
+body #invitation-content .musicTriger.paused i {
+  animation: none;
+}
 body #invitation-content #main-image {
   max-width: 1070px;
   height: 715px;
@@ -61,10 +82,10 @@ body #invitation-content #main-container nav.navbar {
 body #invitation-content #main-container nav.navbar .navbar-item {
   padding: 10px;
 }
-body #invitation-content #main-container nav.navbar .navbar-item a {
+body #invitation-content #main-container nav.navbar .navbar-item a.nav-link {
   text-decoration: none;
 }
-body #invitation-content #main-container nav.navbar .navbar-item a .nav-link-content {
+body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content {
   text-align: center;
   color: #262b44;
   width: -moz-fit-content;
@@ -76,27 +97,38 @@ body #invitation-content #main-container nav.navbar .navbar-item a .nav-link-con
   border-radius: 10px;
   padding: 10px;
 }
-body #invitation-content #main-container nav.navbar .navbar-item a .nav-link-content i {
+body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content i {
   transition: all 0.3s;
   z-index: 5;
 }
-body #invitation-content #main-container nav.navbar .navbar-item a .nav-link-content .nav-text {
+body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content .nav-text {
   position: absolute;
+  background-color: #6C6C4C;
+  padding: 5px;
+  border-radius: 5px;
   margin-top: 10px;
+  margin-left: 15px;
   transform: translateX(-100%);
   opacity: 0;
   transition: all 0.3s;
   font-family: "Poppins", sans-serif;
   font-size: 11px;
-  background-color: transparent;
-  border-radius: 0;
-  padding: 0;
 }
-body #invitation-content #main-container nav.navbar .navbar-item:hover a .nav-link-content {
+body #invitation-content #main-container nav.navbar .navbar-item a.nav-link.active .nav-link-content {
   color: #fcfaf5;
   background-color: #6C6C4C;
 }
-body #invitation-content #main-container nav.navbar .navbar-item:hover a .nav-link-content .nav-text {
+body #invitation-content #main-container nav.navbar .navbar-item a.nav-link.active .nav-link-content .nav-text {
+  transform: translateY(0);
+  opacity: 1;
+  transform: translateX(0);
+  opacity: 1;
+}
+body #invitation-content #main-container nav.navbar .navbar-item:hover a.nav-link .nav-link-content {
+  color: #fcfaf5;
+  background-color: #6C6C4C;
+}
+body #invitation-content #main-container nav.navbar .navbar-item:hover a.nav-link .nav-link-content .nav-text {
   transform: translateY(0);
   opacity: 1;
   transform: translateX(0);
@@ -1104,6 +1136,9 @@ body #invitation-content #main-container .invitation-content.active {
 body #invitation-content #main-container .navbar.active {
   animation: animationFadeInNavbar 6s ease 1 forwards;
 }
+body #invitation-content .musicTriger.active {
+  animation: animationFadeIn 5s ease 1 forwards;
+}
 
 @media screen and (max-width: 900px) {
   body {
@@ -1168,10 +1203,10 @@ body #invitation-content #main-container .navbar.active {
   body #invitation-content #main-container nav.navbar .navbar-item {
     padding: 10px;
   }
-  body #invitation-content #main-container nav.navbar .navbar-item a {
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link {
     text-decoration: none;
   }
-  body #invitation-content #main-container nav.navbar .navbar-item a .nav-link-content {
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content {
     text-align: center;
     color: #262b44;
     width: -moz-fit-content;
@@ -1182,11 +1217,11 @@ body #invitation-content #main-container .navbar.active {
     flex-direction: column;
     align-items: center;
   }
-  body #invitation-content #main-container nav.navbar .navbar-item a .nav-link-content i {
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content i {
     transition: all 0.3s;
     z-index: 5;
   }
-  body #invitation-content #main-container nav.navbar .navbar-item a .nav-link-content .nav-text {
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content .nav-text {
     position: absolute;
     margin-top: 15px;
     transform: translateY(-100%);
@@ -1194,12 +1229,24 @@ body #invitation-content #main-container .navbar.active {
     transition: all 0.3s;
     font-family: "Poppins", sans-serif;
     font-size: 11px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 0;
   }
-  body #invitation-content #main-container nav.navbar .navbar-item:hover a .nav-link-content {
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link.active .nav-link-content {
     color: #6C6C4C;
     background-color: transparent;
   }
-  body #invitation-content #main-container nav.navbar .navbar-item:hover a .nav-link-content .nav-text {
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link.active .nav-link-content .nav-text {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item:hover a.nav-link .nav-link-content {
+    color: #6C6C4C;
+    background-color: transparent;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item:hover a.nav-link .nav-link-content .nav-text {
     transform: translateY(0);
     opacity: 1;
   }
@@ -1403,5 +1450,16 @@ body #invitation-content #main-container .navbar.active {
     display: none;
     visibility: hidden;
     opacity: 0;
+  }
+}
+@keyframes animationScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=style.css.map */
