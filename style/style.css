@@ -4,7 +4,6 @@ html {
 
 body {
   margin: 0;
-  background-color: #fcfaf5;
 }
 body #invitation-content {
   display: flex;
@@ -14,8 +13,8 @@ body #invitation-content {
 }
 body #invitation-content .musicTriger {
   cursor: pointer;
-  background-color: #d7d7c8;
-  color: #6C6C4C;
+  background-color: #758a70;
+  color: #e4d2a9;
   position: fixed;
   top: 15px;
   left: 15px;
@@ -60,12 +59,13 @@ body #invitation-content #main-container {
   max-width: 450px;
   margin: auto;
   position: absolute;
+  overflow: hidden;
   right: 0;
   z-index: 5;
 }
 body #invitation-content #main-container nav.navbar {
   position: fixed;
-  background-color: #d7d7c8;
+  background-color: #e4d2a9;
   padding: 10px 0;
   border-radius: 50px;
   flex-direction: column;
@@ -73,7 +73,7 @@ body #invitation-content #main-container nav.navbar {
   align-items: center;
   height: 400px;
   width: 50px;
-  z-index: 10;
+  z-index: 100;
   animation: animationFadeOut 0s ease 1 forwards;
   right: 460px;
   bottom: 50%;
@@ -87,7 +87,7 @@ body #invitation-content #main-container nav.navbar .navbar-item a.nav-link {
 }
 body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content {
   text-align: center;
-  color: #262b44;
+  color: #758a70;
   width: -moz-fit-content;
   width: fit-content;
   height: 1rem;
@@ -103,7 +103,7 @@ body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav
 }
 body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content .nav-text {
   position: absolute;
-  background-color: #6C6C4C;
+  background-color: #758a70;
   padding: 5px;
   border-radius: 5px;
   margin-top: 10px;
@@ -115,8 +115,8 @@ body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav
   font-size: 11px;
 }
 body #invitation-content #main-container nav.navbar .navbar-item a.nav-link.active .nav-link-content {
-  color: #fcfaf5;
-  background-color: #6C6C4C;
+  color: #e4d2a9;
+  background-color: #758a70;
 }
 body #invitation-content #main-container nav.navbar .navbar-item a.nav-link.active .nav-link-content .nav-text {
   transform: translateY(0);
@@ -125,8 +125,8 @@ body #invitation-content #main-container nav.navbar .navbar-item a.nav-link.acti
   opacity: 1;
 }
 body #invitation-content #main-container nav.navbar .navbar-item:hover a.nav-link .nav-link-content {
-  color: #fcfaf5;
-  background-color: #6C6C4C;
+  color: #e4d2a9;
+  background-color: #758a70;
 }
 body #invitation-content #main-container nav.navbar .navbar-item:hover a.nav-link .nav-link-content .nav-text {
   transform: translateY(0);
@@ -139,6 +139,9 @@ body #invitation-content #main-container .cover {
   width: 100%;
   min-height: 700px;
   overflow: hidden;
+  background-image: url(../layout/cover-background.png);
+  background-size: cover;
+  background-repeat: repeat-y;
 }
 body #invitation-content #main-container .cover .cover-layout {
   position: absolute;
@@ -146,12 +149,62 @@ body #invitation-content #main-container .cover .cover-layout {
   width: 100%;
   z-index: 1;
 }
-body #invitation-content #main-container .cover .image {
-  max-width: 70%;
-  margin: 0 15%;
+body #invitation-content #main-container .cover .cover-photo {
+  max-width: 45%;
+  height: 200px;
   position: relative;
-  margin-top: calc(6rem + 3vw);
+  margin: auto;
+  margin-top: 25%;
+  z-index: 5;
+}
+body #invitation-content #main-container .cover .cover-photo .image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  border-radius: 100%;
+  animation: animationFadeIn 4s ease 1 forwards;
+}
+body #invitation-content #main-container .cover .cover-photo .frame-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130%;
   animation: animationFadeIn 2s ease 1 forwards;
+}
+body #invitation-content #main-container .cover .flower-one {
+  position: absolute;
+  top: 350px;
+  right: 75%;
+  width: 30%;
+  z-index: 2;
+  animation: animationFadeRight 2s ease 1 forwards;
+}
+body #invitation-content #main-container .cover .flower-two {
+  position: absolute;
+  top: -50px;
+  right: 5px;
+  width: 30%;
+  z-index: 2;
+  animation: animationFadeDown 2s ease 1 forwards;
+}
+body #invitation-content #main-container .cover .flower-three {
+  position: absolute;
+  top: -65px;
+  right: 75%;
+  width: 30%;
+  z-index: 2;
+  animation: animationFadeRightFlower 2s ease 1 forwards;
+}
+body #invitation-content #main-container .cover .flower-four {
+  position: absolute;
+  top: 375px;
+  right: 25px;
+  width: 75%;
+  z-index: 2;
+  animation: animationFadeInFlower 2s ease 1 forwards;
 }
 body #invitation-content #main-container .cover .text {
   max-width: 450px;
@@ -159,24 +212,25 @@ body #invitation-content #main-container .cover .text {
   position: absolute;
   top: 0;
   z-index: 2;
-  color: #262b44;
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
   text-align: center;
   overflow: hidden;
 }
 body #invitation-content #main-container .cover .text .title {
-  margin-top: 8.5%;
+  margin-top: 5%;
+  font-family: "Parisienne", cursive;
+  color: #e4d2a9;
 }
 body #invitation-content #main-container .cover .text .title .title-one {
   animation: animationFadeRight 4s ease 1 forwards;
   margin: 0;
+  margin-bottom: -10px;
   margin-right: 24%;
   font-size: calc(1.5rem + 0.5vw);
 }
 body #invitation-content #main-container .cover .text .title .title-two {
   animation: animationFadeLeft 4s ease 1 forwards;
   margin: 0;
+  margin-top: -10px;
   margin-left: 17%;
   font-size: calc(1.5rem + 0.5vw);
 }
@@ -185,70 +239,80 @@ body #invitation-content #main-container .cover .text .name {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  margin-top: 61.5%;
+  margin-top: 55%;
+  display: flex;
+  font-family: "Parisienne", cursive;
+  color: #e4d2a9;
 }
 body #invitation-content #main-container .cover .text .name .groom {
-  margin: 0 0 -30px 0;
+  margin: 0;
+  font-size: calc(2rem + 1vw);
   animation: animationFadeDown 4s ease 1 forwards;
 }
 body #invitation-content #main-container .cover .text .name .and {
-  text-align: end;
-  margin: 0 -25px 0 0;
-  animation: animationFadeLeft 4s ease 1 forwards;
+  margin: 0 15px;
+  font-size: calc(2rem + 1vw);
+  animation: animationFadeIn 4s ease 1 forwards;
 }
 body #invitation-content #main-container .cover .text .name .bride {
-  margin: -30px 0 0 0;
+  margin: 0;
+  font-size: calc(2rem + 1vw);
   animation: animationFadeUp 4s ease 1 forwards;
 }
 body #invitation-content #main-container .cover .text .date {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   max-width: 450px;
   width: 100%;
+  margin-top: -15px;
   position: relative;
-  margin-top: 10%;
+  font-family: "Crimson Text", serif;
+  font-weight: bold;
+  color: #e4d2a9;
+}
+body #invitation-content #main-container .cover .text .date .dot {
+  margin: 0 10px;
+  font-size: calc(1rem + 0.5vw);
 }
 body #invitation-content #main-container .cover .text .date .day {
-  border-top: #262b44 1px solid;
-  border-bottom: #262b44 1px solid;
-  padding: 5px 20px;
-  font-weight: normal;
+  font-size: calc(1rem + 0.5vw);
   z-index: 2;
   animation: animationFadeRight 4s ease 1 forwards;
 }
 body #invitation-content #main-container .cover .text .date .month {
-  border-top: #262b44 1px solid;
-  border-bottom: #262b44 1px solid;
-  padding: 5px 20px;
-  font-weight: normal;
+  font-size: calc(1rem + 0.5vw);
+  z-index: 2;
+  animation: animationFadeIn 4s ease 1 forwards;
+}
+body #invitation-content #main-container .cover .text .date .year {
+  font-size: calc(1rem + 0.5vw);
   z-index: 2;
   animation: animationFadeLeft 4s ease 1 forwards;
 }
-body #invitation-content #main-container .cover .text .date .year {
-  font-size: 25px;
-  z-index: 2;
-  animation: animationFadeIn 4s ease 1 forwards;
-}
 body #invitation-content #main-container .cover .text .visitor {
   position: relative;
-  margin-top: 5%;
-  z-index: 2;
+  margin-top: 25px;
+  font-family: "Crimson Text", serif;
+  color: #c2c2be;
   animation: animationFadeIn 4s ease 1 forwards;
+  z-index: 2;
 }
 body #invitation-content #main-container .cover .text .visitor .respect {
   font-weight: normal;
-  font-size: 11px;
+  font-size: 0.8rem;
   margin-bottom: 5px;
 }
 body #invitation-content #main-container .cover .text .visitor .visitor-name {
-  font-weight: 900;
+  font-weight: bold;
+  font-size: 1rem;
 }
 body #invitation-content #main-container .cover .text .visitor .visitor-address {
   font-weight: normal;
+  font-size: 1rem;
 }
 body #invitation-content #main-container .cover .text .visitor .apologize {
   font-weight: normal;
-  font-size: 10px;
+  font-size: 0.8rem;
   margin-top: 5px;
 }
 body #invitation-content #main-container .cover button {
@@ -256,24 +320,24 @@ body #invitation-content #main-container .cover button {
   position: relative;
   width: 50%;
   margin: 0 25%;
-  margin-top: calc(13.5rem + 0.5vw);
+  margin-top: 70%;
   background: transparent;
   border-radius: 50px;
-  border: 1px #262b44 solid;
-  color: #262b44;
+  border: 1px #e4d2a9 solid;
+  color: #e4d2a9;
   padding: 10px 15px;
   z-index: 1000;
   transition: all 0.3s;
   animation: animationFadeIn 4s ease 1 forwards;
 }
 body #invitation-content #main-container .cover button:hover {
-  background: #d7d7c8;
-  border: 1px #d7d7c8 solid;
-  color: white;
+  background: #e4d2a9;
+  border: 1px #e4d2a9 solid;
+  color: #758a70;
 }
 body #invitation-content #main-container .invitation-content {
   animation: animationFadeOut 0s ease 1 forwards;
-  background-image: url(../layout/main.png);
+  background-image: url(../layout/main-background.png);
   background-size: contain;
   background-repeat: repeat-y;
 }
@@ -287,7 +351,7 @@ body #invitation-content #main-container .invitation-content #quotes .quotes-lay
   width: 100%;
   max-width: 450px;
   position: absolute;
-  z-index: 1;
+  z-index: 5;
 }
 body #invitation-content #main-container .invitation-content #quotes .quotes-image {
   width: 100%;
@@ -299,10 +363,10 @@ body #invitation-content #main-container .invitation-content #quotes .text {
 }
 body #invitation-content #main-container .invitation-content #quotes .text .arab {
   width: 100%;
-  color: #262b44;
+  color: #3a3a3a;
   position: relative;
-  z-index: 2;
-  margin: 150px 0 25px 0;
+  z-index: 10;
+  margin: 75px 0 25px 0;
   text-align: center;
   animation: animationFadeDown 4s ease 1 forwards;
 }
@@ -312,38 +376,49 @@ body #invitation-content #main-container .invitation-content #quotes .text .terj
   font-style: italic;
   width: 100%;
   margin: auto;
-  color: #262b44;
+  color: #3a3a3a;
   position: relative;
-  z-index: 2;
+  z-index: 10;
   text-align: center;
   animation: animationFadeDown 4s ease 1 forwards;
 }
 body #invitation-content #main-container .invitation-content #couple {
-  position: relative;
-  z-index: 5;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: #6C6C4C;
-  padding: 25px;
-  margin-top: 75px;
-  border-radius: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: -25px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 20%), linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0) 20%), url(../layout/couple-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 25px 0;
 }
 body #invitation-content #main-container .invitation-content #couple .title {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
   margin-top: 200px;
-  color: white;
-  text-align: center;
+  color: #e4d2a9;
 }
 body #invitation-content #main-container .invitation-content #couple .title h1 {
   font-weight: bold;
-  font-family: "Playfair Display", serif;
+  font-family: "Parisienne", cursive;
+  font-size: 2.5rem;
 }
 body #invitation-content #main-container .invitation-content #couple .brides {
   width: 100%;
-  margin-top: 100px;
+  height: 1000px;
+  margin-top: 200px;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .groom {
+  position: relative;
+  height: 150px;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
-  flex-direction: column;
+  margin-left: 1.5rem;
+  margin-right: auto;
   align-items: center;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .groom .image {
@@ -357,34 +432,38 @@ body #invitation-content #main-container .invitation-content #couple .brides .gr
   border-radius: 100%;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .groom .image .frame {
-  position: relative;
-  top: -170px;
-  left: -15px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .groom .image .frame img {
-  width: 130%;
+  width: 160px;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .groom .text {
-  margin-top: -175px;
-  text-align: center;
+  text-align: start;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .groom .text .name h1 {
   margin-bottom: 5px;
-  color: #ECECE4;
-  font-family: "Playfair Display", serif;
+  font-family: "Parisienne", cursive;
   font-weight: bold;
+  font-size: 2rem;
+  color: #e4d2a9;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .groom .text .child-of p {
   margin: 0;
-  font-size: calc(0.7rem + 0.2vw);
-  font-family: "Poppins", sans-serif;
-  color: #ECECE4;
+  font-size: calc(0.8rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  color: #c2c2be;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .and {
   width: 100%;
-  color: white;
-  font-family: "Playfair Display", serif;
-  margin: 50px 0;
+  margin: 150px auto;
+  font-weight: bold;
+  font-family: "Parisienne", cursive;
+  font-size: 3rem;
+  color: #e4d2a9;
   display: flex;
   justify-content: center;
 }
@@ -395,10 +474,15 @@ body #invitation-content #main-container .invitation-content #couple .brides .an
   width: 200px;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .bride {
+  position: relative;
+  height: 150px;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
+  margin-right: 1.5rem;
+  margin-left: auto;
   align-items: center;
-  margin-top: -25px;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .bride .image {
   width: 150px;
@@ -411,83 +495,164 @@ body #invitation-content #main-container .invitation-content #couple .brides .br
   border-radius: 100%;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .bride .image .frame {
-  position: relative;
-  top: -170px;
-  left: -30px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .bride .image .frame img {
-  width: 130%;
+  width: 160px;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .bride .text {
-  text-align: center;
-  margin-bottom: 50px;
+  text-align: end;
+  margin-right: 2rem;
+  margin-bottom: 1.5rem;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .bride .text .name h1 {
   margin-bottom: 5px;
-  color: #ECECE4;
-  font-family: "Playfair Display", serif;
+  font-family: "Parisienne", cursive;
   font-weight: bold;
+  font-size: 2rem;
+  color: #e4d2a9;
 }
 body #invitation-content #main-container .invitation-content #couple .brides .bride .text .child-of p {
   margin: 0;
-  font-size: calc(0.7rem + 0.2vw);
-  font-family: "Poppins", sans-serif;
-  color: #ECECE4;
+  font-size: calc(0.8rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  color: #c2c2be;
 }
 body #invitation-content #main-container .invitation-content #gallery {
   width: 100%;
-  margin-top: 25px;
-}
-body #invitation-content #main-container .invitation-content #gallery .text {
-  text-align: center;
-  color: #262b44;
-  padding: 25px;
-}
-body #invitation-content #main-container .invitation-content #gallery .text .title {
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
-}
-body #invitation-content #main-container .invitation-content #gallery .text .fill {
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
 }
 body #invitation-content #main-container .invitation-content #gallery .video iframe {
   width: 100%;
   height: 225px;
 }
-body #invitation-content #main-container .invitation-content #gallery .photos {
-  -moz-column-count: 3;
-       column-count: 3;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+body #invitation-content #main-container .invitation-content #gallery .text {
+  margin-top: -10px;
+  text-align: center;
+  padding: 50px 25px;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0) 20%), url(../layout/galleryHead-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-body #invitation-content #main-container .invitation-content #gallery .photos .gallery-photo {
-  width: 100%;
-  height: auto;
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  transition: transform 0.3s ease-in-out;
+body #invitation-content #main-container .invitation-content #gallery .text .title {
+  font-family: "Parisienne", cursive;
+  color: #6c7e68;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-body #invitation-content #main-container .invitation-content #gallery .photos .gallery-photo img {
+body #invitation-content #main-container .invitation-content #gallery .text .fill {
+  font-family: "Crimson Text", serif;
+  color: #3a3a3a;
+  font-size: calc(0.8rem + 0.2vw);
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper {
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper .photos {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper .photos .gallery-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper .photos .gallery-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper .photos .gallery-photo.active {
+  opacity: 1;
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper .preview {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  overflow: hidden;
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper .preview .preview-photo {
+  width: 33.3333333333%;
+  height: 100px;
+  margin: 0 5px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  transform: scale(0.9);
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper .preview .preview-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper .preview .preview-photo.active {
+  opacity: 1;
+  transform: scale(1);
+}
+body #invitation-content #main-container .invitation-content #gallery .slider-wrapper .preview .preview-photo.hidden {
+  display: none;
 }
 body #invitation-content #main-container .invitation-content #countdown {
-  margin-top: 50px;
-  padding: 50px 10px;
+  background-color: #758a70;
+  margin-top: 10px;
   text-align: center;
-  font-family: "Playfair Display", serif;
+  font-family: "Crimson Text", serif;
 }
 body #invitation-content #main-container .invitation-content #countdown .play {
+  padding: 50px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 body #invitation-content #main-container .invitation-content #countdown .play .title h4 {
-  margin-bottom: 20px;
-  font-size: 20px;
-  color: #262b44;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  color: #e4d2a9;
 }
-body #invitation-content #main-container .invitation-content #countdown .play .time {
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap {
+  background-color: #e4d2a9;
+  padding: 50px 25px 100px 25px;
+  border-radius: 0 0 200px 200px;
+  margin-bottom: 50px;
+}
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap .buttons {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap .buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #e4d2a9;
+  color: #758a70;
+  border: 1px solid #758a70;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap .buttons button i {
+  margin-right: 10px;
+}
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap .buttons button:hover {
+  color: #e4d2a9;
+  background-color: #758a70;
+}
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap .time {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -495,279 +660,256 @@ body #invitation-content #main-container .invitation-content #countdown .play .t
   gap: 10px;
   font-weight: bold;
 }
-body #invitation-content #main-container .invitation-content #countdown .play .time span {
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap .time span {
+  width: 4.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #6C6C4C;
-  color: #fcfaf5;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 8px;
+  color: #758a70;
 }
-body #invitation-content #main-container .invitation-content #countdown .play .time span .times {
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap .time span .times {
   font-size: 2rem;
 }
-body #invitation-content #main-container .invitation-content #countdown .play .time span .text {
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap .time span .text {
   font-size: 1rem;
 }
-body #invitation-content #main-container .invitation-content #countdown .play .tanggal p {
-  margin-top: 20px;
+body #invitation-content #main-container .invitation-content #countdown .play .play-wrap .tanggal p {
+  margin-top: 25px;
   font-size: 1rem;
-  color: #262b44;
+  color: #3a3a3a;
 }
 body #invitation-content #main-container .invitation-content #countdown .done {
-  height: 200px;
-  width: 80%;
-  margin: auto;
-  line-height: 200px;
-  border-radius: 15px;
-  color: #fcfaf5;
-  background-color: #6C6C4C;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: -20px;
+  line-height: 300px;
+  font-size: 1.5rem;
+  color: #e4d2a9;
 }
-body #invitation-content #main-container .invitation-content #countdown .buttons {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-}
-body #invitation-content #main-container .invitation-content #countdown .buttons button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #6C6C4C;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-body #invitation-content #main-container .invitation-content #countdown .buttons button i {
-  margin-right: 10px;
-}
-body #invitation-content #main-container .invitation-content #countdown .buttons button:hover {
-  background-color: rgba(108, 108, 76, 0.6352941176);
+body #invitation-content #main-container .invitation-content #rundown {
+  margin-top: 100px;
 }
 body #invitation-content #main-container .invitation-content #rundown .title {
-  font-family: "Playfair Display", serif;
+  font-family: "Parisienne", cursive;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  color: #262b44;
+  color: #758a70;
 }
-body #invitation-content #main-container .invitation-content #rundown .first {
-  width: 75%;
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap {
+  background-color: #758a70;
+  width: 85%;
+  margin: auto;
   margin-top: 75px;
-  background-color: #6C6C4C;
-  color: white;
+  padding: 100px 0;
+  border-radius: 125px;
+  position: relative;
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .rundown-flower {
+  width: 50%;
+  position: absolute;
+  top: 0px;
+  right: 70%;
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first {
   padding: 2rem;
   margin-right: auto;
+  text-align: center;
 }
-body #invitation-content #main-container .invitation-content #rundown .first .title h2 {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first .title h2 {
   margin: 0;
   margin-bottom: 1rem;
-  font-size: 20px;
-  text-align: start;
-  color: white;
+  font-size: 1.5rem;
+  color: #e4d2a9;
   font-weight: bold;
 }
-body #invitation-content #main-container .invitation-content #rundown .first .date {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first .date {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
+  color: #d7d7c8;
 }
-body #invitation-content #main-container .invitation-content #rundown .first .date p {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first .date p {
   margin: 0;
-  margin-left: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
 }
-body #invitation-content #main-container .invitation-content #rundown .first .time {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first .time {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
+  color: #d7d7c8;
 }
-body #invitation-content #main-container .invitation-content #rundown .first .time p {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first .time p {
   margin: 0;
-  margin-left: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
 }
-body #invitation-content #main-container .invitation-content #rundown .first .location {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first .location {
   display: flex;
+  justify-content: center;
   margin-bottom: 0.5rem;
+  color: #d7d7c8;
 }
-body #invitation-content #main-container .invitation-content #rundown .first .location i {
-  margin-top: 0.2rem;
-}
-body #invitation-content #main-container .invitation-content #rundown .first .location p {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first .location p {
   margin: 0;
-  margin-left: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
 }
-body #invitation-content #main-container .invitation-content #rundown .first button {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first button {
   cursor: pointer;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: #6C6C4C;
-  background-color: #fcfaf5;
-  border-radius: 10px;
-  border: solid 1px #fcfaf5;
+  color: #758a70;
+  background-color: #e4d2a9;
+  border-radius: 50px;
+  border: solid 1px #e4d2a9;
   transition: 0.3s all;
 }
-body #invitation-content #main-container .invitation-content #rundown .first button:hover {
-  color: #fcfaf5;
-  background-color: #6C6C4C;
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .first button:hover {
+  color: #e4d2a9;
+  background-color: #758a70;
 }
-body #invitation-content #main-container .invitation-content #rundown .second {
-  width: 75%;
-  margin-top: 75px;
-  background-color: #6C6C4C;
-  color: white;
-  padding: 2rem;
-  text-align: end;
-  margin-left: auto;
-}
-body #invitation-content #main-container .invitation-content #rundown .second .title h2 {
-  margin: 0;
-  margin-bottom: 1rem;
-  font-size: 20px;
-  text-align: end;
-  color: white;
-  font-weight: bold;
-}
-body #invitation-content #main-container .invitation-content #rundown .second .date {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-body #invitation-content #main-container .invitation-content #rundown .second .date p {
-  margin: 0;
-  margin-right: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
-}
-body #invitation-content #main-container .invitation-content #rundown .second .time {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-body #invitation-content #main-container .invitation-content #rundown .second .time p {
-  margin: 0;
-  margin-right: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
-}
-body #invitation-content #main-container .invitation-content #rundown .second .location {
-  display: flex;
-  flex-direction: row-reverse;
-  margin-bottom: 0.5rem;
-}
-body #invitation-content #main-container .invitation-content #rundown .second .location i {
-  margin-top: 0.2rem;
-}
-body #invitation-content #main-container .invitation-content #rundown .second .location p {
-  margin: 0;
-  margin-right: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
-}
-body #invitation-content #main-container .invitation-content #rundown .second button {
-  cursor: pointer;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: #6C6C4C;
-  background-color: #fcfaf5;
-  border-radius: 10px;
-  border: solid 1px #fcfaf5;
-  transition: 0.3s all;
-}
-body #invitation-content #main-container .invitation-content #rundown .second button:hover {
-  color: #fcfaf5;
-  background-color: #6C6C4C;
-}
-body #invitation-content #main-container .invitation-content #rundown .third {
-  width: 75%;
-  margin-top: 75px;
-  background-color: #6C6C4C;
-  color: white;
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second {
   padding: 2rem;
   margin-right: auto;
+  text-align: center;
 }
-body #invitation-content #main-container .invitation-content #rundown .third .title h2 {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second .title h2 {
   margin: 0;
   margin-bottom: 1rem;
-  font-size: 20px;
-  text-align: start;
-  color: white;
+  font-size: 1.5rem;
+  color: #e4d2a9;
   font-weight: bold;
 }
-body #invitation-content #main-container .invitation-content #rundown .third .date {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second .date {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
+  color: #d7d7c8;
 }
-body #invitation-content #main-container .invitation-content #rundown .third .date p {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second .date p {
   margin: 0;
-  margin-left: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
 }
-body #invitation-content #main-container .invitation-content #rundown .third .time {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second .time {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
+  color: #d7d7c8;
 }
-body #invitation-content #main-container .invitation-content #rundown .third .time p {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second .time p {
   margin: 0;
-  margin-left: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
 }
-body #invitation-content #main-container .invitation-content #rundown .third .location {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second .location {
   display: flex;
+  justify-content: center;
   margin-bottom: 0.5rem;
+  color: #d7d7c8;
 }
-body #invitation-content #main-container .invitation-content #rundown .third .location i {
-  margin-top: 0.2rem;
-}
-body #invitation-content #main-container .invitation-content #rundown .third .location p {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second .location p {
   margin: 0;
-  margin-left: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
 }
-body #invitation-content #main-container .invitation-content #rundown .third button {
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second button {
   cursor: pointer;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: #6C6C4C;
-  background-color: #fcfaf5;
-  border-radius: 10px;
-  border: solid 1px #fcfaf5;
+  color: #758a70;
+  background-color: #e4d2a9;
+  border-radius: 50px;
+  border: solid 1px #e4d2a9;
   transition: 0.3s all;
 }
-body #invitation-content #main-container .invitation-content #rundown .third button:hover {
-  color: #fcfaf5;
-  background-color: #6C6C4C;
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .second button:hover {
+  color: #e4d2a9;
+  background-color: #758a70;
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third {
+  padding: 2rem;
+  margin-right: auto;
+  text-align: center;
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third .title h2 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #e4d2a9;
+  font-weight: bold;
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #d7d7c8;
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third .date p {
+  margin: 0;
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #d7d7c8;
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third .time p {
+  margin: 0;
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third .location {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  color: #d7d7c8;
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third .location p {
+  margin: 0;
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third button {
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #758a70;
+  background-color: #e4d2a9;
+  border-radius: 50px;
+  border: solid 1px #e4d2a9;
+  transition: 0.3s all;
+}
+body #invitation-content #main-container .invitation-content #rundown .rundown-wrap .third button:hover {
+  color: #e4d2a9;
+  background-color: #758a70;
 }
 body #invitation-content #main-container .invitation-content #location {
   margin-top: 100px;
   padding-bottom: 75px;
 }
 body #invitation-content #main-container .invitation-content #location .container {
-  width: 80%;
+  background-color: #758a70;
+  width: 75%;
   margin: auto;
   padding-bottom: 2rem;
   text-align: center;
-  border: solid 3px #6C6C4C;
+  border: solid 10px #758a70;
+  border-radius: 15px;
   overflow: hidden;
 }
 body #invitation-content #main-container .invitation-content #location .container .map {
@@ -780,16 +922,16 @@ body #invitation-content #main-container .invitation-content #location .containe
 }
 body #invitation-content #main-container .invitation-content #location .container .address {
   margin-top: 2rem;
-  padding: 0 1rem;
-  font-family: "Poppins", sans-serif;
-  color: #6C6C4C;
+  padding: 0 1.5rem;
+  font-family: "Crimson Text", serif;
+  color: #e4d2a9;
 }
 body #invitation-content #main-container .invitation-content #location .container .address i {
-  font-size: calc(1rem + 0.2vw);
+  font-size: calc(1rem + 0.5vw);
 }
 body #invitation-content #main-container .invitation-content #location .container .address p {
   margin: 0;
-  font-size: calc(0.7rem + 0.2vw);
+  font-size: calc(0.8rem + 0.2vw);
 }
 body #invitation-content #main-container .invitation-content #location .container a button {
   cursor: pointer;
@@ -797,29 +939,30 @@ body #invitation-content #main-container .invitation-content #location .containe
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: #fcfaf5;
-  background-color: #6C6C4C;
-  border-radius: 10px;
-  border: solid 1px #6C6C4C;
+  color: #e4d2a9;
+  background-color: #758a70;
+  border-radius: 50px;
+  border: solid 1px #e4d2a9;
   transition: 0.3s all;
 }
 body #invitation-content #main-container .invitation-content #location .container a button:hover {
-  color: #6C6C4C;
-  background-color: transparent;
+  color: #758a70;
+  background-color: #e4d2a9;
 }
 body #invitation-content #main-container .invitation-content #invited {
   text-align: center;
-  color: #262b44;
 }
 body #invitation-content #main-container .invitation-content #invited .title h4 {
-  font-family: "Playfair Display", serif;
-  margin-bottom: 2rem;
-  font-size: 20px;
+  font-family: "Parisienne", cursive;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #758a70;
 }
 body #invitation-content #main-container .invitation-content #invited .content p {
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
   margin: 0.5rem 0;
+  color: #3a3a3a;
 }
 body #invitation-content #main-container .invitation-content #live-streaming {
   margin-top: 100px;
@@ -829,33 +972,35 @@ body #invitation-content #main-container .invitation-content #live-streaming .co
   width: 75%;
   padding: 2rem;
   margin: auto;
-  background-color: #6C6C4C;
+  background-color: #758a70;
+  border-radius: 25px;
 }
 body #invitation-content #main-container .invitation-content #live-streaming .container .title h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "Parisienne", cursive;
+  font-size: 2rem;
   margin-bottom: 2rem;
   margin: 0;
-  color: white;
+  color: #e4d2a9;
 }
 body #invitation-content #main-container .invitation-content #live-streaming .container .content p {
   color: #fcfaf5;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
 }
 body #invitation-content #main-container .invitation-content #live-streaming .container button {
   cursor: pointer;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: #6C6C4C;
-  background-color: #fcfaf5;
-  border-radius: 10px;
-  border: solid 1px #fcfaf5;
+  color: #758a70;
+  background-color: #e4d2a9;
+  border-radius: 50px;
+  border: solid 1px #e4d2a9;
   transition: 0.3s all;
 }
 body #invitation-content #main-container .invitation-content #live-streaming .container button:hover {
-  color: #fcfaf5;
-  background-color: #6C6C4C;
+  color: #e4d2a9;
+  background-color: #758a70;
 }
 body #invitation-content #main-container .invitation-content #envelope {
   margin-top: 50px;
@@ -863,29 +1008,30 @@ body #invitation-content #main-container .invitation-content #envelope {
 }
 body #invitation-content #main-container .invitation-content #envelope .title h1 {
   text-align: center;
-  font-family: "Playfair Display", serif;
+  font-family: "Parisienne", cursive;
   font-weight: bold;
+  font-size: 2rem;
   margin-bottom: 2rem;
   margin: 0;
-  color: #262b44;
+  color: #758a70;
 }
 body #invitation-content #main-container .invitation-content #envelope .text {
   margin-bottom: 50px;
 }
 body #invitation-content #main-container .invitation-content #envelope .text p {
   color: #262b44;
-  font-family: "Poppins", sans-serif;
-  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  font-size: calc(0.8rem + 0.2vw);
 }
 body #invitation-content #main-container .invitation-content #envelope .accounts .account {
-  background-color: #6C6C4C;
-  color: #fcfaf5;
+  background-color: #758a70;
   padding: 1rem 2rem;
   margin: 1rem auto;
   border-radius: 10px;
 }
 body #invitation-content #main-container .invitation-content #envelope .accounts .account p {
-  font-family: "Playfair Display", serif;
+  font-family: "Crimson Text", serif;
+  color: #e4d2a9;
   margin-bottom: 2rem;
   margin: 0;
 }
@@ -899,108 +1045,122 @@ body #invitation-content #main-container .invitation-content #envelope .accounts
   margin-right: 0.5rem;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  color: #fcfaf5;
+  color: #d7d7c8;
 }
 body #invitation-content #main-container .invitation-content #envelope .accounts .account .number p {
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
+  color: #d7d7c8;
 }
 body #invitation-content #main-container .invitation-content #wish {
   width: 100%;
   margin-top: 100px;
 }
-body #invitation-content #main-container .invitation-content #wish .title {
-  font-family: "Playfair Display", serif;
+body #invitation-content #main-container .invitation-content #wish .wish-wrap {
+  background-color: rgba(228, 210, 169, 0.5);
+  width: 85%;
+  margin: auto;
+  padding: 75px 0 150px 0;
+  border: 5px solid rgba(117, 138, 112, 0.5);
+  border-radius: 150px 150px 0 0;
+}
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .title {
+  font-family: "Parisienne", cursive;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  color: #262b44;
+  color: #758a70;
   margin-bottom: 50px;
 }
-body #invitation-content #main-container .invitation-content #wish .content {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content {
   max-height: 500px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-body #invitation-content #main-container .invitation-content #wish .content .wish-card {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content .wish-card {
   width: 70%;
   margin: 1rem auto;
-  background-color: #6C6C4C;
-  color: #fcfaf5;
-  font-family: "Poppins", sans-serif;
   padding: 1.5rem 2rem;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px -5px rgb(0, 0, 0);
 }
-body #invitation-content #main-container .invitation-content #wish .content .wish-card .name p {
-  font-size: calc(0.8rem + 0.2vw);
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content .wish-card .name p {
+  font-family: "Crimson Text", serif;
+  font-size: calc(1rem + 0.3vw);
+  color: #758a70;
   margin: 0;
   font-weight: bold;
 }
-body #invitation-content #main-container .invitation-content #wish .content .wish-card .information {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content .wish-card .information {
   display: flex;
   margin-bottom: 0.5rem;
 }
-body #invitation-content #main-container .invitation-content #wish .content .wish-card .information .dash {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content .wish-card .information .dash {
   margin: 0 5px;
 }
-body #invitation-content #main-container .invitation-content #wish .content .wish-card .information p {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content .wish-card .information p {
   margin: 0;
-  font-size: calc(0.7rem + 0.2vw);
+  font-size: calc(0.8rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  color: gray;
 }
-body #invitation-content #main-container .invitation-content #wish .content .wish-card .wish p {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content .wish-card .wish p {
   margin: 0;
-  font-size: calc(0.7rem + 0.2vw);
+  font-size: calc(0.8rem + 0.2vw);
+  font-family: "Crimson Text", serif;
+  color: gray;
 }
-body #invitation-content #main-container .invitation-content #wish .content::-webkit-scrollbar {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content::-webkit-scrollbar {
+  display: none;
   width: 8px; /* Lebar scrollbar */
 }
-body #invitation-content #main-container .invitation-content #wish .content::-webkit-scrollbar-thumb {
-  background-color: #6C6C4C; /* Warna scrollbar */
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content::-webkit-scrollbar-thumb {
+  background-color: #758a70; /* Warna scrollbar */
   border-radius: 10px; /* Membuat ujung scrollbar melengkung */
 }
-body #invitation-content #main-container .invitation-content #wish .content::-webkit-scrollbar-track {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .content::-webkit-scrollbar-track {
   background-color: #fcfaf5; /* Warna track (latar belakang scrollbar) */
   border-radius: 10px;
 }
-body #invitation-content #main-container .invitation-content #wish .wish-form {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .wish-form {
   width: 70%;
   padding: 1rem 2rem 2rem 2rem;
   margin: auto;
   margin-top: 50px;
-  background-color: rgba(214, 214, 199, 0.5);
 }
-body #invitation-content #main-container .invitation-content #wish .wish-form .title h4 {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .wish-form .title-form h4 {
   margin: 0;
-  font-size: 2.5rem;
-  color: #262b44;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #758a70;
+  font-family: "Crimson Text", serif;
 }
-body #invitation-content #main-container .invitation-content #wish .wish-form .form-item {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .wish-form .form-item {
   margin: 0.5rem 0;
   padding: 0.5rem;
   font-size: 0.9rem;
   border-radius: 5px;
   border: 1px solid #6C6C4C;
-  font-family: "Poppins", sans-serif;
+  font-family: "Crimson Text", serif;
   opacity: 0.5;
-  background-color: rgba(214, 214, 199, 0.5);
+  background-color: transparent;
 }
-body #invitation-content #main-container .invitation-content #wish .wish-form button {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .wish-form button {
   cursor: pointer;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: #fcfaf5;
-  background-color: #6C6C4C;
+  color: #e4d2a9;
+  background-color: #758a70;
   border-radius: 50px;
-  border: solid 1px #6C6C4C;
+  border: solid 1px #758a70;
   transition: 0.3s all;
 }
-body #invitation-content #main-container .invitation-content #wish .wish-form button:hover {
-  color: #6C6C4C;
-  background-color: #fcfaf5;
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .wish-form button:hover {
+  color: #758a70;
+  background-color: transparent;
 }
-body #invitation-content #main-container .invitation-content #wish .wish-form form {
+body #invitation-content #main-container .invitation-content #wish .wish-wrap .wish-form form {
   display: flex;
   flex-direction: column;
 }
@@ -1014,12 +1174,68 @@ body #invitation-content #main-container .cover.remove-active {
   animation: animationFadeOut 1s ease 1 forwards;
   animation-delay: 1s;
 }
-body #invitation-content #main-container .cover.remove-active .image {
-  max-width: 70%;
-  margin: 0 15%;
+body #invitation-content #main-container .cover.remove-active .cover-layout {
+  position: absolute;
+  max-width: 450px;
+  width: 100%;
+  z-index: 1;
+}
+body #invitation-content #main-container .cover.remove-active .cover-photo {
+  max-width: 45%;
+  height: 200px;
   position: relative;
-  margin-top: calc(6rem + 3vw);
-  animation: animationFadeOut 1s ease 1 forwards;
+  margin: auto;
+  margin-top: 25%;
+  z-index: 5;
+}
+body #invitation-content #main-container .cover.remove-active .cover-photo .image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  border-radius: 100%;
+  animation: animationFadeOut 2s ease 1 forwards;
+}
+body #invitation-content #main-container .cover.remove-active .cover-photo .frame-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130%;
+  animation: animationFadeOut 4s ease 1 forwards;
+}
+body #invitation-content #main-container .cover.remove-active .flower-one {
+  position: absolute;
+  top: 350px;
+  right: 75%;
+  width: 30%;
+  z-index: 2;
+  animation: animationFadeRightOut 4s ease 1 forwards;
+}
+body #invitation-content #main-container .cover.remove-active .flower-two {
+  position: absolute;
+  top: -50px;
+  right: 5px;
+  width: 30%;
+  z-index: 2;
+  animation: animationFadeDownOut 4s ease 1 forwards;
+}
+body #invitation-content #main-container .cover.remove-active .flower-three {
+  position: absolute;
+  top: -65px;
+  right: 75%;
+  width: 30%;
+  z-index: 2;
+  animation: animationFadeRightOut 4s ease 1 forwards;
+}
+body #invitation-content #main-container .cover.remove-active .flower-four {
+  position: absolute;
+  top: 375px;
+  right: 25px;
+  width: 75%;
+  z-index: 2;
+  animation: animationFadeOut 4s ease 1 forwards;
 }
 body #invitation-content #main-container .cover.remove-active .text {
   max-width: 450px;
@@ -1027,24 +1243,25 @@ body #invitation-content #main-container .cover.remove-active .text {
   position: absolute;
   top: 0;
   z-index: 2;
-  color: #262b44;
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
   text-align: center;
   overflow: hidden;
 }
 body #invitation-content #main-container .cover.remove-active .text .title {
-  margin-top: 8.5%;
+  margin-top: 5%;
+  font-family: "Parisienne", cursive;
+  color: #e4d2a9;
 }
 body #invitation-content #main-container .cover.remove-active .text .title .title-one {
-  animation: animationFadeRightOut 1s ease 1 forwards;
+  animation: animationFadeRightOut 2s ease 1 forwards;
   margin: 0;
+  margin-bottom: -10px;
   margin-right: 24%;
   font-size: calc(1.5rem + 0.5vw);
 }
 body #invitation-content #main-container .cover.remove-active .text .title .title-two {
-  animation: animationFadeLeftOut 1s ease 1 forwards;
+  animation: animationFadeLeftOut 2s ease 1 forwards;
   margin: 0;
+  margin-top: -10px;
   margin-left: 17%;
   font-size: calc(1.5rem + 0.5vw);
 }
@@ -1053,70 +1270,80 @@ body #invitation-content #main-container .cover.remove-active .text .name {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  margin-top: 61.5%;
+  margin-top: 55%;
+  display: flex;
+  font-family: "Parisienne", cursive;
+  color: #e4d2a9;
 }
 body #invitation-content #main-container .cover.remove-active .text .name .groom {
-  margin: 0 0 -30px 0;
-  animation: animationFadeDownOut 1s ease 1 forwards;
+  margin: 0;
+  font-size: calc(2rem + 1vw);
+  animation: animationFadeDownOut 2s ease 1 forwards;
 }
 body #invitation-content #main-container .cover.remove-active .text .name .and {
-  text-align: end;
-  margin: 0 -25px 0 0;
-  animation: animationFadeLeftOut 1s ease 1 forwards;
+  margin: 0 15px;
+  font-size: calc(2rem + 1vw);
+  animation: animationFadeOut 2s ease 1 forwards;
 }
 body #invitation-content #main-container .cover.remove-active .text .name .bride {
-  margin: -30px 0 0 0;
-  animation: animationFadeUpOut 1s ease 1 forwards;
+  margin: 0;
+  font-size: calc(2rem + 1vw);
+  animation: animationFadeUpOut 2s ease 1 forwards;
 }
 body #invitation-content #main-container .cover.remove-active .text .date {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   max-width: 450px;
   width: 100%;
+  margin-top: -15px;
   position: relative;
-  margin-top: 10%;
+  font-family: "Crimson Text", serif;
+  font-weight: bold;
+  color: #e4d2a9;
+}
+body #invitation-content #main-container .cover.remove-active .text .date .dot {
+  margin: 0 10px;
+  font-size: calc(1rem + 0.5vw);
 }
 body #invitation-content #main-container .cover.remove-active .text .date .day {
-  border-top: #262b44 1px solid;
-  border-bottom: #262b44 1px solid;
-  padding: 5px 20px;
-  font-weight: normal;
+  font-size: calc(1rem + 0.5vw);
   z-index: 2;
-  animation: animationFadeRightOut 1s ease 1 forwards;
+  animation: animationFadeRightOut 2s ease 1 forwards;
 }
 body #invitation-content #main-container .cover.remove-active .text .date .month {
-  border-top: #262b44 1px solid;
-  border-bottom: #262b44 1px solid;
-  padding: 5px 20px;
-  font-weight: normal;
+  font-size: calc(1rem + 0.5vw);
   z-index: 2;
-  animation: animationFadeLeftOut 1s ease 1 forwards;
+  animation: animationFadeOut 2s ease 1 forwards;
 }
 body #invitation-content #main-container .cover.remove-active .text .date .year {
-  font-size: 25px;
+  font-size: calc(1rem + 0.5vw);
   z-index: 2;
-  animation: animationFadeOut 1s ease 1 forwards;
+  animation: animationFadeLeftOut 2s ease 1 forwards;
 }
 body #invitation-content #main-container .cover.remove-active .text .visitor {
   position: relative;
-  margin-top: 5%;
+  margin-top: 25px;
+  font-family: "Crimson Text", serif;
+  color: #c2c2be;
+  animation: animationFadeOut 2s ease 1 forwards;
   z-index: 2;
-  animation: animationFadeOut 1s ease 1 forwards;
 }
 body #invitation-content #main-container .cover.remove-active .text .visitor .respect {
   font-weight: normal;
-  font-size: 11px;
+  font-size: 0.8rem;
   margin-bottom: 5px;
 }
 body #invitation-content #main-container .cover.remove-active .text .visitor .visitor-name {
-  font-weight: 900;
+  font-weight: bold;
+  font-size: 1rem;
 }
 body #invitation-content #main-container .cover.remove-active .text .visitor .visitor-address {
   font-weight: normal;
+  font-size: 1rem;
 }
 body #invitation-content #main-container .cover.remove-active .text .visitor .apologize {
   font-weight: normal;
-  font-size: 10px;
+  font-size: 0.8rem;
   margin-top: 5px;
 }
 body #invitation-content #main-container .cover.remove-active button {
@@ -1124,15 +1351,15 @@ body #invitation-content #main-container .cover.remove-active button {
   position: relative;
   width: 50%;
   margin: 0 25%;
-  margin-top: calc(13.5rem + 0.5vw);
+  margin-top: 70%;
   background: transparent;
   border-radius: 50px;
-  border: 1px #262b44 solid;
-  color: #262b44;
+  border: 1px #e4d2a9 solid;
+  color: #e4d2a9;
   padding: 10px 15px;
   z-index: 1000;
   transition: all 0.3s;
-  animation: animationFadeOut 1s ease 1 forwards;
+  animation: animationFadeOut 2s ease 1 forwards;
 }
 body #invitation-content #main-container .invitation-content.active {
   animation: animationFadeIn 1s ease 1 forwards;
@@ -1151,6 +1378,7 @@ body #invitation-content .musicTriger.active {
     background-color: #fcfaf5;
   }
   body #invitation-content {
+    max-width: 450px;
     display: flex;
     width: -moz-fit-content;
     width: fit-content;
@@ -1185,7 +1413,119 @@ body #invitation-content .musicTriger.active {
     max-width: 450px;
     width: 100%;
     margin: auto;
-    position: static;
+    position: relative;
+    z-index: 5;
+  }
+  body #invitation-content #main-container nav.navbar {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e4d2a9;
+    padding: 10px 0;
+    border-radius: 50px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 40px;
+    width: 90%;
+    line-height: 20px;
+    max-width: 400px;
+    bottom: 15px;
+    z-index: 10;
+    animation: animationFadeOut 0s ease 1 forwards;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item {
+    padding: 10px;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link {
+    text-decoration: none;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content {
+    text-align: center;
+    color: #758a70;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content i {
+    transition: all 0.3s;
+    z-index: 5;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link .nav-link-content .nav-text {
+    position: absolute;
+    margin-top: 15px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 0;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link.active .nav-link-content {
+    color: #758a70;
+    background-color: transparent;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item a.nav-link.active .nav-link-content .nav-text {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item:hover a.nav-link .nav-link-content {
+    color: #758a70;
+    background-color: transparent;
+  }
+  body #invitation-content #main-container nav.navbar .navbar-item:hover a.nav-link .nav-link-content .nav-text {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 380px) {
+  body {
+    margin: 0;
+    background-color: #fcfaf5;
+  }
+  body #invitation-content {
+    max-width: 450px;
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    overflow: hidden;
+  }
+  body #invitation-content #main-image {
+    max-width: 1070px;
+    height: 715px;
+    margin-right: 450px;
+    position: fixed;
+    z-index: 5;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  body #invitation-content #main-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  body #invitation-content #main-image canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  body #invitation-content #main-container {
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+    position: relative;
     z-index: 5;
   }
   body #invitation-content #main-container nav.navbar {
@@ -1254,6 +1594,143 @@ body #invitation-content .musicTriger.active {
   body #invitation-content #main-container nav.navbar .navbar-item:hover a.nav-link .nav-link-content .nav-text {
     transform: translateY(0);
     opacity: 1;
+  }
+  body #invitation-content #main-container .invitation-content #couple {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: -25px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 20%), linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 20%), url("../layout/couple-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 25px 0;
+  }
+  body #invitation-content #main-container .invitation-content #couple .title {
+    margin-top: 200px;
+    color: #e4d2a9;
+    text-align: center;
+  }
+  body #invitation-content #main-container .invitation-content #couple .title h1 {
+    font-weight: bold;
+    font-family: "Parisienne", cursive;
+    font-size: 2.5rem;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides {
+    width: 100%;
+    height: 1000px;
+    margin-top: 200px;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .groom {
+    position: relative;
+    height: 150px;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+    margin-right: auto;
+    align-items: center;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .groom .image {
+    width: 150px;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .groom .image .photo {
+    position: relative;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .groom .image .photo img {
+    width: 100%;
+    border-radius: 100%;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .groom .image .frame {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .groom .image .frame img {
+    width: 160px;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .groom .text {
+    text-align: start;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .groom .text .name h1 {
+    margin-bottom: 5px;
+    font-family: "Parisienne", cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #e4d2a9;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .groom .text .child-of p {
+    margin: 0;
+    font-size: calc(0.8rem + 0.2vw);
+    font-family: "Crimson Text", serif;
+    color: #c2c2be;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .and {
+    width: 100%;
+    margin: 150px auto;
+    font-weight: bold;
+    font-family: "Parisienne", cursive;
+    font-size: 3rem;
+    color: #e4d2a9;
+    display: flex;
+    justify-content: center;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .and p {
+    margin: auto 25px;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .and img {
+    width: 200px;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .bride {
+    position: relative;
+    height: 150px;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 1.5rem;
+    margin-left: auto;
+    align-items: center;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .bride .image {
+    width: 150px;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .bride .image .photo {
+    position: relative;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .bride .image .photo img {
+    width: 100%;
+    border-radius: 100%;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .bride .image .frame {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .bride .image .frame img {
+    width: 160px;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .bride .text {
+    text-align: end;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .bride .text .name h1 {
+    margin-bottom: 5px;
+    font-family: "Parisienne", cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #e4d2a9;
+  }
+  body #invitation-content #main-container .invitation-content #couple .brides .bride .text .child-of p {
+    margin: 0;
+    font-size: calc(0.8rem + 0.2vw);
+    font-family: "Crimson Text", serif;
+    color: #c2c2be;
   }
 }
 @keyframes animationFadeUp {
@@ -1422,6 +1899,41 @@ body #invitation-content .musicTriger.active {
   100% {
     visibility: visible;
     opacity: 1;
+  }
+}
+@keyframes animationFadeRightFlower {
+  0% {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    visibility: visible;
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+}
+@keyframes animationFadeInFlower {
+  0% {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  50% {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 0.5;
   }
 }
 @keyframes animationFadeInNavbar {

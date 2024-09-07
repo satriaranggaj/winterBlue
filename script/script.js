@@ -52,7 +52,7 @@ window.addEventListener('scroll', function() {
 
 // Set target date for the countdown
 // Set target date for the countdown
-const targetDate = new Date("August 31, 2024 00:00:00").getTime();
+const targetDate = new Date("October 22, 2024 00:00:00").getTime();
 
 // Update countdown every second
 const countdownInterval = setInterval(() => {
@@ -210,3 +210,51 @@ function draw() {
   
   requestAnimationFrame(draw);
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const photos = document.querySelectorAll('.gallery-photo');
+  const previews = document.querySelectorAll('.preview-photo');
+  let current = 0;
+
+  function showPhoto(index) {
+      // Hapus kelas active, previous, dan next dari gambar dan preview sebelumnya
+      photos.forEach(photo => photo.classList.remove('active'));
+      previews.forEach(preview => preview.classList.remove('active', 'previous', 'next', 'hidden'));
+
+      // Set gambar dan preview baru sebagai active
+      current = index;
+      photos[current].classList.add('active');
+      previews[current].classList.add('active');
+
+      // Set gambar sebelumnya dan setelahnya
+      const previousIndex = (current - 1 + previews.length) % previews.length;
+      const nextIndex = (current + 1) % previews.length;
+
+      previews[previousIndex].classList.add('previous');
+      previews[nextIndex].classList.add('next');
+
+      // Sembunyikan gambar lainnya
+      previews.forEach((preview, index) => {
+          if (index !== current && index !== previousIndex && index !== nextIndex) {
+              preview.classList.add('hidden');
+          }
+      });
+  }
+
+  // Ganti gambar secara otomatis setiap 3 detik
+  setInterval(() => {
+      let next = (current + 1) % photos.length;
+      showPhoto(next);
+  }, 3000);
+
+  // Event listener untuk klik preview
+  previews.forEach((preview, index) => {
+      preview.addEventListener('click', () => {
+          showPhoto(index);
+      });
+  });
+
+  // Inisialisasi tampilan pertama kali
+  showPhoto(current);
+});
