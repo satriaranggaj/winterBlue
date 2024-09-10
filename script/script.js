@@ -52,7 +52,7 @@ window.addEventListener('scroll', function() {
 
 // Set target date for the countdown
 // Set target date for the countdown
-const targetDate = new Date("October 22, 2024 00:00:00").getTime();
+const targetDate = new Date("August 31, 2024 00:00:00").getTime();
 
 // Update countdown every second
 const countdownInterval = setInterval(() => {

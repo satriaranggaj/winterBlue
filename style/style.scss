@@ -3,6 +3,7 @@ html{
 }
 body{
     margin: 0;
+    background-color: #f3f4f1;
 
     #invitation-content{
         display: flex;
@@ -12,8 +13,8 @@ body{
         
         .musicTriger{
             cursor: pointer;
-            background-color: #758a70;
-            color: #e4d2a9;
+            background-color: #78a4da;
+            color: #f3f4f1;
             position: fixed;
             top: 15px;
             left: 15px;
@@ -24,6 +25,7 @@ body{
             font-size: 25px;
             font-weight: bold;
             animation: animationFadeOut .0s ease 1 forwards;
+            box-shadow: 0px 0px 10px -7px black;
 
             i{
                 animation: animationScale 2s ease infinite;
@@ -64,7 +66,7 @@ body{
     
             nav.navbar{
                 position: fixed;
-                background-color: #e4d2a9;
+                background-color: #78a4da;
                 padding: 10px 0;
                 border-radius: 50px;
                 flex-direction: column;
@@ -85,7 +87,7 @@ body{
                         text-decoration: none;
                         .nav-link-content{
                             text-align: center;
-                            color: #758a70;
+                            color: #f3f4f1;
                             width: fit-content;
                             height: 1rem;
                             display: flex;
@@ -100,7 +102,7 @@ body{
                             }
                             .nav-text{
                                 position: absolute;
-                                background-color: #758a70;
+                                background-color: #f3f4f1;
                                 padding: 5px;
                                 border-radius: 5px;
                                 margin-top: 10px;
@@ -116,8 +118,8 @@ body{
 
                     a.nav-link.active{
                         .nav-link-content{
-                            color: #e4d2a9;
-                            background-color: #758a70;
+                            color: #78a4da;
+                            background-color: #f3f4f1;
 
                             .nav-text{
                                 transform: translateY(0);
@@ -132,8 +134,8 @@ body{
                 .navbar-item:hover{
                     a.nav-link{
                         .nav-link-content{
-                            color: #e4d2a9;
-                            background-color: #758a70;
+                            color: #78a4da;
+                            background-color: #f3f4f1;
 
                             .nav-text{
                                 transform: translateY(0);
@@ -161,152 +163,137 @@ body{
                     width: 100%;
                     z-index: 1;
                 }
+                .name{
+                    position: relative;
+                    width: fit-content;
+                    height: fit-content;
+                    margin: auto;
+                    margin-top: 30%;
+                    padding: 1rem 1rem;
+                    display: flex;
+                    font-family: "Passions Conflict", cursive;
+                    color: #f3f4f1;
+                    background-image: url(../layout/bg-cover-name.png);
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 10;
+
+                    .groom{
+                        margin: 0;
+                        font-size: calc(2rem + 1vw);
+                        font-weight: normal;
+                        animation: animationFadeRight 4s ease 1 forwards;
+                    }
+                    .and{
+                        margin: 0 15px;
+                        font-size: calc(2rem + 1vw);
+                        font-weight: normal;
+                        animation: animationFadeIn 4s ease 1 forwards;
+                    }
+                    .bride{
+                        margin: 0;
+                        font-size: calc(2rem + 1vw);
+                        font-weight: normal;
+                        animation: animationFadeLeft 4s ease 1 forwards;
+                    } 
+                }
                 .cover-photo{
+                    background-image: url(../layout/bg-cover-photo.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
                     max-width: 45%;
-                    height: 200px;
+                    max-height: fit-content;
                     position: relative;
                     margin: auto;
-                    margin-top: 25%;
+                    margin-top: -10%;
+                    padding: 15px;
+                    animation: animationFadeUp 2s ease 1 forwards;
                     z-index: 5;
 
                     .image{
-                        position: relative;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
+                        margin: auto;
                         width: 100%;
-                        border-radius: 100%;
                         animation: animationFadeIn 4s ease 1 forwards;
                     }
-                    .frame-cover{
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 130%;
-                        animation: animationFadeIn 2s ease 1 forwards;
-                    }
-                }
-                .flower-one{
-                    position: absolute;
-                    top: 350px;
-                    right: 75%;
-                    width: 30%;
-                    z-index: 2;
-                    animation: animationFadeRight 2s ease 1 forwards;
-                }
-                .flower-two{
-                    position: absolute;
-                    top: -50px;
-                    right: 5px;
-                    width: 30%;
-                    z-index: 2;
-                    animation: animationFadeDown 2s ease 1 forwards;
-                }
-                .flower-three{
-                    position: absolute;
-                    top: -65px;
-                    right: 75%;
-                    width: 30%;
-                    z-index: 2;
-                    animation: animationFadeRightFlower 2s ease 1 forwards;
-                }
-                .flower-four{
-                    position: absolute;
-                    top: 375px;
-                    right: 25px;
-                    width: 75%;
-                    z-index: 2;
-                    animation: animationFadeInFlower 2s ease 1 forwards;
                 }
                 .text{
                     max-width: 450px;
                     width: 100%;   
                     position: absolute;
                     top: 0;
-                    z-index: 2;
+                    z-index: 7;
                     text-align: center;
                     overflow: hidden;
+
                     .title{
                         margin-top: 5%;
-                        font-family: "Parisienne", cursive;
-                        color: #e4d2a9;
+                        font-size: calc(1rem + .5vw);
+                        font-family: "Passions Conflict", cursive;
+                        color: #1a2d3c;
 
                         .title-one{
+                            font-weight: normal;
                             animation: animationFadeRight 4s ease 1 forwards;
                             margin: 0;
                             margin-bottom: -10px;
                             margin-right: 24%;
-                            font-size: calc(1.5rem + .5vw);
                         }
                         .title-two{
+                            font-weight: normal;
                             animation: animationFadeLeft 4s ease 1 forwards;
                             margin: 0;
                             margin-top: -10px;
                             margin-left: 17%;
-                            font-size: calc(1.5rem + .5vw);
                         }
-                    }
-                    .name{
-                        position: relative;
-                        width: fit-content;
-                        margin: auto;
-                        margin-top: 55%;
-                        display: flex;
-                        font-family: "Parisienne", cursive;
-                        color: #e4d2a9;
-                        .groom{
-                            margin: 0;
-                            font-size: calc(2rem + 1vw);
-                            animation: animationFadeDown 4s ease 1 forwards;
-                        }
-                        .and{
-                            margin: 0 15px;
-                            font-size: calc(2rem + 1vw);
-                            animation: animationFadeIn 4s ease 1 forwards;
-                        }
-                        .bride{
-                            margin: 0;
-                            font-size: calc(2rem + 1vw);
-                            animation: animationFadeUp 4s ease 1 forwards;
-                        } 
                     }
                     .date{
                         display: flex;
-                        justify-content: center;
+                        justify-content: space-between;
                         max-width: 450px;
-                        width: 100%;
-                        margin-top: -15px;
+                        width: 50%;
+                        margin: auto;
+                        margin-top: 65%;
                         position: relative;
-                        font-family: "Crimson Text", serif;
-                        font-weight: bold;
-                        color: #e4d2a9;
+                        font-family: "Tenor Sans", sans-serif;
+                        font-weight: normal;
+                        color: #705c45;
                         
-                        .dot{
-                            margin: 0 10px;
-                            font-size: calc(1rem + .5vw);
-                        }
                         .day{
                             font-size: calc(1rem + .5vw);
                             z-index: 2;
                             animation: animationFadeRight 4s ease 1 forwards;
+                            
+                            p{
+                                width: 3rem;
+                                border-top: 1px solid #705c45;
+                                border-bottom: 1px solid #705c45;
+                            }
                         }
                         .month{
                             font-size: calc(1rem + .5vw);
                             z-index: 2;
-                            animation: animationFadeIn 4s ease 1 forwards;
+                            animation: animationFadeLeft 4s ease 1 forwards;
+                            
+                            p{
+                                width: 3rem;
+                                border-top: 1px solid #705c45;
+                                border-bottom: 1px solid #705c45;
+                            }
                         }
                         .year{
                             font-size: calc(1rem + .5vw);
                             z-index: 2;
-                            animation: animationFadeLeft 4s ease 1 forwards;
+                            animation: animationFadeIn 4s ease 1 forwards;
                         }
                     }
                     .visitor{
+                        width: 75%;
+                        margin: auto;
                         position: relative;
-                        margin-top: 25px;
-                        font-family: "Crimson Text", serif;
-                        color: #c2c2be;
+                        font-family: "Tenor Sans", sans-serif;
+                        color: #1a2d3c;
                         animation: animationFadeIn 4s ease 1 forwards;
                         z-index: 2;
     
@@ -335,20 +322,20 @@ body{
                     position: relative;
                     width: 50%;
                     margin: 0 25%;
-                    margin-top: 70%;
+                    margin-top: 45%;
                     background: transparent;
                     border-radius: 50px;
-                    border: 1px #e4d2a9 solid;
-                    color: #e4d2a9;
+                    border: 1px #78a4da solid;
+                    color: #78a4da;
                     padding: 10px 15px;
                     z-index: 1000;
                     transition: all .3s;
                     animation: animationFadeIn 4s ease 1 forwards;
                 }
                 button:hover{
-                    background: #e4d2a9;
-                    border: 1px #e4d2a9 solid;
-                    color: #758a70;
+                    background: #78a4da;
+                    border: 1px #78a4da solid;
+                    color: #fefefe;
                 }
             }
             .invitation-content{
@@ -358,38 +345,58 @@ body{
                 background-repeat: repeat-y;
     
                 #quotes{
+                    position: relative;
                     width: 100%;
                     height: fit-content;
+                    padding-bottom: 195px;
                     overflow: hidden;
+
                     .quotes-layout{
                         width: 100%;
                         max-width: 450px;
                         position: absolute;
                         z-index: 5;
                     }
-                    .quotes-image{
+                    .image-wrapper {
+                        position: relative;
+                        display: inline-block;
                         width: 100%;
                         max-width: 450px;
-                        animation: animationFadeIn 4s ease 1 forwards;
+
+                        .quotes-image {
+                            width: 100%;
+                            display: block;
+                        }
                     }
+                    .image-wrapper::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 30%;
+                        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+                        pointer-events: none;
+                      }
                     .text{
                         padding: 0 25px;
                         .arab{
                             width: 100%;
-                            color: #3a3a3a;
+                            color: #705c45;
                             position: relative;
                             z-index: 10;
                             margin: 75px 0 25px 0;
                             text-align: center;
+                            font-family: "Tenor Sans", sans-serif;
                             animation: animationFadeDown 4s ease 1 forwards;
                         }
                         .terjemah{
-                            font-family: "Poppins", sans-serif;
-                            font-size: calc(.7rem + .2vw);
+                            font-family: "Tenor Sans", sans-serif;
+                            font-size: calc(.8rem + .2vw);
                             font-style: italic;
                             width: 100%;
                             margin: auto;
-                            color: #3a3a3a;
+                            color: #705c45;
                             position: relative;
                             z-index: 10;
                             text-align: center;
@@ -398,35 +405,26 @@ body{
                     }
                 }
                 #couple{
-                    height: fit-content;
                     width: 100%;
                     position: relative;
-                    z-index: 1;
-                    margin-top: -25px;
-                    background-image: 
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 20%), /* Gradient transparan di bagian atas */
-                    linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 20%), /* Gradient transparan di bagian bawah */
-                    url(../layout/couple-background.png);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    padding: 25px 0;
-        
+                    z-index: 0;
+                    
                     .title{
                         width: fit-content;
                         margin: auto;
-                        margin-top: 200px;
-                        color: #e4d2a9;
+                        margin-top: 100px;
+                        color: #1a2d3c;
                 
                         h1{
-                            font-weight: bold;
-                            font-family: "Parisienne", cursive;
-                            font-size: 2.5rem;
+                            font-weight: lighter;
+                            font-family: "Passions Conflict", cursive;
+                            font-size: 4rem;
                         }
                     }
                     .brides{
                         width: 100%;
                         height: 1000px;
-                        margin-top: 200px;
+                        margin-top: 150px;
                         .groom{
                             position: relative;
                             height: 150px;
@@ -439,17 +437,13 @@ body{
                                 width: 150px;
                                 .photo{
                                     position: relative;
+                                    background-image: url(../layout/bg-cover-photo.png);
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    padding: 10px;
                                     img{
                                         width: 100%;
-                                        border-radius: 100%;
-                                    }
-                                }
-                                .frame{
-                                    position: absolute;
-                                    top: -5px;
-                                    left: -5px;
-                                    img{
-                                        width: 160px;
                                     }
                                 }
                             }
@@ -457,21 +451,33 @@ body{
                                 text-align: start;
                                 margin-left: 2rem;
                                 margin-bottom: 1.5rem;
+
                                 .name{
+                                    position: relative;
+                                    width: fit-content;
+                                    height: fit-content;
+                                    margin-bottom: -1rem;
+                                    padding: 1rem 1rem;
+                                    font-family: "Passions Conflict", cursive;
+                                    color: #f3f4f1;
+                                    background-image: url(../layout/bg-cover-name.png);
+                                    background-size: contain;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    z-index: 10;
+
                                     h1{
-                                        margin-bottom: 5px;
-                                        font-family: "Parisienne", cursive;
-                                        font-weight: bold;
-                                        font-size: 2rem;
-                                        color: #e4d2a9;
+                                        font-size: calc(2rem + 1vw);
+                                        font-weight: normal;
+                                        margin: 0;
                                     }
                                 }
                                 .child-of{
                                     p{
                                         margin: 0;
                                         font-size: calc(.8rem + .2vw);
-                                        font-family: "Crimson Text", serif;
-                                        color: #c2c2be;
+                                        font-family: "Tenor Sans", sans-serif;
+                                        color: #705c45;
                                     }
                                 }
                             }
@@ -479,10 +485,10 @@ body{
                         .and{
                             width: 100%;
                             margin: 150px auto;
-                            font-weight: bold;
-                            font-family: "Parisienne", cursive;
-                            font-size: 3rem;
-                            color: #e4d2a9;
+                            font-weight: normal;
+                            font-family: "Passions Conflict", cursive;
+                            font-size: 5rem;
+                            color: #1a2d3c;
                             display: flex;
                             justify-content: center;
     
@@ -506,73 +512,84 @@ body{
                                 width: 150px;
                                 .photo{
                                     position: relative;
+                                    background-image: url(../layout/bg-cover-photo.png);
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    padding: 10px;
                                     img{
                                         width: 100%;
-                                        border-radius: 100%;
                                     }
                                 }
-                                .frame{
-                                    position: absolute;
-                                    top: -5px;
-                                    right: -5px;
-                                    img{
-                                        width: 160px;
-                                    }
-                                }
+
                             }
                             .text{
                                 text-align: end;
                                 margin-right: 2rem;
                                 margin-bottom: 1.5rem;
                                 .name{
+                                    position: relative;
+                                    width: fit-content;
+                                    height: fit-content;
+                                    margin-bottom: -1rem;
+                                    padding: 1rem 1rem;
+                                    font-family: "Passions Conflict", cursive;
+                                    color: #f3f4f1;
+                                    background-image: url(../layout/bg-cover-name.png);
+                                    background-size: contain;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    z-index: 10;
+
                                     h1{
-                                        margin-bottom: 5px;
-                                        font-family: "Parisienne", cursive;
-                                        font-weight: bold;
-                                        font-size: 2rem;
-                                        color: #e4d2a9;
+                                        font-size: calc(2rem + 1vw);
+                                        font-weight: normal;
+                                        margin: 0;
                                     }
                                 }
                                 .child-of{
                                     p{
                                         margin: 0;
                                         font-size: calc(.8rem + .2vw);
-                                        font-family: "Crimson Text", serif;
-                                        color: #c2c2be;
+                                        font-family: "Tenor Sans", sans-serif;
+                                        color: #705c45;
                                     }
                                 }
                             }
                         }
                     }
                 }
+                .svg-one {
+                    position: relative;
+                    transform: rotate(180deg);
+                    width: 150%;
+                    height: 100px;
+                    margin-top: -75px;
+                    display: block;
+                    z-index: 5;
+                }
                 #gallery{
                     width: 100%;
-    
-                    .video{
-                        iframe{
-                            width: 100%;
-                            height: 225px;
-                        }
-                    }
+                    margin-top: -75px;
+                    background-color: #78a4da;
+
                     .text{
-                        margin-top: -10px;
+                        margin-top: 25px;
                         text-align: center;
                         padding: 50px 25px;
-                        background-image: 
-                        linear-gradient(to bottom, rgba(255, 255, 255, 1.5), rgba(255, 255, 255, 0) 20%),
-                        url(../layout/galleryHead-background.png);
-                        background-repeat: no-repeat;
-                        background-size: cover;
         
                         .title{
-                            font-family: "Parisienne", cursive;
-                            color: #6c7e68;
-                            font-size: 1.5rem;
-                            font-weight: bold;
+                            font-family: "Passions Conflict", cursive;
+                            color: #f3f4f1;
+                            font-size: 2rem;
+
+                            h1{
+                                font-weight: normal;
+                            }
                         }
                         .fill{
-                            font-family: "Crimson Text", serif;
-                            color: #3a3a3a;
+                            font-family: "Tenor Sans", sans-serif;
+                            color: #1a2d3c;
                             font-size: calc(.8rem + .2vw);
                         }
                     }
@@ -582,36 +599,10 @@ body{
                         margin: 0 auto;
                         position: relative;
 
-                        .photos {
-                            position: relative;
-                            width: 100%;
-                            height: 400px;
-                            overflow: hidden;
-                        
-                            .gallery-photo {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                opacity: 0;
-                                transition: opacity 1s ease;
-                        
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
-                                }
-                            }
-                        
-                            .gallery-photo.active {
-                                opacity: 1;
-                            }
-                        }
                         .preview {
                             display: flex;
                             justify-content: center;
-                            margin-top: 10px;
+                            margin: 10px auto;
                             overflow: hidden;
                         
                             .preview-photo {
@@ -639,13 +630,44 @@ body{
                                 display: none;
                             }
                         }
+                        .photos {
+                            position: relative;
+                            width: 100%;
+                            height: 400px;
+                            overflow: hidden;
+                        
+                            .gallery-photo {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                                transition: opacity 1s ease;
+                        
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        
+                            .gallery-photo.active {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .video{
+                        margin-top: 10px;
+                        iframe{
+                            width: 100%;
+                            height: 225px;
+                        }
                     }
                 }
                 #countdown {
-                    background-color: #758a70;
-                    margin-top: 10px;
+                    background-color: #78a4da;
                     text-align: center;
-                    font-family: "Crimson Text", serif;
                     
                     .play {
                         padding: 50px 10px;
@@ -654,13 +676,14 @@ body{
                         align-items: center;
     
                         .title h4 {
-                            margin-bottom: 25px;
-                            font-size: 1.5rem;
-                            color: #e4d2a9;
+                            font-family: "Passions Conflict", cursive;
+                            color: #f3f4f1;
+                            font-size: 2.5rem;
+                            font-weight: normal;
                         }
                         
                         .play-wrap{
-                            background-color: #e4d2a9;
+                            background-color: #f3f4f1;
                             padding: 50px 25px 100px 25px;
                             border-radius: 0 0 200px 200px;
                             margin-bottom: 50px;
@@ -676,9 +699,9 @@ body{
                                 button {
                                     padding: 10px 20px;
                                     font-size: 1rem;
-                                    background-color: #e4d2a9;
-                                    color: #758a70;
-                                    border: 1px solid #758a70;
+                                    background-color: transparent;
+                                    color: #78a4da;
+                                    border: 1px solid #78a4da;
                                     border-radius: 50px;
                                     cursor: pointer;
                                     transition: background-color 0.3s ease;
@@ -688,8 +711,8 @@ body{
                                     }
                                 }
                                 button:hover {
-                                    color: #e4d2a9;
-                                    background-color: #758a70;
+                                    color: #f3f4f1;
+                                    background-color: #78a4da;
                                 }
                             }
                             .time {
@@ -701,49 +724,70 @@ body{
                                 font-weight: bold;
         
                                 span {
+                                    font-family: "Passions Conflict", cursive;
                                     width: 4.5rem;
+                                    padding: 10px 5px;
+                                    background-color: #78a4da;
                                     display: flex;
                                     flex-direction: column;
                                     align-items: center;
                                     justify-content: center;
-                                    color: #758a70;
+                                    color: #f3f4f1;
+                                    border-radius: 10px;
         
                                     .times{
-                                        font-size: 2rem;
+                                        font-size: 3rem;
                                     }
                                     .text{
-                                        font-size: 1rem;
+                                        font-size: 2rem;
                                     }
                                 }
                             }
                             .tanggal p {
+                                font-family: "Tenor Sans", sans-serif;
                                 margin-top: 25px;
                                 font-size: 1rem;
-                                color: #3a3a3a;
+                                color: #705c45;
                             }
                         }
                     }
                     .done {
+                        font-family: "Passions Conflict", cursive;
                         height: 300px;
                         margin: 0 auto;
-                        margin-top: -20px;
+                        margin-top: -50px;
                         line-height: 300px;
-                        font-size: 1.5rem;
-                        color: #e4d2a9;
+                        font-size: 2.5rem;
+                        color: #f3f4f1;
+
+                        h2{
+                            font-weight: normal;
+                        }
                     }
+                }
+                .svg-two {
+                    position: relative;
+                    transform: rotate(180deg);
+                    width: 150%;
+                    height: 100px;
+                    display: block;
+                    z-index: 5;
                 }
                 #rundown{
                     margin-top: 100px;
 
                     .title{
-                        font-family: "Parisienne", cursive;
-                        font-size: 1.5rem;
-                        font-weight: bold;
+                        font-family: "Passions Conflict", cursive;
+                        color: #1a2d3c;
+                        font-size: 2.5rem;
                         text-align: center;
-                        color: #758a70;
+                        
+                        h1{
+                            font-weight: normal;
+                        }
                     }
                     .rundown-wrap{
-                        background-color: #758a70;
+                        background-color: #78a4da;
                         width: 85%;
                         margin: auto;
                         margin-top: 75px;
@@ -751,12 +795,6 @@ body{
                         border-radius: 125px;
                         position: relative;
 
-                        .rundown-flower{
-                            width: 50%;
-                            position: absolute;
-                            top: 0px;
-                            right: 70%;
-                        }
                         .first{
                             padding: 2rem;
                             margin-right: auto;
@@ -765,20 +803,20 @@ body{
                             .title h2 {
                                 margin: 0;
                                 margin-bottom: 1rem;
-                                font-size: 1.5rem;
-                                color: #e4d2a9;
-                                font-weight: bold;
+                                font-size: 2.5rem;
+                                color: #f3f4f1;
+                                font-weight: normal;
                             }
                             .date{
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 margin-bottom: .5rem;
-                                color: #d7d7c8;
+                                color: #1a2d3c;
                                 
                                 p{
                                     margin: 0;
-                                    font-family: "Crimson Text", serif;
+                                    font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
                             }
@@ -787,11 +825,11 @@ body{
                                 justify-content: center;
                                 align-items: center;
                                 margin-bottom: .5rem;
-                                color: #d7d7c8;
+                                color: #1a2d3c;
                                 
                                 p{
                                     margin: 0;
-                                    font-family: "Crimson Text", serif;
+                                    font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
                             }
@@ -799,10 +837,10 @@ body{
                                 display: flex;
                                 justify-content: center;
                                 margin-bottom: .5rem;
-                                color: #d7d7c8;
+                                color: #1a2d3c;
                                 p{
                                     margin: 0;
-                                    font-family: "Crimson Text", serif;
+                                    font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
                             }
@@ -811,15 +849,15 @@ body{
                                 margin-top: 1rem;
                                 padding: .5rem 1rem;
                                 font-size: 1rem;
-                                color: #758a70;
-                                background-color: #e4d2a9;
+                                color: #78a4da;
+                                background-color: #f3f4f1;
                                 border-radius: 50px;
-                                border: solid 1px #e4d2a9;
+                                border: solid 1px #f3f4f1;
                                 transition: .3s all;
                             }
                             button:hover{
-                                color: #e4d2a9;
-                                background-color: #758a70;
+                                color: #f3f4f1;
+                                background-color: #78a4da;
                             }
                         }
                         .second{
@@ -830,20 +868,20 @@ body{
                             .title h2 {
                                 margin: 0;
                                 margin-bottom: 1rem;
-                                font-size: 1.5rem;
-                                color: #e4d2a9;
-                                font-weight: bold;
+                                font-size: 2.5rem;
+                                color: #f3f4f1;
+                                font-weight: normal;
                             }
                             .date{
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 margin-bottom: .5rem;
-                                color: #d7d7c8;
+                                color: #1a2d3c;
                                 
                                 p{
                                     margin: 0;
-                                    font-family: "Crimson Text", serif;
+                                    font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
                             }
@@ -852,11 +890,11 @@ body{
                                 justify-content: center;
                                 align-items: center;
                                 margin-bottom: .5rem;
-                                color: #d7d7c8;
+                                color: #1a2d3c;
                                 
                                 p{
                                     margin: 0;
-                                    font-family: "Crimson Text", serif;
+                                    font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
                             }
@@ -864,10 +902,10 @@ body{
                                 display: flex;
                                 justify-content: center;
                                 margin-bottom: .5rem;
-                                color: #d7d7c8;
+                                color: #1a2d3c;
                                 p{
                                     margin: 0;
-                                    font-family: "Crimson Text", serif;
+                                    font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
                             }
@@ -876,15 +914,15 @@ body{
                                 margin-top: 1rem;
                                 padding: .5rem 1rem;
                                 font-size: 1rem;
-                                color: #758a70;
-                                background-color: #e4d2a9;
+                                color: #78a4da;
+                                background-color: #f3f4f1;
                                 border-radius: 50px;
-                                border: solid 1px #e4d2a9;
+                                border: solid 1px #f3f4f1;
                                 transition: .3s all;
                             }
                             button:hover{
-                                color: #e4d2a9;
-                                background-color: #758a70;
+                                color: #f3f4f1;
+                                background-color: #78a4da;
                             }
                         }
                         .third{
@@ -895,20 +933,20 @@ body{
                             .title h2 {
                                 margin: 0;
                                 margin-bottom: 1rem;
-                                font-size: 1.5rem;
-                                color: #e4d2a9;
-                                font-weight: bold;
+                                font-size: 2.5rem;
+                                color: #f3f4f1;
+                                font-weight: normal;
                             }
                             .date{
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 margin-bottom: .5rem;
-                                color: #d7d7c8;
+                                color: #1a2d3c;
                                 
                                 p{
                                     margin: 0;
-                                    font-family: "Crimson Text", serif;
+                                    font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
                             }
@@ -917,11 +955,11 @@ body{
                                 justify-content: center;
                                 align-items: center;
                                 margin-bottom: .5rem;
-                                color: #d7d7c8;
+                                color: #1a2d3c;
                                 
                                 p{
                                     margin: 0;
-                                    font-family: "Crimson Text", serif;
+                                    font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
                             }
@@ -929,10 +967,10 @@ body{
                                 display: flex;
                                 justify-content: center;
                                 margin-bottom: .5rem;
-                                color: #d7d7c8;
+                                color: #1a2d3c;
                                 p{
                                     margin: 0;
-                                    font-family: "Crimson Text", serif;
+                                    font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
                             }
@@ -941,15 +979,15 @@ body{
                                 margin-top: 1rem;
                                 padding: .5rem 1rem;
                                 font-size: 1rem;
-                                color: #758a70;
-                                background-color: #e4d2a9;
+                                color: #78a4da;
+                                background-color: #f3f4f1;
                                 border-radius: 50px;
-                                border: solid 1px #e4d2a9;
+                                border: solid 1px #f3f4f1;
                                 transition: .3s all;
                             }
                             button:hover{
-                                color: #e4d2a9;
-                                background-color: #758a70;
+                                color: #f3f4f1;
+                                background-color: #78a4da;
                             }
                         }
                     }
@@ -959,12 +997,12 @@ body{
                     padding-bottom: 75px;
     
                     .container{
-                        background-color: #758a70;
+                        background-color: #78a4da;
                         width: 75%;
                         margin: auto;
                         padding-bottom: 2rem;
                         text-align: center;
-                        border: solid 10px #758a70;
+                        border: solid 10px #78a4da;
                         border-radius: 15px;
                         overflow: hidden;
                         .map{
@@ -980,8 +1018,8 @@ body{
                         .address{
                             margin-top: 2rem;
                             padding: 0 1.5rem;
-                            font-family: "Crimson Text", serif;
-                            color: #e4d2a9;
+                            font-family: "Tenor Sans", sans-serif;
+                            color: #f3f4f1;
     
                             i{
                                 font-size: calc(1rem + .5vw);  
@@ -998,15 +1036,15 @@ body{
                                 margin-top: 1rem;
                                 padding: .5rem 1rem;
                                 font-size: 1rem;
-                                color: #e4d2a9;
-                                background-color: #758a70;
+                                color: #78a4da;
+                                background-color: #f3f4f1;
                                 border-radius: 50px;
-                                border: solid 1px #e4d2a9;
+                                border: solid 1px #f3f4f1;
                                 transition: .3s all;
                             }
                             button:hover{
-                                color: #758a70;
-                                background-color: #e4d2a9;
+                                color: #f3f4f1;
+                                background-color: #78a4da;
                             }
                         }
                     }
@@ -1015,44 +1053,45 @@ body{
                     text-align: center;
     
                     .title h4 {
-                        font-family: "Parisienne", cursive;
-                        margin-bottom: 1.5rem;
-                        font-size: 2rem;
-                        color: #758a70;
+                        font-family: "Passions Conflict", cursive;
+                        color: #1a2d3c;
+                        font-size: 3rem;
+                        font-weight: normal;
+                        margin: 5rem 0 2rem 0;
                     }
                     .content{
                         p{
-                            font-family: "Crimson Text", serif;
+                            font-family: "Tenor Sans", sans-serif;
                             font-size: calc(.8rem + .2vw);
                             margin: .5rem 0;
-                            color: #3a3a3a;
+                            color: #705c45;
                         }
                     }
                 }
                 #live-streaming{
-                    margin-top: 100px;
+                    margin-top: 150px;
                     text-align: center;
                     
                     .container{
                         width: 75%;
                         padding: 2rem;
                         margin: auto;
-                        background-color: #758a70;
+                        background-color: #78a4da;
                         border-radius: 25px;
     
                         .title{
                             h1{
-                                font-family: "Parisienne", cursive;
-                                font-size: 2rem;
-                                margin-bottom: 2rem;
+                                font-family: "Passions Conflict", cursive;
+                                color: #f3f4f1;
+                                font-size: 3rem;
+                                font-weight: normal;
                                 margin: 0;
-                                color: #e4d2a9;
                             }
                         }
                         .content{
                             p{
-                                color: #fcfaf5;
-                                font-family: "Crimson Text", serif;
+                                color: #1a2d3c;
+                                font-family: "Tenor Sans", sans-serif;
                                 font-size: calc(.8rem + .2vw);
     
                             }
@@ -1062,51 +1101,50 @@ body{
                             margin-top: 1rem;
                             padding: .5rem 1rem;
                             font-size: 1rem;
-                            color: #758a70;
-                            background-color: #e4d2a9;
+                            color: #78a4da;
+                            background-color: #f3f4f1;
                             border-radius: 50px;
-                            border: solid 1px #e4d2a9;
+                            border: solid 1px #f3f4f1;
                             transition: .3s all;
                         }
                         button:hover{
-                            color: #e4d2a9;
-                            background-color: #758a70;
+                            color: #f3f4f1;
+                            background-color: #78a4da;
                         }
                     }
                 }
                 #envelope{
-                    margin-top: 50px;
+                    margin-top: 150px;
                     padding: 0 2rem;
                     .title{
                         h1{
+                            font-family: "Passions Conflict", cursive;
+                            color: #1a2d3c;
+                            font-size: 3rem;
+                            font-weight: normal;
                             text-align: center;
-                            font-family: "Parisienne", cursive;
-                            font-weight: bold;
-                            font-size: 2rem;
-                            margin-bottom: 2rem;
                             margin: 0;
-                            color: #758a70;
                         }
                     }
                     .text{
                         margin-bottom: 50px;
                         p{
-                            color: #262b44;
-                            font-family: "Crimson Text", serif;
+                            color: #705c45;
+                            font-family: "Tenor Sans", sans-serif;
                             font-size: calc(.8rem + .2vw);
 
                         }
                     }
                     .accounts{
                         .account{
-                            background-color: #758a70;
+                            background-color: #78a4da;
                             padding: 1rem 2rem;
                             margin: 1rem auto;
                             border-radius: 10px;
 
                             p{
-                                font-family: "Crimson Text", serif;
-                                color: #e4d2a9;
+                                font-family: "Tenor Sans", sans-serif;
+                                color: #1a2d3c;
                                 margin-bottom: 2rem;
                                 margin: 0;
                             }
@@ -1120,13 +1158,13 @@ body{
                                     margin-right: .5rem;
                                     font-family: "Poppins", sans-serif;
                                     font-size: 1rem;
-                                    color: #d7d7c8;
+                                    color: #f3f4f1;
                                 }
                                 p{
                                     margin: 0;
                                     font-family: "Poppins", sans-serif;
                                     font-size: 1rem;
-                                    color: #d7d7c8;
+                                    color: #f3f4f1;
                                 }
                             }
                         }
@@ -1137,20 +1175,23 @@ body{
                     margin-top: 100px;
 
                     .wish-wrap{
-                        background-color: rgba(228, 210, 169, 0.5);
+                        background-color: rgba(120, 164, 218, 0.5);
                         width: 85%;
                         margin: auto;
                         padding: 75px 0 150px 0;
-                        border: 5px solid rgba(117, 138, 112, 0.5);
+                        border: 5px solid #78a4da;
                         border-radius: 150px 150px 0 0;
 
                         .title{
-                            font-family: "Parisienne", cursive;
-                            font-size: 1.5rem;
-                            font-weight: bold;
+                            font-family: "Passions Conflict", cursive;
+                            color: #1a2d3c;
+                            font-size: 2.5rem;
                             text-align: center;
-                            color: #758a70;
-                            margin-bottom: 50px;
+                            margin: 0;
+
+                            h1{
+                                font-weight: normal;
+                            }
                         }
                         .content{
                             max-height: 500px;
@@ -1164,9 +1205,9 @@ body{
         
                                 .name{
                                     p{
-                                        font-family: "Crimson Text", serif;
+                                        font-family: "Tenor Sans", sans-serif;
                                         font-size: calc(1rem + .3vw);
-                                        color: #758a70;
+                                        color: #705c45;
                                         margin: 0;
                                         font-weight: bold;
                                     }
@@ -1181,16 +1222,16 @@ body{
                                     p{
                                         margin: 0;
                                         font-size: calc(.8rem + .2vw);
-                                        font-family: "Crimson Text", serif;
-                                        color: gray;
+                                        font-family: "Tenor Sans", sans-serif;
+                                        color: #1a2d3c;
                                     }
                                 }
                                 .wish{
                                     p{
                                         margin: 0;
                                         font-size: calc(.8rem + .2vw);
-                                        font-family: "Crimson Text", serif;
-                                        color: gray;
+                                        font-family: "Tenor Sans", sans-serif;
+                                        color: #1a2d3c;
                                     }
                                 }
                             }
@@ -1219,16 +1260,16 @@ body{
                                 margin: 0;
                                 margin-bottom: 1rem;
                                 font-size: 1.5rem;
-                                color: #758a70;
-                                font-family: "Crimson Text", serif;
+                                color: #1a2d3c;
+                                font-family: "Tenor Sans", sans-serif;
                             }
                             .form-item{
                                 margin: .5rem 0;
                                 padding: .5rem;
                                 font-size: .9rem;
                                 border-radius: 5px;
-                                border: 1px solid #6C6C4C;
-                                font-family: "Crimson Text", serif;
+                                border: 1px solid #1a2d3c;
+                                font-family: "Tenor Sans", sans-serif;
                                 opacity: .5;
                                 background-color: transparent;
                             }
@@ -1237,15 +1278,15 @@ body{
                                 margin-top: 1rem;
                                 padding: .5rem 1rem;
                                 font-size: 1rem;
-                                color: #e4d2a9;
-                                background-color: #758a70;
+                                color: #f3f4f1;
+                                background-color: transparent;
                                 border-radius: 50px;
-                                border: solid 1px #758a70;
+                                border: solid 1px #f3f4f1;
                                 transition: .3s all;
                             }
                             button:hover{
-                                color: #758a70;
-                                background-color: transparent;
+                                color: #78a4da;
+                                background-color: #f3f4f1;
                             }
                             form{
                                 display: flex;
@@ -1271,153 +1312,138 @@ body{
                     width: 100%;
                     z-index: 1;
                 }
+                .name{
+                    position: relative;
+                    width: fit-content;
+                    height: fit-content;
+                    margin: auto;
+                    margin-top: 30%;
+                    padding: 1rem 1rem;
+                    display: flex;
+                    font-family: "Passions Conflict", cursive;
+                    color: #fefefe;
+                    background-image: url(../layout/bg-cover-name.png);
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 10;
+
+                    .groom{
+                        margin: 0;
+                        font-size: calc(2rem + 1vw);
+                        font-weight: normal;
+                        animation: animationFadeRightOut 4s ease 1 forwards;
+                    }
+                    .and{
+                        margin: 0 15px;
+                        font-size: calc(2rem + 1vw);
+                        font-weight: normal;
+                        animation: animationFadeOut 4s ease 1 forwards;
+                    }
+                    .bride{
+                        margin: 0;
+                        font-size: calc(2rem + 1vw);
+                        font-weight: normal;
+                        animation: animationFadeLeftOut 4s ease 1 forwards;
+                    } 
+                }
                 .cover-photo{
+                    background-image: url(../layout/bg-cover-photo.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
                     max-width: 45%;
-                    height: 200px;
+                    max-height: fit-content;
                     position: relative;
                     margin: auto;
-                    margin-top: 25%;
+                    margin-top: -10%;
+                    padding: 15px;
+                    animation: animationFadeUpOut 2s ease 1 forwards;
                     z-index: 5;
 
                     .image{
-                        position: relative;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
+                        margin: auto;
                         width: 100%;
-                        border-radius: 100%;
-                        animation: animationFadeOut 2s ease 1 forwards;
-                    }
-                    .frame-cover{
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 130%;
                         animation: animationFadeOut 4s ease 1 forwards;
                     }
-                }
-                .flower-one{
-                    position: absolute;
-                    top: 350px;
-                    right: 75%;
-                    width: 30%;
-                    z-index: 2;
-                    animation: animationFadeRightOut 4s ease 1 forwards;
-                }
-                .flower-two{
-                    position: absolute;
-                    top: -50px;
-                    right: 5px;
-                    width: 30%;
-                    z-index: 2;
-                    animation: animationFadeDownOut 4s ease 1 forwards;
-                }
-                .flower-three{
-                    position: absolute;
-                    top: -65px;
-                    right: 75%;
-                    width: 30%;
-                    z-index: 2;
-                    animation: animationFadeRightOut 4s ease 1 forwards;
-                }
-                .flower-four{
-                    position: absolute;
-                    top: 375px;
-                    right: 25px;
-                    width: 75%;
-                    z-index: 2;
-                    animation: animationFadeOut 4s ease 1 forwards;
                 }
                 .text{
                     max-width: 450px;
                     width: 100%;   
                     position: absolute;
                     top: 0;
-                    z-index: 2;
+                    z-index: 7;
                     text-align: center;
                     overflow: hidden;
+
                     .title{
                         margin-top: 5%;
-                        font-family: "Parisienne", cursive;
-                        color: #e4d2a9;
+                        font-size: calc(1rem + .5vw);
+                        font-family: "Passions Conflict", cursive;
+                        color: #1a2d3c;
 
                         .title-one{
-                            animation: animationFadeRightOut 2s ease 1 forwards;
+                            font-weight: normal;
+                            animation: animationFadeRightOut 4s ease 1 forwards;
                             margin: 0;
                             margin-bottom: -10px;
                             margin-right: 24%;
-                            font-size: calc(1.5rem + .5vw);
                         }
                         .title-two{
-                            animation: animationFadeLeftOut 2s ease 1 forwards;
+                            font-weight: normal;
+                            animation: animationFadeLeftOut 4s ease 1 forwards;
                             margin: 0;
                             margin-top: -10px;
                             margin-left: 17%;
-                            font-size: calc(1.5rem + .5vw);
                         }
-                    }
-                    .name{
-                        position: relative;
-                        width: fit-content;
-                        margin: auto;
-                        margin-top: 55%;
-                        display: flex;
-                        font-family: "Parisienne", cursive;
-                        color: #e4d2a9;
-                        .groom{
-                            margin: 0;
-                            font-size: calc(2rem + 1vw);
-                            animation: animationFadeDownOut 2s ease 1 forwards;
-                        }
-                        .and{
-                            margin: 0 15px;
-                            font-size: calc(2rem + 1vw);
-                            animation: animationFadeOut 2s ease 1 forwards;
-                        }
-                        .bride{
-                            margin: 0;
-                            font-size: calc(2rem + 1vw);
-                            animation: animationFadeUpOut 2s ease 1 forwards;
-                        } 
                     }
                     .date{
                         display: flex;
-                        justify-content: center;
+                        justify-content: space-between;
                         max-width: 450px;
-                        width: 100%;
-                        margin-top: -15px;
+                        width: 50%;
+                        margin: auto;
+                        margin-top: 65%;
                         position: relative;
-                        font-family: "Crimson Text", serif;
-                        font-weight: bold;
-                        color: #e4d2a9;
+                        font-family: "Tenor Sans", sans-serif;
+                        font-weight: normal;
+                        color: #705c45;
                         
-                        .dot{
-                            margin: 0 10px;
-                            font-size: calc(1rem + .5vw);
-                        }
                         .day{
                             font-size: calc(1rem + .5vw);
                             z-index: 2;
-                            animation: animationFadeRightOut 2s ease 1 forwards;
+                            animation: animationFadeRightOut 4s ease 1 forwards;
+                            
+                            p{
+                                width: 3rem;
+                                border-top: 1px solid #705c45;
+                                border-bottom: 1px solid #705c45;
+                            }
                         }
                         .month{
                             font-size: calc(1rem + .5vw);
                             z-index: 2;
-                            animation: animationFadeOut 2s ease 1 forwards;
+                            animation: animationFadeLeftOut 4s ease 1 forwards;
+                            
+                            p{
+                                width: 3rem;
+                                border-top: 1px solid #705c45;
+                                border-bottom: 1px solid #705c45;
+                            }
                         }
                         .year{
                             font-size: calc(1rem + .5vw);
                             z-index: 2;
-                            animation: animationFadeLeftOut 2s ease 1 forwards;
+                            animation: animationFadeOut 4s ease 1 forwards;
                         }
                     }
                     .visitor{
+                        width: 75%;
+                        margin: auto;
                         position: relative;
-                        margin-top: 25px;
-                        font-family: "Crimson Text", serif;
-                        color: #c2c2be;
-                        animation: animationFadeOut 2s ease 1 forwards;
+                        font-family: "Tenor Sans", sans-serif;
+                        color: #1a2d3c;
+                        animation: animationFadeOut 4s ease 1 forwards;
                         z-index: 2;
     
                         .respect{
@@ -1445,15 +1471,20 @@ body{
                     position: relative;
                     width: 50%;
                     margin: 0 25%;
-                    margin-top: 70%;
+                    margin-top: 45%;
                     background: transparent;
                     border-radius: 50px;
-                    border: 1px #e4d2a9 solid;
-                    color: #e4d2a9;
+                    border: 1px #78a4da solid;
+                    color: #78a4da;
                     padding: 10px 15px;
                     z-index: 1000;
                     transition: all .3s;
-                    animation: animationFadeOut 2s ease 1 forwards;
+                    animation: animationFadeOut 4s ease 1 forwards;
+                }
+                button:hover{
+                    background: #78a4da;
+                    border: 1px #78a4da solid;
+                    color: #fefefe;
                 }
             }
             .invitation-content.active{
@@ -1516,7 +1547,7 @@ body{
                     position: fixed;
                     left: 50%;
                     transform: translateX(-50%);
-                    background-color: #e4d2a9;
+                    background-color: #78a4da;
                     padding: 10px 0;
                     border-radius: 50px;
                     flex-direction: row;
@@ -1528,6 +1559,7 @@ body{
                     bottom: 15px;
                     z-index: 10;
                     animation: animationFadeOut .0s ease 1 forwards;
+                    box-shadow: 0px 0px 10px -7px black;
         
                     .navbar-item{
                         padding: 10px;
@@ -1536,7 +1568,7 @@ body{
                             text-decoration: none;
                             .nav-link-content{
                                 text-align: center;
-                                color: #758a70;
+                                color: #f3f4f1;
                                 width: fit-content;
                                 height: fit-content;
                                 display: flex;
@@ -1564,7 +1596,7 @@ body{
                         }
                         a.nav-link.active{
                             .nav-link-content{
-                                color: #758a70;
+                                color: #f3f4f1;
                                 background-color: transparent;
     
                                 .nav-text{
@@ -1577,7 +1609,7 @@ body{
                     .navbar-item:hover{
                         a.nav-link{
                             .nav-link-content{
-                                color: #758a70;
+                                color: #f3f4f1;
                                 background-color: transparent;
     
                                 .nav-text{
@@ -1636,80 +1668,81 @@ body{
         
                 .invitation-content{
                     #couple{
-                        height: fit-content;
                         width: 100%;
                         position: relative;
-                        z-index: 1;
-                        margin-top: -25px;
-                        background-image: 
-                        linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 20%), /* Gradient transparan di bagian atas */
-                        linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 20%), /* Gradient transparan di bagian bawah */
-                        url('../layout/couple-background.png');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        padding: 25px 0;
-            
+                        z-index: 0;
+                        
                         .title{
-                            margin-top: 200px;
-                            color: #e4d2a9;
-                            text-align: center;
+                            width: fit-content;
+                            margin: auto;
+                            margin-top: 100px;
+                            color: #1a2d3c;
                     
                             h1{
-                                font-weight: bold;
-                                font-family: "Parisienne", cursive;
-                                font-size: 2.5rem;
+                                font-weight: lighter;
+                                font-family: "Passions Conflict", cursive;
+                                font-size: 4rem;
                             }
                         }
                         .brides{
                             width: 100%;
                             height: 1000px;
-                            margin-top: 200px;
+                            margin-top: 150px;
                             .groom{
                                 position: relative;
                                 height: 150px;
                                 width: fit-content;
                                 display: flex;
                                 flex-direction: column;
-                                margin-left: 1.5rem;
-                                margin-right: auto;
+                                margin: auto;
                                 align-items: center;
                                 .image{
                                     width: 150px;
+                                    margin: auto;
                                     .photo{
                                         position: relative;
+                                        background-image: url(../layout/bg-cover-photo.png);
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        padding: 10px;
                                         img{
                                             width: 100%;
-                                            border-radius: 100%;
-                                        }
-                                    }
-                                    .frame{
-                                        position: absolute;
-                                        top: -5px;
-                                        left: -5px;
-                                        img{
-                                            width: 160px;
                                         }
                                     }
                                 }
                                 .text{
-                                    text-align: start;
-                                    margin-left: 2rem;
+                                    text-align: center;
+                                    margin: auto;
+                                    margin-top: -2rem;
                                     margin-bottom: 1.5rem;
+    
                                     .name{
+                                        position: relative;
+                                        width: fit-content;
+                                        height: fit-content;
+                                        margin-bottom: -1rem;
+                                        padding: 1rem 1rem;
+                                        font-family: "Passions Conflict", cursive;
+                                        color: #f3f4f1;
+                                        background-image: url(../layout/bg-cover-name.png);
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        z-index: 10;
+    
                                         h1{
-                                            margin-bottom: 5px;
-                                            font-family: "Parisienne", cursive;
-                                            font-weight: bold;
-                                            font-size: 2rem;
-                                            color: #e4d2a9;
+                                            font-size: calc(2rem + 1vw);
+                                            font-weight: normal;
+                                            margin: 0;
                                         }
                                     }
                                     .child-of{
                                         p{
                                             margin: 0;
                                             font-size: calc(.8rem + .2vw);
-                                            font-family: "Crimson Text", serif;
-                                            color: #c2c2be;
+                                            font-family: "Tenor Sans", sans-serif;
+                                            color: #705c45;
                                         }
                                     }
                                 }
@@ -1717,10 +1750,10 @@ body{
                             .and{
                                 width: 100%;
                                 margin: 150px auto;
-                                font-weight: bold;
-                                font-family: "Parisienne", cursive;
-                                font-size: 3rem;
-                                color: #e4d2a9;
+                                font-weight: normal;
+                                font-family: "Passions Conflict", cursive;
+                                font-size: 5rem;
+                                color: #1a2d3c;
                                 display: flex;
                                 justify-content: center;
         
@@ -1737,46 +1770,55 @@ body{
                                 width: fit-content;
                                 display: flex;
                                 flex-direction: column-reverse;
-                                margin-right: 1.5rem;
-                                margin-left: auto;
+                                margin: auto;
                                 align-items: center;
                                 .image{
                                     width: 150px;
                                     .photo{
                                         position: relative;
+                                        background-image: url(../layout/bg-cover-photo.png);
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        padding: 10px;
                                         img{
                                             width: 100%;
-                                            border-radius: 100%;
                                         }
                                     }
-                                    .frame{
-                                        position: absolute;
-                                        top: -5px;
-                                        right: -5px;
-                                        img{
-                                            width: 160px;
-                                        }
-                                    }
+    
                                 }
                                 .text{
-                                    text-align: end;
-                                    margin-right: 2rem;
-                                    margin-bottom: 1.5rem;
+                                    text-align: center;
+                                    display: flex;
+                                    flex-direction: column-reverse;
+                                    margin: auto;
                                     .name{
+                                        position: relative;
+                                        width: fit-content;
+                                        height: fit-content;
+                                        margin-top: -1rem;
+                                        margin-bottom: -2rem;
+                                        padding: 1rem 1rem;
+                                        font-family: "Passions Conflict", cursive;
+                                        color: #f3f4f1;
+                                        background-image: url(../layout/bg-cover-name.png);
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        z-index: 10;
+    
                                         h1{
-                                            margin-bottom: 5px;
-                                            font-family: "Parisienne", cursive;
-                                            font-weight: bold;
-                                            font-size: 2rem;
-                                            color: #e4d2a9;
+                                            font-size: calc(2rem + 1vw);
+                                            font-weight: normal;
+                                            margin: 0;
                                         }
                                     }
                                     .child-of{
                                         p{
                                             margin: 0;
                                             font-size: calc(.8rem + .2vw);
-                                            font-family: "Crimson Text", serif;
-                                            color: #c2c2be;
+                                            font-family: "Tenor Sans", sans-serif;
+                                            color: #705c45;
                                         }
                                     }
                                 }
