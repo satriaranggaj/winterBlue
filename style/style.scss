@@ -153,22 +153,40 @@ body{
                 width: 100%;
                 min-height: 700px;
                 overflow: hidden;
-                background-image: url(../layout/cover-background.png);
+                background-image: url(../layout/background-cover.png);
                 background-size: cover;
                 background-repeat: repeat-y;
 
-                .cover-layout{
-                    position: absolute;
-                    max-width: 450px;
-                    width: 100%;
-                    z-index: 1;
+                .title{
+                    font-size: calc(1rem + .5vw);
+                    font-family: "Passions Conflict", cursive;
+                    color: #1a2d3c;
+                    position: relative;
+                    margin: auto;
+                    margin-top: 10%;
+                    text-align: center;
+
+                    .title-one{
+                        font-weight: normal;
+                        animation: animationFadeRight 4s ease 1 forwards;
+                        margin: 0;
+                        margin-bottom: -10px;
+                        margin-right: 24%;
+                    }
+                    .title-two{
+                        font-weight: normal;
+                        animation: animationFadeLeft 4s ease 1 forwards;
+                        margin: 0;
+                        margin-top: -10px;
+                        margin-left: 17%;
+                    }
                 }
                 .name{
                     position: relative;
                     width: fit-content;
                     height: fit-content;
                     margin: auto;
-                    margin-top: 30%;
+                    margin-top: 5%;
                     padding: 1rem 1rem;
                     display: flex;
                     font-family: "Passions Conflict", cursive;
@@ -179,7 +197,7 @@ body{
                     background-repeat: no-repeat;
                     z-index: 10;
 
-                    .groom{
+                    .groom-name{
                         margin: 0;
                         font-size: calc(2rem + 1vw);
                         font-weight: normal;
@@ -191,7 +209,7 @@ body{
                         font-weight: normal;
                         animation: animationFadeIn 4s ease 1 forwards;
                     }
-                    .bride{
+                    .bride-name{
                         margin: 0;
                         font-size: calc(2rem + 1vw);
                         font-weight: normal;
@@ -200,7 +218,7 @@ body{
                 }
                 .cover-photo{
                     background-image: url(../layout/bg-cover-photo.png);
-                    background-size: contain;
+                    background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
                     max-width: 45%;
@@ -208,61 +226,43 @@ body{
                     position: relative;
                     margin: auto;
                     margin-top: -10%;
-                    padding: 15px;
+                    padding: 10px;
                     animation: animationFadeUp 2s ease 1 forwards;
                     z-index: 5;
-
-                    .image{
+                    overflow: hidden;
+                    
+                    .image-cover{
+                        object-fit: cover;
                         margin: auto;
-                        width: 100%;
+                        height: 100%;
+                        max-width: 100%;
                         animation: animationFadeIn 4s ease 1 forwards;
                     }
                 }
                 .text{
                     max-width: 450px;
                     width: 100%;   
-                    position: absolute;
+                    position: relative;
                     top: 0;
-                    z-index: 7;
+                    z-index: 5;
                     text-align: center;
                     overflow: hidden;
 
-                    .title{
-                        margin-top: 5%;
-                        font-size: calc(1rem + .5vw);
-                        font-family: "Passions Conflict", cursive;
-                        color: #1a2d3c;
-
-                        .title-one{
-                            font-weight: normal;
-                            animation: animationFadeRight 4s ease 1 forwards;
-                            margin: 0;
-                            margin-bottom: -10px;
-                            margin-right: 24%;
-                        }
-                        .title-two{
-                            font-weight: normal;
-                            animation: animationFadeLeft 4s ease 1 forwards;
-                            margin: 0;
-                            margin-top: -10px;
-                            margin-left: 17%;
-                        }
-                    }
                     .date{
+                        position: relative;
+                        z-index: 5;
                         display: flex;
                         justify-content: space-between;
                         max-width: 450px;
                         width: 50%;
-                        margin: auto;
-                        margin-top: 65%;
-                        position: relative;
+                        margin: 0 auto;
+                        margin-top: 10px;
                         font-family: "Tenor Sans", sans-serif;
                         font-weight: normal;
                         color: #705c45;
                         
                         .day{
                             font-size: calc(1rem + .5vw);
-                            z-index: 2;
                             animation: animationFadeRight 4s ease 1 forwards;
                             
                             p{
@@ -273,7 +273,6 @@ body{
                         }
                         .month{
                             font-size: calc(1rem + .5vw);
-                            z-index: 2;
                             animation: animationFadeLeft 4s ease 1 forwards;
                             
                             p{
@@ -284,18 +283,17 @@ body{
                         }
                         .year{
                             font-size: calc(1rem + .5vw);
-                            z-index: 2;
                             animation: animationFadeIn 4s ease 1 forwards;
                         }
                     }
                     .visitor{
                         width: 75%;
-                        margin: auto;
+                        margin: 10px auto;
                         position: relative;
                         font-family: "Tenor Sans", sans-serif;
                         color: #1a2d3c;
                         animation: animationFadeIn 4s ease 1 forwards;
-                        z-index: 2;
+                        z-index: 5;
     
                         .respect{
                             font-weight: normal;
@@ -322,7 +320,7 @@ body{
                     position: relative;
                     width: 50%;
                     margin: 0 25%;
-                    margin-top: 45%;
+                    margin-top: 10px;
                     background: transparent;
                     border-radius: 50px;
                     border: 1px #78a4da solid;
@@ -365,7 +363,7 @@ body{
 
                         .quotes-image {
                             width: 100%;
-                            display: block;
+                            animation: animationFadeIn 4s ease 1 forwards;
                         }
                     }
                     .image-wrapper::after {
@@ -380,26 +378,18 @@ body{
                       }
                     .text{
                         padding: 0 25px;
-                        .arab{
+
+                        p{
                             width: 100%;
                             color: #705c45;
                             position: relative;
                             z-index: 10;
-                            margin: 75px 0 25px 0;
+                            margin: auto;
+                            margin: 150px 0 25px 0;
                             text-align: center;
-                            font-family: "Tenor Sans", sans-serif;
-                            animation: animationFadeDown 4s ease 1 forwards;
-                        }
-                        .terjemah{
                             font-family: "Tenor Sans", sans-serif;
                             font-size: calc(.8rem + .2vw);
                             font-style: italic;
-                            width: 100%;
-                            margin: auto;
-                            color: #705c45;
-                            position: relative;
-                            z-index: 10;
-                            text-align: center;
                             animation: animationFadeDown 4s ease 1 forwards;
                         }
                     }
@@ -412,7 +402,7 @@ body{
                     .title{
                         width: fit-content;
                         margin: auto;
-                        margin-top: 100px;
+                        margin-top: 50px;
                         color: #1a2d3c;
                 
                         h1{
@@ -425,16 +415,17 @@ body{
                         width: 100%;
                         height: 1000px;
                         margin-top: 150px;
+
                         .groom{
                             position: relative;
-                            height: 150px;
+                            height: fit-content;
                             width: fit-content;
                             display: flex;
                             margin-left: 1.5rem;
                             margin-right: auto;
                             align-items: center;
                             .image{
-                                width: 150px;
+                                max-width: 150px;
                                 .photo{
                                     position: relative;
                                     background-image: url(../layout/bg-cover-photo.png);
@@ -451,6 +442,7 @@ body{
                                 text-align: start;
                                 margin-left: 2rem;
                                 margin-bottom: 1.5rem;
+                                padding-right: 1rem;
 
                                 .name{
                                     position: relative;
@@ -473,6 +465,15 @@ body{
                                     }
                                 }
                                 .child-of{
+                                    margin: 10px 0;
+                                    p{
+                                        margin: 0;
+                                        font-size: calc(.8rem + .2vw);
+                                        font-family: "Tenor Sans", sans-serif;
+                                        color: #705c45;
+                                    }
+                                }
+                                .address{
                                     p{
                                         margin: 0;
                                         font-size: calc(.8rem + .2vw);
@@ -484,7 +485,7 @@ body{
                         }
                         .and{
                             width: 100%;
-                            margin: 150px auto;
+                            margin: 75px auto;
                             font-weight: normal;
                             font-family: "Passions Conflict", cursive;
                             font-size: 5rem;
@@ -501,7 +502,7 @@ body{
                         }
                         .bride{
                             position: relative;
-                            height: 150px;
+                            height: fit-content;
                             width: fit-content;
                             display: flex;
                             flex-direction: row-reverse;
@@ -509,7 +510,7 @@ body{
                             margin-left: auto;
                             align-items: center;
                             .image{
-                                width: 150px;
+                                max-width: 150px;
                                 .photo{
                                     position: relative;
                                     background-image: url(../layout/bg-cover-photo.png);
@@ -521,16 +522,18 @@ body{
                                         width: 100%;
                                     }
                                 }
-
                             }
                             .text{
                                 text-align: end;
                                 margin-right: 2rem;
                                 margin-bottom: 1.5rem;
+                                padding-left: 1rem;
+
                                 .name{
                                     position: relative;
                                     width: fit-content;
                                     height: fit-content;
+                                    margin-left: auto;
                                     margin-bottom: -1rem;
                                     padding: 1rem 1rem;
                                     font-family: "Passions Conflict", cursive;
@@ -548,6 +551,15 @@ body{
                                     }
                                 }
                                 .child-of{
+                                    margin: 10px 0;
+                                    p{
+                                        margin: 0;
+                                        font-size: calc(.8rem + .2vw);
+                                        font-family: "Tenor Sans", sans-serif;
+                                        color: #705c45;
+                                    }
+                                }
+                                .address{
                                     p{
                                         margin: 0;
                                         font-size: calc(.8rem + .2vw);
@@ -567,6 +579,103 @@ body{
                     margin-top: -75px;
                     display: block;
                     z-index: 5;
+                }
+                #love-story{
+                    height: fit-content;
+                    width: 100%;
+                    margin-top: -75px;
+                    padding-top: 150px;
+                    background-color: #78a4da;
+                    position: relative;
+                    .text{
+                        .title{
+                            text-align: center;
+                            font-family: "Passions Conflict", cursive;
+                            color: #f3f4f1;
+                            font-size: 2rem;
+
+                            h1{
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                    .slider {
+                        position: relative;
+                        width: 100%;
+                        height: 400px;
+                        overflow: hidden;
+                    
+                        .love-story-content {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0;
+                            transition: opacity 1s ease;
+                    
+                            &.active {
+                                opacity: 1;
+                            }
+                    
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                    
+                            .fill-text {
+                                position: absolute;
+                                bottom: 50px;
+                                left: 25px;
+                                font-family: "Tenor Sans", sans-serif;
+                                color: white;
+                                z-index: 10;
+                    
+                                p {
+                                    margin: 0;
+                                }
+                    
+                                h2 {
+                                    margin: 0;
+                                }
+                            }
+                    
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                height: 75%;
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(120, 164, 218) 100%);
+                                pointer-events: none;
+                            }
+                        }
+                    }
+                    .pagination {
+                        position: absolute;
+                        bottom: 20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: flex;
+                        gap: 10px;
+                        z-index: 1000;
+
+                        div {
+                            width: 10px;
+                            height: 10px;
+                            background-color: lightgrey;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+                
+                            &.active {
+                                background-color: white;
+                            }
+                        }
+                    }
+                    
                 }
                 #gallery{
                     width: 100%;
@@ -832,12 +941,21 @@ body{
                                     font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
+                                .dash{
+                                    margin: 0 5px;
+                                }
                             }
                             .location{
-                                display: flex;
                                 justify-content: center;
                                 margin-bottom: .5rem;
                                 color: #1a2d3c;
+
+                                .map{
+                                    iframe{
+                                        border-radius: 10px;
+                                        overflow: hidden;
+                                    }
+                                }
                                 p{
                                     margin: 0;
                                     font-family: "Tenor Sans", sans-serif;
@@ -897,12 +1015,21 @@ body{
                                     font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
+                                .dash{
+                                    margin: 0 5px;
+                                }
                             }
                             .location{
-                                display: flex;
                                 justify-content: center;
                                 margin-bottom: .5rem;
                                 color: #1a2d3c;
+
+                                .map{
+                                    iframe{
+                                        border-radius: 10px;
+                                        overflow: hidden;
+                                    }
+                                }
                                 p{
                                     margin: 0;
                                     font-family: "Tenor Sans", sans-serif;
@@ -962,12 +1089,21 @@ body{
                                     font-family: "Tenor Sans", sans-serif;
                                     font-size: calc(.8rem + .2vw);
                                 }
+                                .dash{
+                                    margin: 0 5px;
+                                }
                             }
                             .location{
-                                display: flex;
                                 justify-content: center;
                                 margin-bottom: .5rem;
                                 color: #1a2d3c;
+
+                                .map{
+                                    iframe{
+                                        border-radius: 10px;
+                                        overflow: hidden;
+                                    }
+                                }
                                 p{
                                     margin: 0;
                                     font-family: "Tenor Sans", sans-serif;
@@ -976,63 +1112,6 @@ body{
                             }
                             button{
                                 cursor: pointer;
-                                margin-top: 1rem;
-                                padding: .5rem 1rem;
-                                font-size: 1rem;
-                                color: #78a4da;
-                                background-color: #f3f4f1;
-                                border-radius: 50px;
-                                border: solid 1px #f3f4f1;
-                                transition: .3s all;
-                            }
-                            button:hover{
-                                color: #f3f4f1;
-                                background-color: #78a4da;
-                            }
-                        }
-                    }
-                }
-                #location{
-                    margin-top: 100px;
-                    padding-bottom: 75px;
-    
-                    .container{
-                        background-color: #78a4da;
-                        width: 75%;
-                        margin: auto;
-                        padding-bottom: 2rem;
-                        text-align: center;
-                        border: solid 10px #78a4da;
-                        border-radius: 15px;
-                        overflow: hidden;
-                        .map{
-                            width: 100%;
-                            height: 25rem;
-                            
-    
-                            iframe{
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-                        .address{
-                            margin-top: 2rem;
-                            padding: 0 1.5rem;
-                            font-family: "Tenor Sans", sans-serif;
-                            color: #f3f4f1;
-    
-                            i{
-                                font-size: calc(1rem + .5vw);  
-                            }
-                            p{
-                                margin: 0;
-                                font-size: calc(.8rem + .2vw);
-                            }
-                        }
-                        a{
-                            button{
-                                cursor: pointer;
-                                margin: auto;
                                 margin-top: 1rem;
                                 padding: .5rem 1rem;
                                 font-size: 1rem;
@@ -1306,29 +1385,47 @@ body{
                 animation: animationFadeOut 1s ease 1 forwards;
                 animation-delay: 1s;
 
-                .cover-layout{
-                    position: absolute;
-                    max-width: 450px;
-                    width: 100%;
-                    z-index: 1;
+                .title{
+                    font-size: calc(1rem + .5vw);
+                    font-family: "Passions Conflict", cursive;
+                    color: #1a2d3c;
+                    position: relative;
+                    margin: auto;
+                    margin-top: 10%;
+                    text-align: center;
+
+                    .title-one{
+                        font-weight: normal;
+                        animation: animationFadeRightOut 4s ease 1 forwards;
+                        margin: 0;
+                        margin-bottom: -10px;
+                        margin-right: 24%;
+                    }
+                    .title-two{
+                        font-weight: normal;
+                        animation: animationFadeLeftOut 4s ease 1 forwards;
+                        margin: 0;
+                        margin-top: -10px;
+                        margin-left: 17%;
+                    }
                 }
                 .name{
                     position: relative;
                     width: fit-content;
                     height: fit-content;
                     margin: auto;
-                    margin-top: 30%;
+                    margin-top: 5%;
                     padding: 1rem 1rem;
                     display: flex;
                     font-family: "Passions Conflict", cursive;
-                    color: #fefefe;
+                    color: #f3f4f1;
                     background-image: url(../layout/bg-cover-name.png);
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
                     z-index: 10;
 
-                    .groom{
+                    .groom-name{
                         margin: 0;
                         font-size: calc(2rem + 1vw);
                         font-weight: normal;
@@ -1340,7 +1437,7 @@ body{
                         font-weight: normal;
                         animation: animationFadeOut 4s ease 1 forwards;
                     }
-                    .bride{
+                    .bride-name{
                         margin: 0;
                         font-size: calc(2rem + 1vw);
                         font-weight: normal;
@@ -1349,7 +1446,7 @@ body{
                 }
                 .cover-photo{
                     background-image: url(../layout/bg-cover-photo.png);
-                    background-size: contain;
+                    background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
                     max-width: 45%;
@@ -1357,61 +1454,43 @@ body{
                     position: relative;
                     margin: auto;
                     margin-top: -10%;
-                    padding: 15px;
+                    padding: 10px;
                     animation: animationFadeUpOut 2s ease 1 forwards;
                     z-index: 5;
-
-                    .image{
+                    overflow: hidden;
+                    
+                    .image-cover{
+                        object-fit: cover;
                         margin: auto;
-                        width: 100%;
+                        height: 100%;
+                        max-width: 100%;
                         animation: animationFadeOut 4s ease 1 forwards;
                     }
                 }
                 .text{
                     max-width: 450px;
                     width: 100%;   
-                    position: absolute;
+                    position: relative;
                     top: 0;
-                    z-index: 7;
+                    z-index: 5;
                     text-align: center;
                     overflow: hidden;
 
-                    .title{
-                        margin-top: 5%;
-                        font-size: calc(1rem + .5vw);
-                        font-family: "Passions Conflict", cursive;
-                        color: #1a2d3c;
-
-                        .title-one{
-                            font-weight: normal;
-                            animation: animationFadeRightOut 4s ease 1 forwards;
-                            margin: 0;
-                            margin-bottom: -10px;
-                            margin-right: 24%;
-                        }
-                        .title-two{
-                            font-weight: normal;
-                            animation: animationFadeLeftOut 4s ease 1 forwards;
-                            margin: 0;
-                            margin-top: -10px;
-                            margin-left: 17%;
-                        }
-                    }
                     .date{
+                        position: relative;
+                        z-index: 5;
                         display: flex;
                         justify-content: space-between;
                         max-width: 450px;
                         width: 50%;
-                        margin: auto;
-                        margin-top: 65%;
-                        position: relative;
+                        margin: 0 auto;
+                        margin-top: 10px;
                         font-family: "Tenor Sans", sans-serif;
                         font-weight: normal;
                         color: #705c45;
                         
                         .day{
                             font-size: calc(1rem + .5vw);
-                            z-index: 2;
                             animation: animationFadeRightOut 4s ease 1 forwards;
                             
                             p{
@@ -1422,7 +1501,6 @@ body{
                         }
                         .month{
                             font-size: calc(1rem + .5vw);
-                            z-index: 2;
                             animation: animationFadeLeftOut 4s ease 1 forwards;
                             
                             p{
@@ -1433,18 +1511,17 @@ body{
                         }
                         .year{
                             font-size: calc(1rem + .5vw);
-                            z-index: 2;
                             animation: animationFadeOut 4s ease 1 forwards;
                         }
                     }
                     .visitor{
                         width: 75%;
-                        margin: auto;
+                        margin: 10px auto;
                         position: relative;
                         font-family: "Tenor Sans", sans-serif;
                         color: #1a2d3c;
                         animation: animationFadeOut 4s ease 1 forwards;
-                        z-index: 2;
+                        z-index: 5;
     
                         .respect{
                             font-weight: normal;
@@ -1471,7 +1548,7 @@ body{
                     position: relative;
                     width: 50%;
                     margin: 0 25%;
-                    margin-top: 45%;
+                    margin-top: 10px;
                     background: transparent;
                     border-radius: 50px;
                     border: 1px #78a4da solid;
@@ -1480,11 +1557,6 @@ body{
                     z-index: 1000;
                     transition: all .3s;
                     animation: animationFadeOut 4s ease 1 forwards;
-                }
-                button:hover{
-                    background: #78a4da;
-                    border: 1px #78a4da solid;
-                    color: #fefefe;
                 }
             }
             .invitation-content.active{
@@ -1665,7 +1737,195 @@ body{
                 margin: auto;
                 position: relative;
                 z-index: 5;
+
+                .cover{
+                    max-width: 450px;
+                    width: 100%;
+                    min-height: 700px;
+                    overflow: hidden;
+                    background-image: url(../layout/background-cover.png);
+                    background-size: cover;
+                    background-repeat: repeat-y;
+    
+                    .title{
+                        font-size: calc(1rem + .5vw);
+                        font-family: "Passions Conflict", cursive;
+                        color: #1a2d3c;
+                        position: relative;
+                        margin: auto;
+                        margin-top: 10%;
+                        text-align: center;
+    
+                        .title-one{
+                            font-weight: normal;
+                            animation: animationFadeRight 4s ease 1 forwards;
+                            margin: 0;
+                            margin-bottom: -10px;
+                            margin-right: 24%;
+                        }
+                        .title-two{
+                            font-weight: normal;
+                            animation: animationFadeLeft 4s ease 1 forwards;
+                            margin: 0;
+                            margin-top: -10px;
+                            margin-left: 17%;
+                        }
+                    }
+                    .name{
+                        position: relative;
+                        width: fit-content;
+                        height: fit-content;
+                        margin: auto;
+                        margin-top: 5%;
+                        padding: 1rem 1rem;
+                        display: flex;
+                        font-family: "Passions Conflict", cursive;
+                        color: #f3f4f1;
+                        background-image: url(../layout/bg-cover-name.png);
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        z-index: 10;
+    
+                        .groom-name{
+                            margin: 0;
+                            font-size: calc(2rem + 1vw);
+                            font-weight: normal;
+                            animation: animationFadeRight 4s ease 1 forwards;
+                        }
+                        .and{
+                            margin: 0 15px;
+                            font-size: calc(2rem + 1vw);
+                            font-weight: normal;
+                            animation: animationFadeIn 4s ease 1 forwards;
+                        }
+                        .bride-name{
+                            margin: 0;
+                            font-size: calc(2rem + 1vw);
+                            font-weight: normal;
+                            animation: animationFadeLeft 4s ease 1 forwards;
+                        } 
+                    }
+                    .cover-photo{
+                        background-image: url(../layout/bg-cover-photo.png);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        max-width: 45%;
+                        max-height: fit-content;
+                        position: relative;
+                        margin: auto;
+                        margin-top: -10%;
+                        padding: 15px;
+                        animation: animationFadeUp 2s ease 1 forwards;
+                        z-index: 5;
+                        overflow: hidden;
+                        
+                        .image-cover{
+                            object-fit: cover;
+                            margin: auto;
+                            height: 100%;
+                            max-width: 100%;
+                            animation: animationFadeIn 4s ease 1 forwards;
+                        }
+                    }
+                    .text{
+                        max-width: 450px;
+                        width: 100%;   
+                        position: relative;
+                        top: 0;
+                        z-index: 5;
+                        text-align: center;
+                        overflow: hidden;
+    
+                        .date{
+                            position: relative;
+                            z-index: 5;
+                            display: flex;
+                            justify-content: space-between;
+                            max-width: 450px;
+                            width: 50%;
+                            margin: 0 auto;
+                            margin-top: 25px;
+                            font-family: "Tenor Sans", sans-serif;
+                            font-weight: normal;
+                            color: #705c45;
+                            
+                            .day{
+                                font-size: calc(1rem + .5vw);
+                                animation: animationFadeRight 4s ease 1 forwards;
+                                
+                                p{
+                                    width: 3rem;
+                                    border-top: 1px solid #705c45;
+                                    border-bottom: 1px solid #705c45;
+                                }
+                            }
+                            .month{
+                                font-size: calc(1rem + .5vw);
+                                animation: animationFadeLeft 4s ease 1 forwards;
+                                
+                                p{
+                                    width: 3rem;
+                                    border-top: 1px solid #705c45;
+                                    border-bottom: 1px solid #705c45;
+                                }
+                            }
+                            .year{
+                                font-size: calc(1rem + .5vw);
+                                animation: animationFadeIn 4s ease 1 forwards;
+                            }
+                        }
+                        .visitor{
+                            width: 75%;
+                            margin: 25px auto;
+                            position: relative;
+                            font-family: "Tenor Sans", sans-serif;
+                            color: #1a2d3c;
+                            animation: animationFadeIn 4s ease 1 forwards;
+                            z-index: 5;
         
+                            .respect{
+                                font-weight: normal;
+                                font-size: .8rem;
+                                margin-bottom: 5px;
+                            }
+                            .visitor-name{
+                                font-weight: bold;
+                                font-size: 1rem;
+                            }
+                            .visitor-address{
+                                font-weight: normal;
+                                font-size: 1rem;
+                            }
+                            .apologize{
+                                font-weight: normal;
+                                font-size: .8rem;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    button{
+                        cursor: pointer;
+                        position: relative;
+                        width: 50%;
+                        margin: 0 25%;
+                        margin-top: 10px;
+                        background: transparent;
+                        border-radius: 50px;
+                        border: 1px #78a4da solid;
+                        color: #78a4da;
+                        padding: 10px 15px;
+                        z-index: 1000;
+                        transition: all .3s;
+                        animation: animationFadeIn 4s ease 1 forwards;
+                    }
+                    button:hover{
+                        background: #78a4da;
+                        border: 1px #78a4da solid;
+                        color: #fefefe;
+                    }
+                }
                 .invitation-content{
                     #couple{
                         width: 100%;
@@ -1675,7 +1935,7 @@ body{
                         .title{
                             width: fit-content;
                             margin: auto;
-                            margin-top: 100px;
+                            margin-top: 50px;
                             color: #1a2d3c;
                     
                             h1{
@@ -1686,19 +1946,21 @@ body{
                         }
                         .brides{
                             width: 100%;
-                            height: 1000px;
-                            margin-top: 150px;
+                            height: fit-content;
+                            padding: 150px 0;
+                            margin-top: 0;
+    
                             .groom{
                                 position: relative;
-                                height: 150px;
+                                height: fit-content;
                                 width: fit-content;
                                 display: flex;
                                 flex-direction: column;
-                                margin: auto;
+                                margin-left: auto;
+                                margin-right: auto;
                                 align-items: center;
                                 .image{
-                                    width: 150px;
-                                    margin: auto;
+                                    max-width: 150px;
                                     .photo{
                                         position: relative;
                                         background-image: url(../layout/bg-cover-photo.png);
@@ -1713,14 +1975,16 @@ body{
                                 }
                                 .text{
                                     text-align: center;
-                                    margin: auto;
-                                    margin-top: -2rem;
+                                    margin-left: 0;
                                     margin-bottom: 1.5rem;
+                                    padding-right: 0;
+                                    padding: 0 1rem;
     
                                     .name{
                                         position: relative;
                                         width: fit-content;
                                         height: fit-content;
+                                        margin: auto;
                                         margin-bottom: -1rem;
                                         padding: 1rem 1rem;
                                         font-family: "Passions Conflict", cursive;
@@ -1738,6 +2002,15 @@ body{
                                         }
                                     }
                                     .child-of{
+                                        margin: 10px 0;
+                                        p{
+                                            margin: 0;
+                                            font-size: calc(.8rem + .2vw);
+                                            font-family: "Tenor Sans", sans-serif;
+                                            color: #705c45;
+                                        }
+                                    }
+                                    .address{
                                         p{
                                             margin: 0;
                                             font-size: calc(.8rem + .2vw);
@@ -1749,7 +2022,7 @@ body{
                             }
                             .and{
                                 width: 100%;
-                                margin: 150px auto;
+                                margin: 75px auto;
                                 font-weight: normal;
                                 font-family: "Passions Conflict", cursive;
                                 font-size: 5rem;
@@ -1766,14 +2039,15 @@ body{
                             }
                             .bride{
                                 position: relative;
-                                height: 150px;
+                                height: fit-content;
                                 width: fit-content;
                                 display: flex;
                                 flex-direction: column-reverse;
-                                margin: auto;
+                                margin-left: auto;
+                                margin-right: auto;
                                 align-items: center;
                                 .image{
-                                    width: 150px;
+                                    max-width: 150px;
                                     .photo{
                                         position: relative;
                                         background-image: url(../layout/bg-cover-photo.png);
@@ -1785,19 +2059,20 @@ body{
                                             width: 100%;
                                         }
                                     }
-    
                                 }
                                 .text{
                                     text-align: center;
-                                    display: flex;
-                                    flex-direction: column-reverse;
-                                    margin: auto;
+                                    margin-right: 0;
+                                    margin-bottom: 1.5rem;
+                                    padding-left: 0;
+                                    padding: 0 1rem;
+    
                                     .name{
                                         position: relative;
                                         width: fit-content;
                                         height: fit-content;
-                                        margin-top: -1rem;
-                                        margin-bottom: -2rem;
+                                        margin: auto;
+                                        margin-bottom: -1rem;
                                         padding: 1rem 1rem;
                                         font-family: "Passions Conflict", cursive;
                                         color: #f3f4f1;
@@ -1814,6 +2089,15 @@ body{
                                         }
                                     }
                                     .child-of{
+                                        margin: 10px 0;
+                                        p{
+                                            margin: 0;
+                                            font-size: calc(.8rem + .2vw);
+                                            font-family: "Tenor Sans", sans-serif;
+                                            color: #705c45;
+                                        }
+                                    }
+                                    .address{
                                         p{
                                             margin: 0;
                                             font-size: calc(.8rem + .2vw);
@@ -1824,6 +2108,15 @@ body{
                                 }
                             }
                         }
+                    }
+                    .svg-one {
+                        position: relative;
+                        transform: rotate(180deg);
+                        width: 175%;
+                        height: 100px;
+                        margin-top: 60px;
+                        display: block;
+                        z-index: 5;
                     }
                 }
             }
